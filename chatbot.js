@@ -13,20 +13,41 @@ const KB = [
     },
     {
         keys: ['سعر','أسعار','تكلفة','كم','غالي','رخيص','ميزانية','باقة','باقات'],
-        reply: `إليك باقاتنا الاحترافية 💼<br><br>
-<b>🟢 Basic</b> — <b>400,000 – 600,000 د.ع</b><br>
-⏱ 1 – 3 أيام &nbsp;|&nbsp; موقع + واتساب + 3 صفحات<br><br>
-<b>🟡 Standard</b> — <b>900,000 – 1,400,000 د.ع</b><br>
-⏱ 3 – 5 أيام &nbsp;|&nbsp; لوحة تحكم بسيطة + نموذج طلب<br><br>
-<b>🔵 E-Commerce</b> — <b>2,000,000 – 3,500,000 د.ع</b><br>
-⏱ 5 – 7 أيام &nbsp;|&nbsp; متجر كامل + إدارة منتجات<br><br>
-<b>🟣 Smart AI</b> — <b>4,000,000 – 5,500,000 د.ع</b><br>
-⏱ 7 – 10 أيام &nbsp;|&nbsp; كل شيء + مجيب آلي + إشعارات<br><br>
-<b>🔴 Enterprise</b> — <b>من 6,500,000 د.ع</b><br>
-⏱ 10 – 20 يوم &nbsp;|&nbsp; نظام كامل للشركات + AI متقدم<br><br>
-✅ <i>نضمن تشغيل النظام في مدة قصيرة حتى يبدأ العمل فوراً!</i><br><br>
-للاستفسار والحجز:<br>
-<a href="https://wa.me/9647706688044" target="_blank" style="color:#e30613">واتساب: 07706688044</a>`
+        reply: `<b>💼 باقاتنا الاحترافية</b><br><br>
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
+  🟢 <b>Basic</b><br>
+  💰 400,000 – 600,000 د.ع<br>
+  ⏱ 1 – 3 أيام<br>
+  📌 موقع تعريفي + واتساب + 3 صفحات
+</div>
+<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
+  🟡 <b>Standard</b><br>
+  💰 900,000 – 1,400,000 د.ع<br>
+  ⏱ 3 – 5 أيام<br>
+  📌 لوحة تحكم + نموذج طلبات
+</div>
+<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
+  🔵 <b>E-Commerce</b><br>
+  💰 2,000,000 – 3,500,000 د.ع<br>
+  ⏱ 5 – 7 أيام<br>
+  📌 متجر كامل + إدارة منتجات
+</div>
+<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
+  🟣 <b>Smart AI</b><br>
+  💰 4,000,000 – 5,500,000 د.ع<br>
+  ⏱ 7 – 10 أيام<br>
+  📌 كل شيء + مجيب آلي + إشعارات
+</div>
+<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
+  🔴 <b>Enterprise</b><br>
+  💰 من 6,500,000 د.ع<br>
+  ⏱ 10 – 20 يوم<br>
+  📌 نظام كامل للشركات + AI متقدم
+</div>
+</div><br>
+✅ نضمن التسليم في الوقت المحدد!<br><br>
+📲 <a href="https://wa.me/9647706688044" target="_blank" style="color:#e30613">تواصل معنا: 07706688044</a>`
     },
     {
         keys: ['تواصل','اتصال','هاتف','واتساب','whatsapp','ايميل','بريد','contact'],
