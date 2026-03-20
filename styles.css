@@ -671,7 +671,48 @@ a { text-decoration: none; color: inherit; }
   border-color: rgba(0,255,209,0.25);
   background: var(--accent-dim);
 }
-.contact-card.contact-ceo { border-color: rgba(0,255,209,0.15); }
+.contact-card.contact-ceo {
+  border-color: rgba(0,255,209,0.25);
+  background: linear-gradient(135deg, rgba(0,255,209,0.06), rgba(0,255,209,0.02));
+  padding: var(--s4);
+}
+
+.ceo-profile {
+  display: flex; align-items: center; gap: var(--s3);
+}
+.ceo-photo-wrap {
+  position: relative; flex-shrink: 0;
+}
+.ceo-photo {
+  width: 64px; height: 64px; border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 16px rgba(0,255,209,0.3);
+}
+.ceo-online-dot {
+  position: absolute; bottom: 2px; right: 2px;
+  width: 12px; height: 12px; background: #4ADE80;
+  border-radius: 50%; border: 2px solid var(--bg2);
+  animation: pulse-dot 2s infinite;
+}
+.ceo-info {
+  display: flex; flex-direction: column; gap: 3px;
+}
+.ceo-info strong {
+  font-size: 16px; font-weight: 700; color: var(--white);
+}
+.ceo-info span:first-of-type {
+  font-size: 12px; color: var(--muted); font-weight: 500;
+}
+.ceo-badge {
+  display: inline-flex; align-items: center;
+  background: rgba(0,255,209,0.12);
+  border: 1px solid rgba(0,255,209,0.3);
+  color: var(--accent) !important;
+  font-size: 11px !important; font-weight: 600 !important;
+  padding: 2px 10px; border-radius: 20px;
+  width: fit-content;
+}
 
 .cc-icon {
   width: 40px; height: 40px; border-radius: var(--r-sm);
