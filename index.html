@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شركة بغداد المستقبل AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <span class="nav-logo">شركة بغداد المستقبل <span class="nav-ai">AI</span></span>
+      <span class="nav-tagline">Open for Projects 🚀</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">الرئيسية</a></li>
+      <li class="has-drop">
+        <a href="#services">
+          الخدمات
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav-drop">
+          <li><a href="#services"><span class="drop-icon">🌐</span>تصميم مواقع ذكية</a></li>
+          <li><a href="#services"><span class="drop-icon">⚙️</span>تطوير أنظمة متكاملة</a></li>
+          <li><a href="#services"><span class="drop-icon">🤖</span>أتمتة الأعمال بالـ AI</a></li>
+          <li><a href="#services"><span class="drop-icon">🛠️</span>دعم وصيانة مستمر</a></li>
+          <li><a href="#services"><span class="drop-icon">🏨</span>أنظمة المطاعم والفنادق</a></li>
+        </ul>
+      </li>
+      <li class="has-drop">
+        <a href="#stats">
+          الإنجازات
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav-drop">
+          <li><a href="#stats"><span class="drop-icon">📊</span>الأرقام والإحصائيات</a></li>
+          <li><a href="#services"><span class="drop-icon">⚙️</span>الخدمات المقدمة</a></li>
+          <li><a href="#cta"><span class="drop-icon">🚀</span>ابدأ مشروعك</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">تواصل</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#hero">الرئيسية</a>
+    <a href="#services">الخدمات</a>
+    <a href="#stats">الإنجازات</a>
+    <a href="#contact">تواصل</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section id="hero" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-pulse"></span>
+      متاح للمشاريع الجديدة
+    </div>
+    <h1 class="hero-h1">
+      شركة بغداد المستقبل <span class="h1-ai">AI</span>
+    </h1>
+    <h2 class="hero-h2">نحو أنظمة رقمية تعمل بدلاً عنك</h2>
+    <p class="hero-desc">
+      نطوّر مواقع وحلول ذكية مدعومة بالذكاء الاصطناعي<br>
+      تحوّل أعمالك إلى نظام يعمل تلقائياً ويزيد أرباحك
+    </p>
+    <div class="hero-btns">
+      <a href="https://wa.me/9647706688044" target="_blank" class="btn btn-accent">
+        احجز استشارة مجانية
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/9647706688044" target="_blank" class="btn btn-outline">اطلب عرض سعر</a>
+      <a href="#services" class="btn btn-ghost">ابدأ مشروعك</a>
+    </div>
+    <div class="hero-stats">
+      <span><strong>+150</strong> مشروع</span>
+      <span class="hs-sep">|</span>
+      <span><strong>+300</strong> عميل</span>
+      <span class="hs-sep">|</span>
+      <span><strong>10+</strong> سنوات</span>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>مرّر للاستكشاف</span>
+  </div>
+</section>
+
+<!-- ══════════════════ VIDEO SCROLL + SERVICES ══════════════════ -->
+<div class="scroll-container" id="services">
+  <canvas id="video-canvas"></canvas>
+
+  <div class="service-block left" data-anim="fade-up">
+    <div class="scard">
+      <span class="snum">01 — تصميم</span>
+      <h3>تصميم مواقع ذكية</h3>
+      <p>نصمّم مواقع احترافية وصفحات هبوط عالية التحويل تجذب العملاء وتحوّل الزيارات إلى مبيعات حقيقية</p>
+      <a href="https://wa.me/9647706688044" target="_blank" class="slink">اطلب الآن ←</a>
+    </div>
+  </div>
+
+  <div class="service-block right" data-anim="slide-in">
+    <div class="scard">
+      <span class="snum">02 — تطوير</span>
+      <h3>تطوير أنظمة متكاملة</h3>
+      <p>نبني أنظمة مخصصة لإدارة أعمالك بكفاءة عالية مع أداء سريع وتجربة استخدام سلسة</p>
+      <a href="https://wa.me/9647706688044" target="_blank" class="slink">اطلب الآن ←</a>
+    </div>
+  </div>
+
+  <div class="service-block left" data-anim="scale-up">
+    <div class="scard">
+      <span class="snum">03 — AI</span>
+      <h3>أتمتة الأعمال بالذكاء الاصطناعي</h3>
+      <p>نطوّر حلول AI مثل الشات بوت وتحليل البيانات لتقليل الجهد وزيادة الإنتاجية بشكل كبير</p>
+      <a href="https://wa.me/9647706688044" target="_blank" class="slink">اطلب الآن ←</a>
+    </div>
+  </div>
+
+  <div class="service-block right" data-anim="fade-up">
+    <div class="scard">
+      <span class="snum">04 — دعم</span>
+      <h3>دعم وصيانة مستمر</h3>
+      <p>نوفر دعم فني متواصل وتحديثات دورية لضمان استقرار وأداء عالي لمشروعك</p>
+      <a href="https://wa.me/9647706688044" target="_blank" class="slink">اطلب الآن ←</a>
+    </div>
+  </div>
+
+  <div class="service-block left" data-anim="slide-in">
+    <div class="scard featured">
+      <span class="snum">05 — أنظمة متطورة</span>
+      <h3>للمطاعم والفنادق والبنوك والشركات</h3>
+      <p>حلول جاهزة للعمل التجاري، مثل POS ذكي للفنادق والمطاعم، إدارة بيانات للبنوك، وأتمتة الأعمال للشركات</p>
+      <a href="https://wa.me/9647706688044" target="_blank" class="slink">اطلب الآن ←</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ══════════════════ SERVICES ACCORDION ══════════════════ -->
+<section class="acc-section">
+  <div class="acc-header">
+    <p class="section-tag">خدماتنا</p>
+    <h2>ماذا نقدّم لك؟</h2>
+    <p class="acc-sub">اكتشف خدماتنا — مرّر الماوس على أي خدمة لمعرفة التفاصيل</p>
+  </div>
+
+  <div class="acc-list">
+
+    <div class="acc-item">
+      <div class="acc-trigger">
+        <span class="acc-num">01</span>
+        <span class="acc-title">تصميم مواقع ذكية</span>
+        <span class="acc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </div>
+      <div class="acc-body">
+        <div class="acc-body-inner">
+          <p>نصمّم مواقع احترافية وصفحات هبوط عالية التحويل تجذب العملاء وتحوّل الزيارات إلى مبيعات حقيقية</p>
+          <a href="https://wa.me/9647706688044" target="_blank" class="acc-cta">اطلب الآن ←</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-trigger">
+        <span class="acc-num">02</span>
+        <span class="acc-title">تطوير أنظمة متكاملة</span>
+        <span class="acc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </div>
+      <div class="acc-body">
+        <div class="acc-body-inner">
+          <p>نبني أنظمة مخصصة لإدارة أعمالك بكفاءة عالية مع أداء سريع وتجربة استخدام سلسة</p>
+          <a href="https://wa.me/9647706688044" target="_blank" class="acc-cta">اطلب الآن ←</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-trigger">
+        <span class="acc-num">03</span>
+        <span class="acc-title">أتمتة الأعمال بالذكاء الاصطناعي</span>
+        <span class="acc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </div>
+      <div class="acc-body">
+        <div class="acc-body-inner">
+          <p>نطوّر حلول AI مثل الشات بوت وتحليل البيانات لتقليل الجهد وزيادة الإنتاجية بشكل كبير</p>
+          <a href="https://wa.me/9647706688044" target="_blank" class="acc-cta">اطلب الآن ←</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-trigger">
+        <span class="acc-num">04</span>
+        <span class="acc-title">دعم وصيانة مستمر</span>
+        <span class="acc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </div>
+      <div class="acc-body">
+        <div class="acc-body-inner">
+          <p>نوفر دعم فني متواصل وتحديثات دورية لضمان استقرار وأداء عالي لمشروعك</p>
+          <a href="https://wa.me/9647706688044" target="_blank" class="acc-cta">اطلب الآن ←</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="acc-item">
+      <div class="acc-trigger">
+        <span class="acc-num">05</span>
+        <span class="acc-title">أنظمة متطورة للمطاعم والفنادق والبنوك والشركات</span>
+        <span class="acc-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </span>
+      </div>
+      <div class="acc-body">
+        <div class="acc-body-inner">
+          <p>حلول جاهزة للعمل التجاري، مثل POS ذكي للفنادق والمطاعم، إدارة بيانات للبنوك، وأتمتة الأعمال للشركات</p>
+          <a href="https://wa.me/9647706688044" target="_blank" class="acc-cta">اطلب الآن ←</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════ STATS ══════════════════ -->
+<section id="stats" class="stats-section">
+  <p class="section-tag">إنجازاتنا بالأرقام</p>
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-num"><span class="count" data-target="150">0</span>+</div>
+      <p>مشروع تم تنفيذها بنجاح</p>
+    </div>
+    <div class="stat-line"></div>
+    <div class="stat">
+      <div class="stat-num"><span class="count" data-target="300">0</span>+</div>
+      <p>عميل يثقون بخدماتنا</p>
+    </div>
+    <div class="stat-line"></div>
+    <div class="stat">
+      <div class="stat-num"><span class="count" data-target="10">0</span>+</div>
+      <p>سنوات خبرة في المجال الرقمي</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ MARQUEE ══════════════════ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>AI</span><em>•</em><span>AUTOMATION</span><em>•</em>
+    <span>DIGITAL SYSTEMS</span><em>•</em><span>SMART BUSINESS</span><em>•</em>
+    <span>AI</span><em>•</em><span>AUTOMATION</span><em>•</em>
+    <span>DIGITAL SYSTEMS</span><em>•</em><span>SMART BUSINESS</span><em>•</em>
+  </div>
+</div>
+
+<!-- ══════════════════ CTA ══════════════════ -->
+<section id="cta" class="cta-section">
+  <div class="cta-glow"></div>
+  <div class="cta-box">
+    <p class="section-tag">ابدأ اليوم</p>
+    <h2>ابدأ مشروعك الذكي الآن</h2>
+    <p>نساعدك على بناء نظام رقمي متكامل<br>يعمل تلقائياً ويطوّر عملك باستخدام الذكاء الاصطناعي</p>
+    <div class="cta-btns">
+      <button class="btn btn-accent" id="open-chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        تحدث معنا الآن
+      </button>
+      <a href="https://wa.me/9647706688044" target="_blank" class="btn btn-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+        واتساب
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CONTACT ══════════════════ -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <p class="section-tag">تواصل معنا</p>
+      <h2>نحن هنا لمساعدتك</h2>
+      <p class="contact-sub">فريقنا متاح للرد على استفساراتك وتقديم أفضل الحلول الرقمية</p>
+
+      <div class="contact-cards">
+        <a href="https://wa.me/9647706688044" target="_blank" class="contact-card">
+          <span class="cc-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+          </span>
+          <div>
+            <strong>واتساب</strong>
+            <span>07706688044 | 07806688044</span>
+          </div>
+        </a>
+        <a href="mailto:info@shammari-electronics.com" class="contact-card">
+          <span class="cc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <div>
+            <strong>البريد الإلكتروني</strong>
+            <span>info@shammari-electronics.com</span>
+          </div>
+        </a>
+        <div class="contact-card no-link">
+          <span class="cc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div>
+            <strong>العنوان</strong>
+            <span>العراق، بغداد، المنصور</span>
+          </div>
+        </div>
+        <div class="contact-card no-link contact-ceo">
+          <span class="cc-icon cc-icon--accent">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          <div>
+            <strong>المدير العام</strong>
+            <span class="ceo-name-card">سعد الشمري</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="handleContactForm(event)">
+      <h3>أرسل رسالة</h3>
+      <div class="form-group">
+        <label>الاسم الكامل</label>
+        <input type="text" placeholder="اكتب اسمك..." required>
+      </div>
+      <div class="form-group">
+        <label>رقم الهاتف</label>
+        <input type="tel" placeholder="07xxxxxxxxx" required>
+      </div>
+      <div class="form-group">
+        <label>نوع الخدمة المطلوبة</label>
+        <select>
+          <option value="">اختر الخدمة...</option>
+          <option>تصميم موقع</option>
+          <option>تطوير نظام</option>
+          <option>أتمتة بالـ AI</option>
+          <option>دعم وصيانة</option>
+          <option>أنظمة مطاعم / فنادق</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>رسالتك</label>
+        <textarea rows="4" placeholder="اكتب تفاصيل مشروعك..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-accent" style="width:100%;justify-content:center;">
+        إرسال عبر واتساب
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <p id="form-success" style="display:none;color:#00ffd1;text-align:center;margin-top:.8rem;font-weight:600;">تم إرسال رسالتك! سنتواصل معك قريباً ✅</p>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">شركة بغداد المستقبل <span>AI</span></div>
+      <p>حلول رقمية ذكية مدعومة بالذكاء الاصطناعي</p>
+      <div class="footer-ceo">
+        <span class="footer-ceo-label">المدير العام</span>
+        <span class="footer-ceo-name">سعد الشمري</span>
+      </div>
+      <div class="socials">
+        <a href="https://www.facebook.com/share/18SPZ7mb6d/" target="_blank" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/cptsaad" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/saad-bobo-048b023a8" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>الخدمات</h4>
+      <ul>
+        <li>تصميم مواقع ذكية</li>
+        <li>تطوير أنظمة متكاملة</li>
+        <li>أتمتة الأعمال بالـ AI</li>
+        <li>دعم وصيانة</li>
+        <li>أنظمة المطاعم والفنادق</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>تواصل معنا</h4>
+      <ul>
+        <li><a href="mailto:info@shammari-electronics.com">info@shammari-electronics.com</a></li>
+        <li><a href="mailto:cptstaf2017@gmail.com">cptstaf2017@gmail.com</a></li>
+        <li><a href="https://wa.me/9647706688044">07706688044</a></li>
+        <li><a href="https://wa.me/9647806688044">07806688044</a></li>
+        <li>العراق، بغداد، المنصور</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 شركة بغداد المستقبل AI — جميع الحقوق محفوظة</div>
+</footer>
+
+</main>
+
+<!-- ══════════════════ CHAT BOT ══════════════════ -->
+<div class="chatbot" id="chatbot">
+  <button class="chat-fab" id="chat-fab" aria-label="فتح المحادثة">
+    <svg class="fab-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg class="fab-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    <span class="fab-dot" id="fab-dot"></span>
+  </button>
+
+  <div class="chat-win" id="chat-win">
+    <div class="chat-head">
+      <div class="chat-av">AI</div>
+      <div class="chat-info">
+        <strong>شركة بغداد المستقبل AI</strong>
+        <span><span class="online-dot"></span>متاح الآن</span>
+      </div>
+      <button class="chat-x" id="chat-x">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="chat-msgs" id="chat-msgs"></div>
+    <div class="chat-quick" id="chat-quick">
+      <button data-q="ما هي خدماتكم؟">الخدمات</button>
+      <button data-q="كم الأسعار؟">الأسعار</button>
+      <button data-q="كيف أتواصل معكم؟">تواصل</button>
+      <button data-q="كم مدة التنفيذ؟">المدة</button>
+    </div>
+    <div class="chat-row">
+      <input id="chat-input" type="text" placeholder="اكتب رسالتك…" autocomplete="off">
+      <button id="chat-send">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
