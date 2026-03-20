@@ -984,6 +984,74 @@ a { text-decoration: none; color: inherit; }
 #chat-send:hover { transform: scale(1.08); box-shadow: 0 4px 16px rgba(0,255,209,0.35); }
 #chat-send svg { width: 14px; height: 14px; color: #0A0A0B; }
 
+/* ══════════════════ TESTIMONIALS ══════════════════ */
+.testimonials-section {
+  background: rgba(10,10,14,0.88);
+  padding: var(--s12) 0;
+  position: relative; z-index: 1;
+}
+.testimonials-section .section-label {
+  text-align: center;
+  font-size: 12px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: var(--s2);
+}
+.testimonials-section .section-title {
+  text-align: center;
+  font-size: var(--text-3xl); font-weight: 700; color: var(--white);
+  margin-bottom: var(--s2);
+}
+.testimonials-section .section-sub {
+  text-align: center;
+  color: var(--muted); font-size: var(--text-base);
+  margin-bottom: var(--s8);
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s4);
+}
+.review-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--s5);
+  display: flex; flex-direction: column; gap: var(--s3);
+  transition: border-color 0.25s, transform 0.25s;
+}
+.review-card:hover {
+  border-color: rgba(0,255,209,0.35);
+  transform: translateY(-4px);
+}
+.review-stars { color: #FBBF24; font-size: 18px; letter-spacing: 2px; }
+.review-text {
+  color: var(--white); font-size: var(--text-sm);
+  line-height: 1.75; flex: 1;
+  opacity: 0.9;
+}
+.review-author {
+  display: flex; align-items: center; gap: var(--s2);
+  padding-top: var(--s3);
+  border-top: 1px solid var(--border);
+}
+.review-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(0,255,209,0.12);
+  border: 1px solid rgba(0,255,209,0.3);
+  color: var(--accent); font-size: 14px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.review-author span { color: var(--muted); font-size: var(--text-sm); font-weight: 500; }
+
+@media (max-width: 860px) {
+  .reviews-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+}
+@media (max-width: 600px) {
+  .reviews-grid { max-width: 100%; }
+  .testimonials-section .section-title { font-size: var(--text-2xl); }
+}
+
 /* ══════════════════ RESPONSIVE ══════════════════ */
 @media (max-width: 1024px) {
   .contact-inner { gap: var(--s8); }
