@@ -225,7 +225,7 @@ const KB = [
 <a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1">07706688044</a> &nbsp;|&nbsp;
 <a href="https://wa.me/9647806688044" target="_blank" style="color:#00ffd1">07806688044</a><br><br>
 <b>البريد:</b><br>
-<a href="mailto:info@shammari-electronics.com" style="color:#00ffd1">info@shammari-electronics.com</a><br>
+<a href="mailto:cptstaf2017@gmail.com" style="color:#00ffd1">cptstaf2017@gmail.com</a><br>
 📍 العراق، بغداد، المنصور`
     },
     {
