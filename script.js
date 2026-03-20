@@ -286,10 +286,16 @@ function openChatWithPrice() {
 function ts() { return new Date().toLocaleTimeString('ar-IQ', { hour: '2-digit', minute: '2-digit' }); }
 function scrollEnd() { setTimeout(() => { msgsEl.scrollTop = msgsEl.scrollHeight; }, 60); }
 
+function escapeHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
 function addMsg(html, type) {
     const el = document.createElement('div');
     el.className = `msg ${type}`;
-    el.innerHTML = `<div class="bubble">${html.replace(/\n/g, '<br>')}</div><span class="ts">${ts()}</span>`;
+    // Bot messages are trusted HTML; user messages are escaped
+    const content = type === 'user' ? escapeHtml(html).replace(/\n/g, '<br>') : html;
+    el.innerHTML = `<div class="bubble">${content}</div><span class="ts">${ts()}</span>`;
     msgsEl.appendChild(el);
     scrollEnd();
 }

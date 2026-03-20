@@ -1014,7 +1014,16 @@ a { text-decoration: none; color: inherit; }
   .stat-line { width: 48px; height: 1px; align-self: center; }
   .cta-btns { flex-direction: column; align-items: stretch; }
   .cta-btns .btn { justify-content: center; }
-  .chatbot { right: var(--s2); bottom: var(--s2); }
-  .chat-win { width: calc(100vw - var(--s4)); right: 0; }
+  .chatbot { right: var(--s2); bottom: var(--s2); left: var(--s2); }
+  .chat-fab-wrap { align-items: flex-end; }
+  .chat-win {
+    width: calc(100vw - 32px);
+    right: 0; left: 0;
+    max-height: 75vh;
+    bottom: 72px;
+  }
+  .chat-msgs { min-height: 200px; max-height: calc(75vh - 180px); }
+  .bubble { font-size: 13px; word-break: break-word; overflow-wrap: anywhere; }
+  .msg { max-width: 92%; }
   .acc-body-inner { padding-right: 0; }
 }
