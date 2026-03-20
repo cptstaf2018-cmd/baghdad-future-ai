@@ -232,7 +232,7 @@ const KB = [
 <a href="https://wa.me/9647806688044" target="_blank" style="color:#00ffd1">07806688044</a><br><br>
 <b>البريد:</b><br>
 <a href="mailto:cptstaf2017@gmail.com" style="color:#00ffd1">cptstaf2017@gmail.com</a><br>
-📍 العراق، بغداد، المنصور`
+📍 العراق، أربيل، شارع 100`
     },
     {
         keys: ['مدة','وقت','يستغرق','تنفيذ','متى','سرعة'],
