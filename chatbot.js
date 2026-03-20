@@ -16,31 +16,31 @@ const KB = [
         reply: `<b>💼 باقاتنا الاحترافية</b><br><br>
 <div style="display:flex;flex-direction:column;gap:8px">
 <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🟢 <b>Basic</b><br>
+  🟢 <b>Basic — الأساسية</b><br>
   💰 400,000 – 600,000 د.ع<br>
   ⏱ 1 – 3 أيام<br>
   📌 موقع تعريفي + واتساب + 3 صفحات
 </div>
 <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🟡 <b>Standard</b><br>
+  🟡 <b>Standard — المتوسطة</b><br>
   💰 900,000 – 1,400,000 د.ع<br>
   ⏱ 3 – 5 أيام<br>
   📌 لوحة تحكم + نموذج طلبات
 </div>
 <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🔵 <b>E-Commerce</b><br>
+  🔵 <b>E-Commerce — التجارة الإلكترونية</b><br>
   💰 2,000,000 – 3,500,000 د.ع<br>
   ⏱ 5 – 7 أيام<br>
   📌 متجر كامل + إدارة منتجات
 </div>
 <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🟣 <b>Smart AI</b><br>
+  🟣 <b>Smart AI — الذكاء الاصطناعي</b><br>
   💰 4,000,000 – 5,500,000 د.ع<br>
   ⏱ 7 – 10 أيام<br>
   📌 كل شيء + مجيب آلي + إشعارات
 </div>
 <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🔴 <b>Enterprise</b><br>
+  🔴 <b>Enterprise — للشركات الكبيرة</b><br>
   💰 من 6,500,000 د.ع<br>
   ⏱ 10 – 20 يوم<br>
   📌 نظام كامل للشركات + AI متقدم
