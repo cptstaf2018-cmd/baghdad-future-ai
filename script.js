@@ -256,6 +256,11 @@ closeX?.addEventListener('click',  closeChat);
 // CTA button opens chat
 document.getElementById('open-chat')?.addEventListener('click', openChat);
 
+function openChatWithPrice() {
+    openChat();
+    setTimeout(() => send('أسعار'), 400);
+}
+
 function ts() { return new Date().toLocaleTimeString('ar-IQ', { hour: '2-digit', minute: '2-digit' }); }
 function scrollEnd() { setTimeout(() => { msgsEl.scrollTop = msgsEl.scrollHeight; }, 60); }
 
