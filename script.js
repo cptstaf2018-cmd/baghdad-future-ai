@@ -146,6 +146,12 @@ gsap.from('.stat', {
     scrollTrigger: { trigger: '.stats-section', start: 'top 82%' }
 });
 
+/* ── Portfolio entrance ──────────────────────────────── */
+gsap.from('.portfolio-card', {
+    y: 50, opacity: 0, stagger: .15, duration: .7, ease: 'power2.out',
+    scrollTrigger: { trigger: '.portfolio-grid', start: 'top 82%' }
+});
+
 /* ── Testimonials entrance ───────────────────────────── */
 gsap.from('.review-card', {
     y: 40, opacity: 0, stagger: .15, duration: .7, ease: 'power2.out',
