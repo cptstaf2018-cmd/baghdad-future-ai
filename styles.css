@@ -13,16 +13,16 @@ input,textarea,select{font-family:inherit;font-size:inherit}
 
 /* ── TOKENS ── */
 :root{
-  --bg:      #0B0B0F;
-  --bg2:     #0F0F14;
-  --bg3:     #141419;
-  --surface: #1A1A22;
-  --border:  rgba(255,255,255,0.08);
+  --bg:      #070C18;
+  --bg2:     #0C1220;
+  --bg3:     #121B2E;
+  --surface: #192338;
+  --border:  rgba(100,140,220,0.13);
   --accent:  #00FFD1;
   --accent2: #00C4A2;
-  --white:   #EEEEF3;
-  --muted:   #7B7B8E;
-  --green:   #4ADE80;
+  --white:   #EEF2FF;
+  --muted:   #7A8BAD;
+  --green:   #34D399;
   --r:       12px;
   --r-lg:    20px;
   --r-xl:    28px;
@@ -34,7 +34,7 @@ input,textarea,select{font-family:inherit;font-size:inherit}
 /* ── BASE ── */
 html{scroll-behavior:smooth;background:var(--bg)}
 body{
-  font-family:'Readex Pro',system-ui,sans-serif;
+  font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;
   background:var(--bg);color:var(--white);
   direction:rtl;line-height:1.7;
   -webkit-font-smoothing:antialiased;
@@ -327,6 +327,10 @@ p{color:rgba(238,238,243,0.75)}
   transition:opacity .25s,transform .25s;
 }
 .pf-card:hover .pf-visit{opacity:1;transform:translateX(0)}
+.pf-coming{
+  opacity:1 !important;transform:none !important;
+  color:var(--muted);font-size:12px;font-weight:600;margin-top:6px;
+}
 
 /* ══════════════════ TESTIMONIALS ══════════════════ */
 .testimonials-section{background:var(--bg2)}
