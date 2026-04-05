@@ -1,365 +1,310 @@
-/* ══════════════════════════════════════════════════════
-   بغداد المستقبل للذكاء الاصطناعي AI — script.js
-   ══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════
+   BAGHDAD FUTURE AI — script.js v3
+   No GSAP · No Canvas · Lightweight
+══════════════════════════════════════ */
 
-gsap.registerPlugin(ScrollTrigger);
+'use strict';
 
-/* ── Lenis smooth scroll ────────────────────────────── */
-const lenis = new Lenis({ lerp: 0.10, smoothWheel: true, syncTouch: false, wheelMultiplier: 0.85 });
-lenis.on('scroll', ScrollTrigger.update);
-gsap.ticker.add(t => lenis.raf(t * 1000));
-gsap.ticker.lagSmoothing(0);
+/* ── NAVBAR ── */
+const navbar   = document.getElementById('navbar');
+const hamburger= document.getElementById('hamburger');
+const mobileMenu=document.getElementById('mobile-menu');
 
-/* ── Navbar: scroll-aware + hamburger ──────────────── */
-const navbar    = document.getElementById('navbar');
-const hamburger = document.getElementById('hamburger');
-const navMobile = document.getElementById('nav-mobile');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
 
+// Close mobile menu on link click
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
+
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
-    // navbar always has blur — just deepen border on scroll
+  navbar.style.background = window.scrollY > 40
+    ? 'rgba(11,11,15,0.97)'
+    : 'rgba(11,11,15,0.85)';
 }, { passive: true });
 
-hamburger?.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMobile.classList.toggle('open');
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-        const el = document.querySelector(a.getAttribute('href'));
-        if (!el) return;
-        e.preventDefault();
-        lenis.scrollTo(el, { offset: -70, duration: 1.4 });
-        hamburger?.classList.remove('active');
-        navMobile?.classList.remove('open');
-    });
-});
-
-/* ── Canvas / Video Frames ─────────────────────────── */
-const canvas = document.getElementById('video-canvas');
-const ctx    = canvas.getContext('2d', { alpha: false, willReadFrequently: false });
-
-function resizeCanvas() {
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', () => { resizeCanvas(); render(); }, { passive: true });
-
-const TOTAL  = 360;
-const src    = i => `./frames/frame_${String(i + 1).padStart(4, '0')}.webp`;
-const frames = new Array(TOTAL);
-const state  = { f: 0 };
-
-/* Three-phase load: first 6 → next 30 → rest in batches */
-(async () => {
-    const load = i => new Promise(res => {
-        const img = new Image();
-        img.decoding = 'async';
-        img.onload = img.onerror = () => res(img);
-        img.src = src(i);
-        frames[i] = img;
-    });
-
-    // Phase 1: first 6 frames — show instantly
-    await Promise.all(Array.from({ length: 6 }, (_, i) => load(i)));
-    render();
-
-    // Phase 2: next 24 — ready before user starts scrolling
-    await Promise.all(Array.from({ length: 24 }, (_, i) => load(i + 6)));
-
-    // Phase 3: rest in small batches — no jank
-    const BATCH = 10;
-    for (let i = 30; i < TOTAL; i += BATCH) {
-        const end = Math.min(i + BATCH, TOTAL);
-        await Promise.all(Array.from({ length: end - i }, (_, k) => load(i + k)));
+/* ── REVEAL ON SCROLL ── */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      // Stagger siblings
+      const siblings = e.target.parentElement.querySelectorAll('.reveal');
+      let delay = 0;
+      siblings.forEach((s, idx) => { if (s === e.target) delay = idx * 80; });
+      setTimeout(() => e.target.classList.add('visible'), delay);
+      revealObserver.unobserve(e.target);
     }
-})();
+  });
+}, { threshold: 0.12 });
 
-/* Scroll-driven frame sequencing — full page via Lenis */
-lenis.on('scroll', ({ scroll, limit }) => {
-    const progress = scroll / limit;
-    state.f = progress * (TOTAL - 1);
-    render();
-});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* rAF-throttled render — skips duplicate frames, never blocks paint */
-let lastFrame = -1;
-let rafId = null;
-function render() {
-    if (rafId) return;
-    rafId = requestAnimationFrame(() => {
-        rafId = null;
-        const idx = Math.round(state.f);
-        if (idx === lastFrame) return;
-        lastFrame = idx;
-        const img = frames[idx];
-        if (!img?.complete || !img.naturalWidth) return;
-        /* Cover-fit: fill entire canvas */
-        const cw = canvas.width, ch = canvas.height;
-        const iw = img.naturalWidth, ih = img.naturalHeight;
-        const scale = Math.max(cw / iw, ch / ih);
-        const dw = iw * scale, dh = ih * scale;
-        ctx.drawImage(img, (cw - dw) / 2, (ch - dh) / 2, dw, dh);
-    });
+/* ── STATS COUNTER ── */
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const duration = 1600;
+  const start = performance.now();
+  const update = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(ease * target);
+    if (progress < 1) requestAnimationFrame(update);
+    else el.textContent = target;
+  };
+  requestAnimationFrame(update);
 }
 
-/* ── Service card animations ────────────────────────── */
-document.querySelectorAll('.service-block').forEach(block => {
-    const anim  = block.dataset.anim;
-    const isR   = block.classList.contains('right');
-    const from  = { opacity: 0 };
-    if (anim === 'fade-up')  from.y = 60;
-    if (anim === 'slide-in') from.x = isR ? -70 : 70;
-    if (anim === 'scale-up') from.scale = .82;
-
-    gsap.timeline({
-        scrollTrigger: { trigger: block, start: 'top 78%', end: 'top 18%', scrub: true }
-    }).fromTo(block, from, { x: 0, y: 0, scale: 1, opacity: 1 });
-});
-
-/* ── Stats counters ─────────────────────────────────── */
-document.querySelectorAll('.count').forEach(el => {
-    const target = +el.dataset.target;
-    ScrollTrigger.create({
-        trigger: el, start: 'top 88%', once: true,
-        onEnter: () => gsap.to({ v: 0 }, {
-            v: target, duration: 2, ease: 'power2.out',
-            onUpdate() { el.textContent = Math.round(this.targets()[0].v); }
-        })
-    });
-});
-
-/* ── Services accordion entrance ───────────────────────── */
-gsap.from('.acc-header', {
-    y: 30, opacity: 0, duration: .8,
-    scrollTrigger: { trigger: '.acc-section', start: 'top 82%' }
-});
-gsap.to('.acc-item', {
-    y: 0, opacity: 1, stagger: .1, duration: .6,
-    ease: 'power3.out',
-    scrollTrigger: { trigger: '.acc-list', start: 'top 85%' }
-});
-
-gsap.from('.stat', {
-    y: 40, opacity: 0, stagger: .18, duration: .8,
-    scrollTrigger: { trigger: '.stats-section', start: 'top 82%' }
-});
-
-/* ── Portfolio entrance ──────────────────────────────── */
-gsap.from('.portfolio-card', {
-    y: 50, opacity: 0, stagger: .15, duration: .7, ease: 'power2.out',
-    scrollTrigger: { trigger: '.portfolio-grid', start: 'top 82%' }
-});
-
-/* ── Testimonials entrance ───────────────────────────── */
-gsap.from('.review-card', {
-    y: 40, opacity: 0, stagger: .15, duration: .7, ease: 'power2.out',
-    scrollTrigger: { trigger: '.reviews-grid', start: 'top 82%' }
-});
-
-/* ── CTA entrance ────────────────────────────────────── */
-gsap.from('.cta-box > *', {
-    y: 35, opacity: 0, stagger: .12, duration: .8,
-    scrollTrigger: { trigger: '.cta-section', start: 'top 80%' }
-});
-
-/* ── Footer entrance ────────────────────────────────── */
-gsap.from('.footer-grid > *', {
-    y: 30, opacity: 0, stagger: .14, duration: .7,
-    scrollTrigger: { trigger: '.footer', start: 'top 88%' }
-});
-
-/* ── Hero entrance ──────────────────────────────────── */
-gsap.timeline({ delay: .1 })
-    .from('.hero-badge',     { y: 10, opacity: 0, duration: .4, ease: 'power2.out', clearProps: 'all' })
-    .from('.hero-h1',        { y: 30, opacity: 0, duration: .55, ease: 'power2.out', clearProps: 'all' }, '-=.15')
-    .from('.hero-h2',        { y: 16, opacity: 0, duration: .45, ease: 'power2.out', clearProps: 'all' }, '-=.25')
-    .from('.hero-desc',      { y: 12, opacity: 0, duration: .4,  ease: 'power2.out', clearProps: 'all' }, '-=.2')
-    .from('.hero-btns .btn', { y: 12, opacity: 0, stagger: .07, duration: .38, ease: 'power2.out', clearProps: 'all' }, '-=.15')
-    .from('.hero-stats',     { opacity: 0, duration: .3, clearProps: 'all' }, '-=.1');
-
-/* ══════════════════════════════════════════════════════
-   CHAT BOT
-   ══════════════════════════════════════════════════════ */
-const KB = [
-    {
-        keys: ['خدمات','تقدم','تعملون','ماذا','تصنع'],
-        reply: `نقدم خمس خدمات متكاملة:<br><br>
-🌐 <b>تصميم مواقع ذكية</b> — مواقع احترافية عالية التحويل<br>
-⚙️ <b>تطوير أنظمة متكاملة</b> — حلول مخصصة لإدارة الأعمال<br>
-🤖 <b>أتمتة الأعمال بالـ AI</b> — شات بوت وتحليل بيانات<br>
-🛠️ <b>دعم وصيانة مستمر</b> — متابعة على مدار الساعة<br>
-🏨 <b>أنظمة المطاعم والفنادق والبنوك</b>`
-    },
-    {
-        keys: ['سعر','أسعار','تكلفة','كم','ميزانية','غالي','رخيص','باقة','باقات'],
-        reply: `<b>💼 باقاتنا الاحترافية</b><br><br>
-<div style="display:flex;flex-direction:column;gap:8px">
-<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🟢 <b>Basic — الأساسية</b><br>
-  💰 400,000 – 600,000 د.ع<br>
-  ⏱ 1 – 3 أيام<br>
-  📌 موقع تعريفي + واتساب + 3 صفحات
-</div>
-<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🟡 <b>Standard — المتوسطة</b><br>
-  💰 900,000 – 1,400,000 د.ع<br>
-  ⏱ 3 – 5 أيام<br>
-  📌 لوحة تحكم + نموذج طلبات
-</div>
-<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🔵 <b>E-Commerce — التجارة الإلكترونية</b><br>
-  💰 2,000,000 – 3,500,000 د.ع<br>
-  ⏱ 5 – 7 أيام<br>
-  📌 متجر كامل + إدارة منتجات
-</div>
-<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🟣 <b>Smart AI — الذكاء الاصطناعي</b><br>
-  💰 4,000,000 – 5,500,000 د.ع<br>
-  ⏱ 7 – 10 أيام<br>
-  📌 كل شيء + مجيب آلي + إشعارات
-</div>
-<div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:10px 12px">
-  🔴 <b>Enterprise — للشركات الكبيرة</b><br>
-  💰 من 6,500,000 د.ع<br>
-  ⏱ 10 – 20 يوم<br>
-  📌 نظام كامل للشركات + AI متقدم
-</div>
-</div><br>
-✅ نضمن التسليم في الوقت المحدد!<br><br>
-📲 <a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1">تواصل معنا: 07706688044</a>`
-    },
-    {
-        keys: ['تواصل','اتصال','هاتف','واتساب','ايميل','بريد','contact'],
-        reply: `تقدر تتواصل معنا مباشرة عبر الواتساب أو من خلال هذا الشات 📞<br><br>
-<b>واتساب:</b><br>
-<a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1">07706688044</a> &nbsp;|&nbsp;
-<a href="https://wa.me/9647806688044" target="_blank" style="color:#00ffd1">07806688044</a><br><br>
-<b>البريد:</b><br>
-<a href="mailto:cptstaf2017@gmail.com" style="color:#00ffd1">cptstaf2017@gmail.com</a><br>
-📍 العراق، أربيل، شارع 100`
-    },
-    {
-        keys: ['مدة','وقت','يستغرق','تنفيذ','متى','سرعة'],
-        reply: `مدة التنفيذ حسب نوع المشروع:<br><br>
-⚡ صفحة هبوط: <b>3–5 أيام</b><br>
-🌐 موقع متكامل: <b>2–4 أسابيع</b><br>
-⚙️ نظام إداري: <b>4–8 أسابيع</b><br>
-🤖 حل AI مخصص: حسب التعقيد<br><br>
-نلتزم دائماً بالمواعيد المتفق عليها ✅`
-    },
-    {
-        keys: ['مشاريع','أعمال','خبرة','portfolio','نماذج'],
-        reply: `أنجزنا أكثر من <b>+150 مشروع</b> لـ<b>+300 عميل</b> خلال <b>10+ سنوات</b> خبرة. 🏆<br><br>
-للاطلاع على نماذج أعمالنا:<br>
-<a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1">تواصل معنا ←</a>`
-    },
-    {
-        keys: ['مرحبا','هلا','اهلا','السلام','صباح','مساء','hi','hello'],
-        reply: `أهلاً وسهلاً! 👋<br>مرحباً بك في <b>شركة بغداد المستقبل AI</b>.<br>كيف يمكنني مساعدتك اليوم؟`
-    },
-    {
-        keys: ['شكر','ممتاز','رائع','احسنت','جيد'],
-        reply: `شكراً لك على كلماتك الطيبة! 🙏<br>نسعى دائماً لتقديم أفضل خدمة.`
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCounter(e.target);
+      counterObserver.unobserve(e.target);
     }
-];
+  });
+}, { threshold: 0.5 });
 
-const FALLBACK = [
-    `يسعدنا مساعدتك! للإجابة الدقيقة تواصل مع فريقنا مباشرة:<br><a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1">واتساب: 07706688044</a>`,
-    `سؤال رائع! فريقنا متاح للإجابة:<br><a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1">ابدأ المحادثة ←</a>`
-];
+document.querySelectorAll('.cnt').forEach(el => counterObserver.observe(el));
 
+/* ── ORDER FORM → WHATSAPP ── */
+document.getElementById('order-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name    = document.getElementById('f-name').value.trim();
+  const phone   = document.getElementById('f-phone').value.trim();
+  const service = document.getElementById('f-service').value;
+  const desc    = document.getElementById('f-desc').value.trim();
+
+  if (!name || !phone || !desc) {
+    alert('يرجى تعبئة جميع الحقول المطلوبة');
+    return;
+  }
+
+  const msg = `مرحباً، أريد طلب مشروع 👋\n\n` +
+    `👤 الاسم: ${name}\n` +
+    `📱 الهاتف: ${phone}\n` +
+    `🛠️ الخدمة: ${service || 'غير محدد'}\n` +
+    `📝 التفاصيل: ${desc}`;
+
+  window.open(`https://wa.me/9647706688044?text=${encodeURIComponent(msg)}`, '_blank');
+});
+
+/* ══════════════════════════════════════
+   CHATBOT
+══════════════════════════════════════ */
 const chatbot  = document.getElementById('chatbot');
-const fabBtn   = document.getElementById('chat-fab');
-const fabDot   = document.getElementById('fab-dot');
-const closeX   = document.getElementById('chat-x');
+const fab      = document.getElementById('chat-fab');
+const chatWin  = document.getElementById('chat-win');
+const chatX    = document.getElementById('chat-x');
 const msgsEl   = document.getElementById('chat-msgs');
 const inputEl  = document.getElementById('chat-input');
 const sendBtn  = document.getElementById('chat-send');
+const chatLabel= document.getElementById('chat-label');
 const quickEl  = document.getElementById('chat-quick');
 
-let open = false;
+let chatOpen = false;
+let welcomed = false;
 
-function openChat()  { open = true;  chatbot.classList.add('open');    fabDot?.classList.add('hide'); inputEl?.focus(); scrollEnd(); }
-function closeChat() { open = false; chatbot.classList.remove('open'); }
-
-fabBtn?.addEventListener('click',  () => open ? closeChat() : openChat());
-closeX?.addEventListener('click',  closeChat);
-
-// CTA button opens chat
-document.getElementById('open-chat')?.addEventListener('click', openChat);
-
-function openChatWithPrice() {
-    openChat();
-    setTimeout(() => send('أسعار'), 400);
+function now() {
+  return new Date().toLocaleTimeString('ar-IQ', { hour: '2-digit', minute: '2-digit' });
 }
 
-function ts() { return new Date().toLocaleTimeString('ar-IQ', { hour: '2-digit', minute: '2-digit' }); }
-function scrollEnd() { setTimeout(() => { msgsEl.scrollTop = msgsEl.scrollHeight; }, 60); }
-
-function escapeHtml(str) {
-    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+function scrollBottom() {
+  msgsEl.scrollTop = msgsEl.scrollHeight;
 }
 
-function addMsg(html, type) {
-    const el = document.createElement('div');
-    el.className = `msg ${type}`;
-    // Bot messages are trusted HTML; user messages are escaped
-    const content = type === 'user' ? escapeHtml(html).replace(/\n/g, '<br>') : html;
-    el.innerHTML = `<div class="bubble">${content}</div><span class="ts">${ts()}</span>`;
-    msgsEl.appendChild(el);
-    scrollEnd();
+function addMsg(text, type) {
+  const div = document.createElement('div');
+  div.className = `msg ${type}`;
+  const sanitized = text
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/\n/g,'<br>');
+  div.innerHTML = `<div class="bubble">${sanitized}</div><span class="msg-time">${now()}</span>`;
+  // Bot messages allow safe HTML (from KB only)
+  if (type === 'bot') div.querySelector('.bubble').innerHTML = text;
+  msgsEl.appendChild(div);
+  scrollBottom();
 }
 
 function showTyping() {
-    const el = document.createElement('div');
-    el.className = 'typing-bbl'; el.id = 'typing';
-    el.innerHTML = '<span></span><span></span><span></span>';
-    const wrapper = document.createElement('div');
-    wrapper.className = 'msg bot'; wrapper.appendChild(el);
-    wrapper.id = 'typing-wrap';
-    msgsEl.appendChild(wrapper); scrollEnd();
+  const t = document.createElement('div');
+  t.className = 'msg bot';
+  t.id = 'typing-indicator';
+  t.innerHTML = `<div class="bubble typing-bbl"><span></span><span></span><span></span></div>`;
+  msgsEl.appendChild(t);
+  scrollBottom();
+  return t;
 }
-function hideTyping() { document.getElementById('typing-wrap')?.remove(); }
 
-function getReply(q) {
-    q = q.toLowerCase().trim();
-    for (const row of KB) {
-        if (row.keys.some(k => q.includes(k))) return row.reply;
-    }
-    return FALLBACK[Math.floor(Math.random() * FALLBACK.length)];
+function removeTyping() {
+  const t = document.getElementById('typing-indicator');
+  if (t) t.remove();
+}
+
+/* ── KNOWLEDGE BASE ── */
+const KB = [
+  {
+    keys: ['مرحبا','هلا','هاي','السلام','اهلا','اهلين','ماكو'],
+    reply: `أهلاً وسهلاً! 👋<br>أنا مساعد شركة <b>بغداد المستقبل AI</b>.<br><br>كيف أقدر أساعدك اليوم؟`
+  },
+  {
+    keys: ['سعر','أسعار','تكلفة','كلفة','كم','ميزانية','باقة','باقات'],
+    reply: `<b>💼 باقاتنا الاحترافية</b><br><br>
+<div style="display:flex;flex-direction:column;gap:7px">
+<div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #4ADE80">
+🟢 <b>Basic — الأساسية</b><br>
+💰 <b>400,000 – 600,000 د.ع</b><br>
+⏱ 1 – 3 أيام &nbsp;|&nbsp; موقع + واتساب + 3 صفحات
+</div>
+<div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #FBBF24">
+🟡 <b>Standard — ستاندرد</b><br>
+💰 <b>900,000 – 1,400,000 د.ع</b><br>
+⏱ 3 – 5 أيام &nbsp;|&nbsp; لوحة تحكم + نموذج طلبات
+</div>
+<div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #60A5FA">
+🔵 <b>E-Commerce — تجارة إلكترونية</b><br>
+💰 <b>2,000,000 – 3,500,000 د.ع</b><br>
+⏱ 5 – 7 أيام &nbsp;|&nbsp; متجر كامل + إدارة منتجات
+</div>
+<div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #A78BFA">
+🟣 <b>Smart AI — ذكاء اصطناعي</b><br>
+💰 <b>4,000,000 – 5,500,000 د.ع</b><br>
+⏱ 7 – 10 أيام &nbsp;|&nbsp; كل شيء + مجيب آلي
+</div>
+<div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #F87171">
+🔴 <b>Enterprise — للشركات</b><br>
+💰 <b>من 6,500,000 د.ع</b><br>
+⏱ 10 – 20 يوم &nbsp;|&nbsp; نظام كامل + AI متقدم
+</div>
+</div><br>
+✅ <i>نضمن التسليم في الوقت المحدد!</i><br><br>
+📲 <a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1;font-weight:600">تواصل معنا: 07706688044</a>`
+  },
+  {
+    keys: ['خدمة','خدمات','تطوير','موقع','مواقع','نظام','اتمتة','ذكاء','ai','تصميم'],
+    reply: `نقدم <b>3 خدمات رئيسية</b>:<br><br>
+🌐 <b>تطوير المواقع</b><br>
+مواقع تعريفية، متاجر، لوحات تحكم<br><br>
+⚙️ <b>أنظمة الأعمال</b><br>
+CRM، نظام طلبات، تقارير ذكية<br><br>
+🤖 <b>أتمتة بالذكاء الاصطناعي</b><br>
+مجيب واتساب، حجوزات، تحليل بيانات<br><br>
+أي خدمة تهمك أكثر؟`
+  },
+  {
+    keys: ['مدة','وقت','كم يوم','متى','تسليم','ينتهي','ينجز'],
+    reply: `<b>⏱ مدة التنفيذ لكل باقة:</b><br><br>
+🟢 Basic: <b>1 – 3 أيام</b><br>
+🟡 Standard: <b>3 – 5 أيام</b><br>
+🔵 E-Commerce: <b>5 – 7 أيام</b><br>
+🟣 Smart AI: <b>7 – 10 أيام</b><br>
+🔴 Enterprise: <b>10 – 20 يوم</b><br><br>
+✅ نضمن التسليم في الوقت المحدد دائماً.`
+  },
+  {
+    keys: ['تواصل','اتصال','هاتف','واتساب','ايميل','بريد','عنوان','موقعكم','فين'],
+    reply: `تقدر تتواصل معنا عبر:<br><br>
+📱 <a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1;font-weight:600">واتساب: 07706688044</a><br>
+📱 <a href="https://wa.me/9647806688044" target="_blank" style="color:#00ffd1">واتساب: 07806688044</a><br>
+✉️ cptstaf2017@gmail.com<br>
+📍 العراق، أربيل، شارع 100<br><br>
+أو استخدم <a href="#order" style="color:#00ffd1" onclick="closeChat()">نموذج الطلب</a> في الموقع.`
+  },
+  {
+    keys: ['انجاز','اعمال','مشاريع','portfolio','اعمالكم','شغلكم'],
+    reply: `<b>🏆 من أبرز أعمالنا:</b><br><br>
+🛍️ <a href="https://mario-zegnoti-milano.vercel.app" target="_blank" style="color:#00ffd1">Mario Zegnoti Milano</a> — موقع أزياء فاخر<br>
+🎙️ <a href="https://voiceiqiraq.duckdns.org/" target="_blank" style="color:#00ffd1">Voice IQ Iraq</a> — نظام صوتي AI<br>
+⚙️ <a href="https://baghdad1.duckdns.org/client" target="_blank" style="color:#00ffd1">Baghdad Client System</a> — إدارة عملاء<br>
+🤖 <a href="https://voxa.srv1213764.hstgr.cloud/" target="_blank" style="color:#00ffd1">Voxa Platform</a> — منصة AI<br><br>
++150 مشروع منجز بنجاح ✅`
+  },
+  {
+    keys: ['شكرا','شكراً','ممتاز','عظيم','رائع','كلش','حلو','وين'],
+    reply: `شكراً لك! 😊<br>يسعدنا خدمتك دائماً.<br><br>
+هل تحتاج مساعدة في شيء آخر؟`
+  }
+];
+
+const fallbacks = [
+  'لم أفهم سؤالك تماماً، هل يمكنك إعادة الصياغة؟ 🤔',
+  'للمساعدة الأسرع تواصل معنا عبر <a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1">واتساب</a> 📲',
+  'أخبرني أكثر كيف أقدر أساعدك؟ 😊'
+];
+let fallbackIdx = 0;
+
+function getReply(text) {
+  const t = text.trim().toLowerCase();
+  for (const item of KB) {
+    if (item.keys.some(k => t.includes(k))) return item.reply;
+  }
+  return fallbacks[fallbackIdx++ % fallbacks.length];
 }
 
 function send(text) {
-    text = (text ?? inputEl.value).trim();
-    if (!text) return;
-    quickEl.style.display = 'none';
-    addMsg(text, 'user');
-    inputEl.value = '';
-    showTyping();
-    setTimeout(() => { hideTyping(); addMsg(getReply(text), 'bot'); }, 750 + Math.random() * 500);
+  const msg = (text || inputEl.value).trim();
+  if (!msg) return;
+  inputEl.value = '';
+
+  addMsg(msg, 'user');
+  quickEl.style.display = 'none';
+
+  const typing = showTyping();
+  const delay = 600 + Math.random() * 600;
+
+  setTimeout(() => {
+    removeTyping();
+    addMsg(getReply(msg), 'bot');
+  }, delay);
 }
 
-sendBtn?.addEventListener('click', () => send());
-inputEl?.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
-quickEl?.querySelectorAll('button').forEach(b => b.addEventListener('click', () => send(b.dataset.q)));
+function sendQuick(text) {
+  inputEl.value = text;
+  send(text);
+}
 
-/* Welcome message after slight delay */
+function openChat() {
+  chatOpen = true;
+  chatbot.classList.add('open');
+  chatWin.setAttribute('aria-hidden', 'false');
+  if (!welcomed) {
+    welcomed = true;
+    setTimeout(() => {
+      addMsg(`أهلاً! 👋 أنا مساعد <b>بغداد المستقبل AI</b>.<br>اختر من الأسئلة السريعة أو اكتب سؤالك مباشرة.`, 'bot');
+    }, 400);
+  }
+  setTimeout(() => inputEl.focus(), 300);
+}
+
+function closeChat() {
+  chatOpen = false;
+  chatbot.classList.remove('open');
+  chatWin.setAttribute('aria-hidden', 'true');
+}
+
+fab.addEventListener('click', () => chatOpen ? closeChat() : openChat());
+chatX.addEventListener('click', closeChat);
+chatLabel.addEventListener('click', openChat);
+sendBtn.addEventListener('click', () => send());
+inputEl.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
+
+/* ── Price button → open chatbot with pricing ── */
+const priceBtn = document.getElementById('price-btn');
+if (priceBtn) {
+  priceBtn.addEventListener('click', () => {
+    openChat();
+    setTimeout(() => sendQuick('ما هي أسعاركم؟'), 800);
+  });
+}
+
+/* ── Auto-show chatbot label after 5s ── */
 setTimeout(() => {
-    addMsg('أهلاً! 👋 أنا مساعد <b>شركة بغداد المستقبل AI</b>.<br>كيف يمكنني مساعدتك اليوم؟', 'bot');
-}, 1000);
-
-/* ── Contact form → WhatsApp ─────────────────────── */
-function handleContactForm(e) {
-    e.preventDefault();
-    const f = e.target;
-    const name    = f.querySelector('input[type=text]').value.trim();
-    const phone   = f.querySelector('input[type=tel]').value.trim();
-    const service = f.querySelector('select').value;
-    const msg     = f.querySelector('textarea').value.trim();
-    const text = `مرحباً، أنا ${name}%0Aرقم الهاتف: ${phone}%0Aالخدمة المطلوبة: ${service || 'غير محدد'}%0Aالرسالة: ${msg}`;
-    window.open(`https://wa.me/9647706688044?text=${text}`, '_blank');
-    document.getElementById('form-success').style.display = 'block';
-    f.reset();
-}
+  if (!chatOpen && chatLabel) {
+    chatLabel.style.animation = 'pulse-label 2s ease infinite';
+  }
+}, 5000);
