@@ -76,18 +76,16 @@ document.querySelectorAll('.cnt').forEach(el => counterObserver.observe(el));
 document.getElementById('order-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const name    = document.getElementById('f-name').value.trim();
-  const phone   = document.getElementById('f-phone').value.trim();
   const service = document.getElementById('f-service').value;
   const desc    = document.getElementById('f-desc').value.trim();
 
-  if (!name || !phone || !desc) {
+  if (!name || !desc) {
     alert('يرجى تعبئة جميع الحقول المطلوبة');
     return;
   }
 
   const msg = `مرحباً، أريد طلب مشروع 👋\n\n` +
     `👤 الاسم: ${name}\n` +
-    `📱 الهاتف: ${phone}\n` +
     `🛠️ الخدمة: ${service || 'غير محدد'}\n` +
     `📝 التفاصيل: ${desc}`;
 
