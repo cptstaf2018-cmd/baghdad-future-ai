@@ -300,9 +300,23 @@ p{color:rgba(238,238,243,0.75)}
   direction:ltr;text-align:left;margin-inline-end:4px;
 }
 .pf-screen{
-  height:180px;display:flex;
+  height:200px;display:flex;
   align-items:center;justify-content:center;overflow:hidden;
+  position:relative;
 }
+.pf-screen-img{padding:0;background:#0a0e1a}
+.pf-screen-img img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+  transition:transform .5s ease;
+}
+.pf-card:hover .pf-screen-img img{transform:scale(1.04)}
+.pf-screen-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to bottom,transparent 50%,rgba(7,12,24,.85) 100%);
+  transition:opacity .3s;
+}
+.pf-card:hover .pf-screen-overlay{opacity:.5}
 .pf-mock{display:flex;flex-direction:column;align-items:center;gap:10px}
 .pf-mock-logo{
   font-size:20px;font-weight:800;color:#fff;
