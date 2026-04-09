@@ -304,8 +304,8 @@ p{color:rgba(238,238,243,0.75)}
 }
 /* Screenshot */
 .pf-screen{
-  height:210px;overflow:hidden;
-  position:relative;background:#070c18;
+  height:230px;overflow:hidden;
+  position:relative;background:#1a1a1a;
   display:flex;align-items:center;justify-content:center;
 }
 .pf-screen-img img{
