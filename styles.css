@@ -11,13 +11,22 @@ ul{list-style:none}
 button{border:none;cursor:pointer;font-family:inherit}
 input,textarea,select{font-family:inherit;font-size:inherit}
 
-/* ── TOKENS — Claude.ai inspired warm dark ── */
+/* ── TOKENS — Claude-inspired warm palette ── */
 :root{
-  --bg:      #0F0E0D;
-  --bg2:     #1A1816;
-  --bg3:     #242220;
-  --surface: #2E2B28;
-  --border:  rgba(255,255,255,0.09);
+  /* Dark sections */
+  --bg:      #1C1917;
+  --bg2:     #252220;
+  --bg3:     #2E2B28;
+  --surface: #3A3632;
+  --border:  rgba(255,200,150,0.12);
+  /* Light sections */
+  --light:   #FAF7F4;
+  --light2:  #F0EBE5;
+  --light3:  #E8E0D8;
+  --lborder: rgba(120,80,40,0.12);
+  --ldark:   #1C1917;
+  --lmuted:  #78716C;
+  /* Brand */
   --accent:  #E8793A;
   --accent2: #CF5F22;
   --white:   #FAFAF9;
@@ -41,7 +50,7 @@ body{
   overflow-x:hidden;
 }
 h1,h2,h3,h4{line-height:1.25;font-weight:700}
-p{color:rgba(238,238,243,0.75)}
+p{color:rgba(250,247,244,0.72)}
 ::selection{background:var(--accent);color:#0B0B0F}
 
 /* ── UTILS ── */
@@ -210,25 +219,29 @@ p{color:rgba(238,238,243,0.75)}
 .h-div{width:1px;height:40px;background:var(--border)}
 
 /* ══════════════════ WHY US ══════════════════ */
-.why-section{background:var(--bg)}
+.why-section{background:var(--light)}
+.why-section .section-label{color:var(--accent);border-color:rgba(232,121,58,.3);background:rgba(232,121,58,.1)}
+.why-section .section-title{color:var(--ldark)}
+.why-section>.container>p{color:var(--lmuted)}
 .why-grid{
   display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);
   margin-top:var(--s5);
 }
 .why-card{
-  background:var(--bg2);border:1px solid var(--border);
+  background:#fff;border:1px solid var(--lborder);
   border-radius:var(--r-lg);padding:var(--s4) var(--s3);
   text-align:center;
+  box-shadow:0 2px 16px rgba(120,80,40,.06);
   transition:border-color .25s,transform .25s,box-shadow .25s;
 }
 .why-card:hover{
-  border-color:rgba(0,255,209,.35);
+  border-color:rgba(232,121,58,.4);
   transform:translateY(-6px);
-  box-shadow:0 20px 48px rgba(0,0,0,.4);
+  box-shadow:0 20px 48px rgba(120,80,40,.14);
 }
 .why-icon{font-size:40px;margin-bottom:var(--s2)}
-.why-card h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--white)}
-.why-card p{font-size:14px;color:var(--muted);line-height:1.7}
+.why-card h3{font-size:18px;font-weight:700;margin-bottom:10px;color:var(--ldark)}
+.why-card p{font-size:14px;color:var(--lmuted);line-height:1.7}
 
 /* ══════════════════ SERVICES ══════════════════ */
 .services-section{background:var(--bg2)}
@@ -267,7 +280,10 @@ p{color:rgba(238,238,243,0.75)}
 .svc-cta{margin-top:4px;align-self:flex-start}
 
 /* ══════════════════ PORTFOLIO ══════════════════ */
-.pf-section{background:var(--bg)}
+.pf-section{background:var(--light)}
+.pf-section .section-label{color:var(--accent);border-color:rgba(232,121,58,.3);background:rgba(232,121,58,.1)}
+.pf-section .section-title{color:var(--ldark)}
+.pf-section .section-sub{color:var(--lmuted)}
 .pf-section .section-title{margin-bottom:6px}
 .pf-grid{
   display:grid;grid-template-columns:repeat(2,1fr);
@@ -275,15 +291,16 @@ p{color:rgba(238,238,243,0.75)}
 }
 .pf-card{
   border-radius:var(--r-lg);overflow:hidden;
-  border:1px solid var(--border);background:var(--bg2);
+  border:1px solid var(--lborder);background:#fff;
   display:flex;flex-direction:column;
+  box-shadow:0 2px 20px rgba(120,80,40,.08);
   transition:border-color .3s,transform .3s,box-shadow .3s;
   cursor:pointer;
 }
 .pf-card:hover{
-  border-color:rgba(0,255,209,.5);
+  border-color:rgba(232,121,58,.5);
   transform:translateY(-10px);
-  box-shadow:0 30px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(0,255,209,.1);
+  box-shadow:0 30px 60px rgba(120,80,40,.18), 0 0 0 1px rgba(232,121,58,.15);
 }
 /* Browser bar */
 .pf-browser{display:flex;flex-direction:column}
@@ -347,15 +364,15 @@ p{color:rgba(238,238,243,0.75)}
 .pf-info{
   padding:14px 18px 18px;
   display:flex;flex-direction:column;gap:5px;
-  border-top:1px solid var(--border);flex:1;
-  background:linear-gradient(to bottom,var(--bg2),var(--bg3));
+  border-top:1px solid var(--lborder);flex:1;
+  background:#fff;
 }
 .pf-tag{
   font-size:10px;font-weight:700;color:var(--accent);
   letter-spacing:.06em;text-transform:uppercase;
 }
-.pf-info strong{font-size:15px;font-weight:700;color:var(--white)}
-.pf-info p{font-size:13px;color:var(--muted);margin:0;line-height:1.5}
+.pf-info strong{font-size:15px;font-weight:700;color:var(--ldark)}
+.pf-info p{font-size:13px;color:var(--lmuted);margin:0;line-height:1.5}
 .pf-visit{
   font-size:12px;font-weight:600;color:var(--accent);
   margin-top:4px;display:inline-flex;align-items:center;
@@ -417,36 +434,42 @@ p{color:rgba(238,238,243,0.75)}
 .cta-inner p{color:rgba(238,238,243,.7);font-size:16px}
 
 /* ══════════════════ ORDER FORM ══════════════════ */
-.order-section{background:var(--bg)}
+.order-section{background:var(--light)}
+.order-section .section-label{color:var(--accent);border-color:rgba(232,121,58,.3);background:rgba(232,121,58,.1)}
+.order-section .section-title{color:var(--ldark)}
+.order-section .section-sub{color:var(--lmuted)}
 .order-form{
   max-width:640px;margin-inline:auto;
-  background:var(--bg2);border:1px solid var(--border);
+  background:#fff;border:1px solid var(--lborder);
   border-radius:var(--r-xl);padding:var(--s5);
   display:flex;flex-direction:column;gap:var(--s3);
+  box-shadow:0 4px 32px rgba(120,80,40,.1);
 }
 .form-group{display:flex;flex-direction:column;gap:8px}
-.form-group label{font-size:13px;font-weight:600;color:rgba(238,238,243,.8)}
+.form-group label{font-size:13px;font-weight:600;color:var(--ldark)}
 .form-group input,
 .form-group textarea,
 .form-group select{
-  background:var(--bg3);border:1px solid var(--border);
+  background:var(--light);border:1.5px solid var(--lborder);
   border-radius:var(--r);padding:12px 16px;
-  color:var(--white);outline:none;
+  color:var(--ldark);outline:none;
   transition:border-color .2s,box-shadow .2s;
 }
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:var(--lmuted)}
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus{
-  border-color:rgba(0,255,209,.5);
-  box-shadow:0 0 0 3px rgba(0,255,209,.08);
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(232,121,58,.1);
 }
-.form-group select option{background:var(--bg3)}
+.form-group select option{background:#fff;color:var(--ldark)}
 .form-group textarea{resize:vertical;min-height:100px}
 
 /* ══════════════════ FOOTER ══════════════════ */
 .footer{
-  background:rgba(6,6,10,.96);
-  border-top:1px solid var(--border);
+  background:#141210;
+  border-top:1px solid rgba(255,200,150,0.1);
   padding-top:var(--s8);
 }
 .footer-grid{
