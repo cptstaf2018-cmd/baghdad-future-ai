@@ -151,7 +151,7 @@ const KB = [
     reply: `أهلاً وسهلاً! 👋<br>أنا مساعد شركة <b>بغداد المستقبل AI</b>.<br><br>كيف أقدر أساعدك اليوم؟`
   },
   {
-    keys: ['سعر','أسعار','تكلفة','كلفة','كم','ميزانية','باقة','باقات'],
+    keys: ['سعر','أسعار','تكلفة','كلفة','بكم','بكام','ميزانية','باقة','باقات','تسعيرة','عروض'],
     reply: `<b>💼 باقاتنا الاحترافية</b><br><br>
 <div style="display:flex;flex-direction:column;gap:7px">
 <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #4ADE80">
@@ -216,10 +216,10 @@ CRM، نظام طلبات، تقارير ذكية<br><br>
   {
     keys: ['انجاز','اعمال','مشاريع','portfolio','اعمالكم','شغلكم'],
     reply: `<b>🏆 من أبرز أعمالنا:</b><br><br>
-🛍️ <a href="https://mario-zegnoti-milano.vercel.app" target="_blank" style="color:#00ffd1">Mario Zegnoti Milano</a> — موقع أزياء فاخر<br>
-🎙️ <a href="https://voiceiqiraq.duckdns.org/" target="_blank" style="color:#00ffd1">Voice IQ Iraq</a> — نظام صوتي AI<br>
-⚙️ <a href="https://baghdad1.duckdns.org/client" target="_blank" style="color:#00ffd1">Baghdad Client System</a> — إدارة عملاء<br>
-🤖 <a href="https://voxa.srv1213764.hstgr.cloud/" target="_blank" style="color:#00ffd1">Voxa Platform</a> — منصة AI<br><br>
+🛍️ <a href="https://zesty-licorice-3717d7.netlify.app/" target="_blank" style="color:#00ffd1">متجر إلكتروني احترافي</a> — متجر مع إدارة منتجات<br>
+🚖 <a href="https://darbonna-taxi.vercel.app/" target="_blank" style="color:#00ffd1">Darbonna Taxi</a> — منصة حجز سيارات ذكية<br>
+🏪 <a href="https://mall-pos-system-fniugb.abacusai.app/" target="_blank" style="color:#00ffd1">Mall POS System</a> — نظام بيع يدير 50 فرع<br>
+⚽ <a href="https://glowing-rugelach-33ae09.netlify.app/" target="_blank" style="color:#00ffd1">نادي اربيل</a> — نموذج موقع رياضي<br><br>
 +150 مشروع منجز بنجاح ✅`
   },
   {
