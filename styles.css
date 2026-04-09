@@ -713,7 +713,7 @@ p{color:rgba(250,247,244,0.72)}
 }
 @media(max-width:700px){
   .hero-video{display:none}
-  .hero{background:radial-gradient(ellipse at 50% 0%,#2a1608 0%,var(--bg) 60%)}
+  .hero{background:radial-gradient(ellipse at 50% 0%,#5c3418 0%,#2e2218 60%)}
   .pf-grid{gap:16px}
   .pf-card{flex-direction:column !important;min-height:auto}
   .pf-card:nth-child(even) .pf-browser{order:unset}
