@@ -284,6 +284,29 @@ p{color:rgba(250,247,244,0.72)}
 .pf-section .section-label{color:var(--accent);border-color:rgba(232,121,58,.3);background:rgba(232,121,58,.1)}
 .pf-section .section-title{color:var(--ldark)}
 .pf-section .section-sub{color:var(--lmuted)}
+/* Group labels */
+.pf-group-label{margin-bottom:var(--s3)}
+.pf-group-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:700;
+  padding:7px 18px;border-radius:30px;
+}
+.pf-group-badge.real{
+  background:rgba(52,211,153,.12);color:#059669;
+  border:1.5px solid rgba(52,211,153,.3);
+}
+.pf-group-badge.demo{
+  background:rgba(99,102,241,.1);color:#6366F1;
+  border:1.5px solid rgba(99,102,241,.25);
+}
+/* Card type badge */
+.pf-badge-type{
+  position:absolute;top:46px;right:12px;
+  font-size:10px;font-weight:700;
+  padding:3px 10px;border-radius:20px;z-index:3;
+}
+.pf-badge-type.real{background:rgba(52,211,153,.15);color:#059669;border:1px solid rgba(52,211,153,.35)}
+.pf-badge-type.demo{background:rgba(99,102,241,.12);color:#6366F1;border:1px solid rgba(99,102,241,.3)}
 .pf-section .section-title{margin-bottom:6px}
 .pf-grid{
   display:grid;grid-template-columns:repeat(2,1fr);
