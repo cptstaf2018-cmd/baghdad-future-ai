@@ -210,7 +210,8 @@ CRM، نظام طلبات، تقارير ذكية<br><br>
 📱 <a href="https://wa.me/9647706688044" target="_blank" style="color:#00ffd1;font-weight:600">واتساب: 07706688044</a><br>
 📱 <a href="https://wa.me/9647806688044" target="_blank" style="color:#00ffd1">واتساب: 07806688044</a><br>
 ✉️ cptstaf2017@gmail.com<br>
-📍 العراق، أربيل، شارع 100<br><br>
+📍 الفرع الأول: أربيل، شارع 100<br>
+📍 الفرع الثاني: بغداد، المنصور، قرب تمثال أبو جعفر المنصور<br><br>
 أو استخدم <a href="#order" style="color:#00ffd1" onclick="closeChat()">نموذج الطلب</a> في الموقع.`
   },
   {
