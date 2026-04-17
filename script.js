@@ -156,27 +156,27 @@ const KB = [
 <div style="display:flex;flex-direction:column;gap:7px">
 <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #4ADE80">
 🟢 <b>Basic — الأساسية</b><br>
-💰 <b>400,000 – 600,000 د.ع</b><br>
+💰 <b>150,000 – 250,000 د.ع</b><br>
 ⏱ 1 – 3 أيام &nbsp;|&nbsp; موقع + واتساب + 3 صفحات
 </div>
 <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #FBBF24">
 🟡 <b>Standard — ستاندرد</b><br>
-💰 <b>900,000 – 1,400,000 د.ع</b><br>
+💰 <b>350,000 – 600,000 د.ع</b><br>
 ⏱ 3 – 5 أيام &nbsp;|&nbsp; لوحة تحكم + نموذج طلبات
 </div>
 <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #60A5FA">
 🔵 <b>E-Commerce — تجارة إلكترونية</b><br>
-💰 <b>2,000,000 – 3,500,000 د.ع</b><br>
+💰 <b>800,000 – 1,500,000 د.ع</b><br>
 ⏱ 5 – 7 أيام &nbsp;|&nbsp; متجر كامل + إدارة منتجات
 </div>
 <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #A78BFA">
 🟣 <b>Smart AI — ذكاء اصطناعي</b><br>
-💰 <b>4,000,000 – 5,500,000 د.ع</b><br>
+💰 <b>1,500,000 – 2,500,000 د.ع</b><br>
 ⏱ 7 – 10 أيام &nbsp;|&nbsp; كل شيء + مجيب آلي
 </div>
 <div style="background:rgba(255,255,255,.06);border-radius:8px;padding:9px 11px;border-right:2px solid #F87171">
 🔴 <b>Enterprise — للشركات</b><br>
-💰 <b>من 6,500,000 د.ع</b><br>
+💰 <b>من 3,000,000 د.ع</b><br>
 ⏱ 10 – 20 يوم &nbsp;|&nbsp; نظام كامل + AI متقدم
 </div>
 </div><br>
