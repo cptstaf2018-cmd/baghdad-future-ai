@@ -773,7 +773,7 @@ p{color:rgba(250,247,244,0.72)}
   .footer-brand{grid-column:1/-1}
 }
 @media(max-width:700px){
-  .hero-video{display:none}
+  .hero-video{display:block;object-fit:cover}
   .hero{
     background:radial-gradient(ellipse at 50% 0%,#3A3A3C 0%,#2C2C2E 60%);
     justify-content:center;
