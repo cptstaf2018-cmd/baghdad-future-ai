@@ -617,8 +617,8 @@ p{color:rgba(240,237,232,0.88)}
   display:flex;align-items:center;gap:12px;
 }
 .ceo-avatar{
-  width:52px;height:52px;border-radius:50%;
-  object-fit:cover;object-position:center top;
+  width:56px;height:56px;border-radius:50%;
+  object-fit:cover;object-position:center 15%;
   border:2px solid var(--accent);
   box-shadow:0 0 12px rgba(200,168,76,.35);
   flex-shrink:0;
