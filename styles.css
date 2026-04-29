@@ -24,13 +24,13 @@ input,textarea,select{font-family:inherit;font-size:inherit}
   --light2:  #28263A;
   --light3:  #242232;
   --lborder: rgba(200,168,76,0.18);
-  --ldark:   #DDD9D0;
-  --lmuted:  #8A8272;
+  --ldark:   #F0EDE8;
+  --lmuted:  #A8A49C;
   /* ذهب باهت دافئ */
   --accent:  #C8A848;
   --accent2: #A88E3C;
-  --white:   #DDD9D0;
-  --muted:   #8A8272;
+  --white:   #F0EDE8;
+  --muted:   #A8A49C;
   --green:   #34D399;
   --r:       12px;
   --r-lg:    20px;
@@ -50,7 +50,7 @@ body{
   overflow-x:hidden;
 }
 h1,h2,h3,h4{line-height:1.25;font-weight:700}
-p{color:rgba(204,202,196,0.72)}
+p{color:rgba(240,237,232,0.88)}
 ::selection{background:var(--accent);color:#1C1C24}
 
 /* ── UTILS ── */
@@ -202,7 +202,7 @@ p{color:rgba(204,202,196,0.72)}
 }
 .hero-sub{
   font-size:clamp(15px,2vw,18px);
-  color:rgba(204,202,196,.8);
+  color:rgba(240,237,232,.92);
   margin-bottom:var(--s4);
   animation:fadeUp .7s .2s ease both;
 }
@@ -237,7 +237,7 @@ p{color:rgba(204,202,196,0.72)}
   grid-template-columns:1fr 1fr;
   gap:80px;
   align-items:center;
-  direction:ltr;
+  direction:rtl;
 }
 
 /* ── Image side (LEFT) ── */
@@ -283,8 +283,8 @@ p{color:rgba(204,202,196,0.72)}
 
 /* ── Text side (LEFT) ── */
 .about-body{
-  direction:ltr;
-  text-align:left;
+  direction:rtl;
+  text-align:right;
 }
 .about-body .section-label{
   color:var(--accent);
@@ -302,12 +302,12 @@ p{color:rgba(204,202,196,0.72)}
   margin:20px 0 28px;
 }
 .about-para{
-  border-left:3px solid rgba(200,168,76,.4);
-  padding-left:14px;
+  border-right:3px solid rgba(200,168,76,.4);
+  padding-right:14px;
   margin-bottom:14px;
 }
 .about-para p{
-  color:rgba(204,202,196,.72);
+  color:rgba(240,237,232,.88);
   font-size:13px;
   line-height:1.7;
   margin:0 0 3px;
@@ -315,7 +315,7 @@ p{color:rgba(204,202,196,0.72)}
 .about-para p:last-child{margin:0}
 .about-pills{
   display:flex;flex-wrap:wrap;gap:10px;
-  justify-content:flex-start;
+  justify-content:flex-end;
   margin-top:28px;
 }
 .about-pill{
@@ -324,7 +324,7 @@ p{color:rgba(204,202,196,0.72)}
   border-radius:30px;
   padding:8px 18px;
   font-size:13px;font-weight:500;
-  color:rgba(204,202,196,.8);
+  color:rgba(240,237,232,.92);
   transition:border-color .2s,background .2s;
 }
 .about-pill:hover{
@@ -390,7 +390,7 @@ p{color:rgba(204,202,196,0.72)}
 .svc-card h3{font-size:19px;font-weight:700;color:var(--white)}
 .svc-card>p{font-size:14px;color:var(--muted);line-height:1.7;flex:1}
 .svc-list{display:flex;flex-direction:column;gap:6px}
-.svc-list li{font-size:13px;color:rgba(204,202,196,.7)}
+.svc-list li{font-size:13px;color:rgba(240,237,232,.90)}
 .svc-cta{margin-top:4px;align-self:flex-start}
 
 /* ══════════════════ PORTFOLIO ══════════════════ */
@@ -514,7 +514,7 @@ p{color:rgba(204,202,196,0.72)}
 .review-top strong{display:block;font-size:14px;font-weight:600;color:var(--white)}
 .review-platform{font-size:11px;color:var(--muted)}
 .stars{color:#FBBF24;font-size:16px;letter-spacing:2px}
-.review-card p{font-size:13px;color:rgba(204,202,196,.75);line-height:1.7;flex:1}
+.review-card p{font-size:13px;color:rgba(240,237,232,.90);line-height:1.7;flex:1}
 
 /* ══════════════════ CTA ══════════════════ */
 .cta-section{
@@ -538,7 +538,7 @@ p{color:rgba(204,202,196,0.72)}
   display:flex;flex-direction:column;align-items:center;gap:var(--s2);
 }
 .cta-inner h2{font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--white)}
-.cta-inner p{color:rgba(204,202,196,.7);font-size:16px}
+.cta-inner p{color:rgba(240,237,232,.90);font-size:16px}
 
 /* ══════════════════ ORDER FORM ══════════════════ */
 .order-section{background:var(--light)}
