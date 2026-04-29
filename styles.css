@@ -13,11 +13,11 @@ input,textarea,select{font-family:inherit;font-size:inherit}
 
 /* ── TOKENS ── */
 :root{
-  --bg:      #0D0A00;
-  --bg2:     #111000;
-  --bg3:     #181200;
-  --surface: rgba(255,255,255,.03);
-  --border:  rgba(200,165,40,.13);
+  --bg:      #1C1600;
+  --bg2:     #211A00;
+  --bg3:     #281F00;
+  --surface: rgba(255,255,255,.04);
+  --border:  rgba(200,165,40,.18);
   --accent:  #C8A030;
   --accent2: #8B6A00;
   --accent-l:#F5C542;
@@ -88,7 +88,7 @@ p{color:var(--muted)}
 .navbar{
   position:fixed;top:0;inset-inline:0;z-index:100;
   height:var(--nav-h);
-  background:rgba(13,10,0,.93);
+  background:rgba(28,22,0,.92);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
   border-bottom:1px solid var(--border);
 }
@@ -124,19 +124,19 @@ p{color:var(--muted)}
 .hero-video{
   position:absolute;inset:0;
   width:100%;height:100%;object-fit:cover;
-  z-index:0;pointer-events:none;opacity:.45;
+  z-index:0;pointer-events:none;opacity:.55;
 }
 .hero-diagonal{
   position:absolute;left:-60px;top:0;
   width:46%;height:100%;
-  background:linear-gradient(135deg,rgba(200,165,40,.09) 0%,rgba(150,80,0,.05) 100%);
+  background:linear-gradient(135deg,rgba(200,165,40,.18) 0%,rgba(150,80,0,.1) 100%);
   clip-path:polygon(0 0,86% 0,100% 100%,0 100%);
   z-index:1;
 }
 .hero-glow{
   position:absolute;right:8%;top:15%;
   width:520px;height:520px;
-  background:radial-gradient(ellipse,rgba(200,160,30,.16) 0%,transparent 65%);
+  background:radial-gradient(ellipse,rgba(200,160,30,.28) 0%,transparent 65%);
   pointer-events:none;z-index:1;
 }
 .hero-watermark{
@@ -392,7 +392,7 @@ p{color:var(--muted)}
 /* ══════════ CTA ══════════ */
 .cta-section{
   position:relative;
-  background:linear-gradient(135deg,#1C1200 0%,#0F0900 50%,#1C1200 100%);
+  background:linear-gradient(135deg,#2A1C00 0%,#1C1200 50%,#2A1C00 100%);
   border-top:2px solid rgba(200,165,40,.2);
   border-bottom:2px solid rgba(200,165,40,.2);
   padding:var(--s10) var(--s4);
@@ -441,7 +441,7 @@ p{color:var(--muted)}
 .form-group textarea{resize:vertical;min-height:100px}
 
 /* ══════════ FOOTER ══════════ */
-.footer{background:#050400;border-top:1px solid rgba(200,165,40,.1);padding-top:var(--s8)}
+.footer{background:#181200;border-top:1px solid rgba(200,165,40,.18);padding-top:var(--s8)}
 .footer-grid{
   max-width:var(--max);margin-inline:auto;
   padding-inline:var(--s4);padding-bottom:var(--s6);
