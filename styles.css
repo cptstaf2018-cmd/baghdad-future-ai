@@ -124,7 +124,7 @@ p{color:var(--muted)}
 .hero-video{
   position:absolute;inset:0;
   width:100%;height:100%;object-fit:cover;
-  z-index:0;pointer-events:none;opacity:.1;
+  z-index:0;pointer-events:none;opacity:.45;
 }
 .hero-diagonal{
   position:absolute;left:-60px;top:0;
