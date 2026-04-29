@@ -616,6 +616,13 @@ p{color:rgba(240,237,232,0.88)}
   border-top:1px solid var(--border);
   display:flex;align-items:center;gap:12px;
 }
+.ceo-avatar{
+  width:52px;height:52px;border-radius:50%;
+  object-fit:cover;object-position:center top;
+  border:2px solid var(--accent);
+  box-shadow:0 0 12px rgba(200,168,76,.35);
+  flex-shrink:0;
+}
 .ceo-label{
   font-size:11px;font-weight:600;color:var(--accent);
   background:rgba(200,168,76,.1);border:1px solid rgba(200,168,76,.2);
