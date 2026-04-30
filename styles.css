@@ -248,11 +248,11 @@ body::before{
 }
 .pf-track{
   display:flex;gap:20px;
-  animation:pfScroll 50s linear infinite;
+  animation:pfScroll 55s linear infinite;
   width:max-content;
 }
 .pf-track:hover{animation-play-state:paused}
-@keyframes pfScroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes pfScroll{0%{transform:translateX(0)}100%{transform:translateX(50%)}}
 
 /* ══════════ ABOUT ══════════ */
 .about-section{padding:var(--s10) 0;background:var(--bg2);border-top:1px solid var(--border)}
@@ -385,7 +385,7 @@ body::before{
   width:300px;flex-shrink:0;
 }
 .pf-card:hover{border-color:rgba(255,255,255,.14);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.6)}
-.pf-img-wrap{position:relative;overflow:hidden;height:185px;background:var(--bg3)}
+.pf-img-wrap{position:relative;overflow:hidden;height:185px;background:linear-gradient(135deg,#12101A,#1C1830)}
 .pf-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s}
 .pf-card:hover .pf-img-wrap img{transform:scale(1.05)}
 .pf-overlay{position:absolute;inset:0;background:rgba(7,7,10,.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
