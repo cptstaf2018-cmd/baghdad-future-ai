@@ -131,6 +131,23 @@ body::before{
 }
 .lang-btn{font-size:12px;letter-spacing:.04em}
 
+/* ── ENGLISH MODE ── */
+[lang="en"] body{direction:ltr;text-align:left}
+[lang="en"] .nav-links{margin-inline-end:0;margin-inline-start:auto}
+[lang="en"] .hero-inner{align-items:flex-start}
+[lang="en"] .hero h1,[lang="en"] .hero-sub{text-align:left}
+[lang="en"] .hero-btns{justify-content:flex-start}
+[lang="en"] .about-inner,[lang="en"] .about-body{direction:ltr;text-align:left}
+[lang="en"] .about-para{border-right:none;padding-right:0;border-left:2px solid rgba(139,92,246,.3);padding-left:16px}
+[lang="en"] .about-pills{justify-content:flex-start}
+[lang="en"] .section-title,[lang="en"] .section-label,[lang="en"] .section-sub{text-align:left}
+[lang="en"] .why-card,[lang="en"] .svc-card,[lang="en"] .step{text-align:left}
+[lang="en"] .step-num{margin-inline:0;margin-right:0}
+[lang="en"] .footer-grid{direction:ltr}
+[lang="en"] .footer-ceo-bar{direction:ltr}
+[lang="en"] .cta-inner{direction:ltr}
+[lang="en"] .hero-stats{margin-inline:0}
+
 /* ── LIGHT MODE ── */
 [data-theme="light"]{
   --bg:      #EEF2FF;

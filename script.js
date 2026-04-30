@@ -336,6 +336,7 @@ const savedLang = localStorage.getItem('lang') || 'ar';
 function applyLanguage(lang) {
   document.documentElement.lang = lang;
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
   langBtn.textContent = lang === 'ar' ? 'EN' : 'عر';
   localStorage.setItem('lang', lang);
 
