@@ -345,13 +345,18 @@ function applyLanguage(lang) {
     if (!val) return;
     if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
       el.placeholder = val;
-    } else if (el.tagName === 'A' || el.tagName === 'BUTTON') {
-      // keep child elements (icons), only update text nodes
-      el.childNodes.forEach(node => {
-        if (node.nodeType === 3 && node.textContent.trim()) {
-          node.textContent = ' ' + val;
-        }
-      });
+    } else if (el.tagName === 'BUTTON' || el.tagName === 'A') {
+      // Only update text nodes, preserve SVG/img children
+      const hasChildren = [...el.children].some(c => c.tagName === 'SVG' || c.tagName === 'IMG' || c.tagName === 'SPAN');
+      if (hasChildren) {
+        el.childNodes.forEach(node => {
+          if (node.nodeType === 3 && node.textContent.trim()) {
+            node.textContent = ' ' + val;
+          }
+        });
+      } else {
+        el.textContent = val;
+      }
     } else {
       el.textContent = val;
     }
