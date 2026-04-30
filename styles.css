@@ -156,11 +156,15 @@ body::before{
   background:rgba(238,242,255,.94);
   border-bottom-color:rgba(30,50,180,.12);
 }
-[data-theme="light"] .hero{background:var(--bg)}
+[data-theme="light"] .hero{background:#0a0a14}
 [data-theme="light"] .hero-overlay{
-  background:linear-gradient(to left,rgba(238,242,255,.2) 0%,rgba(238,242,255,.7) 55%,rgba(238,242,255,.88) 100%);
+  background:linear-gradient(to left,rgba(5,5,20,.3) 0%,rgba(5,5,20,.6) 55%,rgba(5,5,20,.8) 100%);
 }
-[data-theme="light"] .grad-text{color:var(--gold)}
+[data-theme="light"] .hero h1,
+[data-theme="light"] .hero-sub,
+[data-theme="light"] .hero-badge{color:#fff}
+[data-theme="light"] .hero-sub{color:rgba(255,255,255,.75)}
+[data-theme="light"] .grad-text{color:var(--gold-l)}
 [data-theme="light"] .offers-strip{
   background:linear-gradient(135deg,#D4C87A 0%,#E8D98A 50%,#D4C87A 100%);
 }
@@ -184,8 +188,10 @@ body::before{
   color:var(--white);
   border-color:rgba(30,50,180,.15);
 }
-[data-theme="light"] .hero-stats{background:rgba(255,255,255,.5)}
-[data-theme="light"] .h-stat{background:rgba(255,255,255,.6)}
+[data-theme="light"] .hero-stats{background:rgba(0,0,0,.35);border-color:rgba(255,255,255,.15)}
+[data-theme="light"] .h-stat{background:rgba(0,0,0,.2);border-color:rgba(255,255,255,.1)}
+[data-theme="light"] .h-stat .cnt{color:var(--gold-l)}
+[data-theme="light"] .h-stat small{color:rgba(255,255,255,.6)}
 [data-theme="light"] .chat-win{background:rgba(238,242,255,.98)}
 
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:6px;border-radius:8px;transition:background .2s}
