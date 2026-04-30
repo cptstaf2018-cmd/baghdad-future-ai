@@ -307,3 +307,59 @@ setTimeout(() => {
     chatLabel.style.animation = 'pulse-label 2s ease infinite';
   }
 }, 5000);
+
+/* ══════════════════════════════════════
+   THEME TOGGLE (Dark / Light)
+══════════════════════════════════════ */
+const themeBtn = document.getElementById('theme-btn');
+const savedTheme = localStorage.getItem('theme') || 'dark';
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  themeBtn.textContent = theme === 'dark' ? '🌙' : '☀️';
+  localStorage.setItem('theme', theme);
+}
+
+applyTheme(savedTheme);
+
+themeBtn.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+/* ══════════════════════════════════════
+   LANGUAGE TOGGLE (AR / EN)
+══════════════════════════════════════ */
+const langBtn = document.getElementById('lang-btn');
+const savedLang = localStorage.getItem('lang') || 'ar';
+
+function applyLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  langBtn.textContent = lang === 'ar' ? 'EN' : 'عر';
+  localStorage.setItem('lang', lang);
+
+  document.querySelectorAll('[data-ar]').forEach(el => {
+    const val = lang === 'ar' ? el.dataset.ar : el.dataset.en;
+    if (!val) return;
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      el.placeholder = val;
+    } else if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+      // keep child elements (icons), only update text nodes
+      el.childNodes.forEach(node => {
+        if (node.nodeType === 3 && node.textContent.trim()) {
+          node.textContent = ' ' + val;
+        }
+      });
+    } else {
+      el.textContent = val;
+    }
+  });
+}
+
+applyLanguage(savedLang);
+
+langBtn.addEventListener('click', () => {
+  const current = localStorage.getItem('lang') || 'ar';
+  applyLanguage(current === 'ar' ? 'en' : 'ar');
+});

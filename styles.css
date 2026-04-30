@@ -115,6 +115,79 @@ body::before{
 .nav-a{font-size:14px;font-weight:500;color:var(--muted);padding:6px 12px;border-radius:8px;transition:all .2s}
 .nav-a:hover{color:var(--white);background:rgba(255,255,255,.06)}
 .nav-wa{padding:9px 18px;font-size:14px}
+/* ── Theme & Lang Buttons ── */
+.theme-btn,.lang-btn{
+  width:36px;height:36px;border-radius:8px;
+  background:rgba(255,255,255,.07);
+  border:1px solid var(--border);
+  color:var(--white);font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .2s;flex-shrink:0;
+  font-family:'Tajawal',sans-serif;
+}
+.theme-btn:hover,.lang-btn:hover{
+  background:rgba(255,255,255,.14);
+  border-color:rgba(255,255,255,.2);
+}
+.lang-btn{font-size:12px;letter-spacing:.04em}
+
+/* ── LIGHT MODE ── */
+[data-theme="light"]{
+  --bg:      #EEF2FF;
+  --bg2:     #E4EAFF;
+  --bg3:     #D9E2FF;
+  --border:  rgba(30,50,180,.1);
+  --white:   #0D1340;
+  --off:     #0D1340;
+  --muted:   rgba(13,19,64,.55);
+  --gold:    #9A7200;
+  --gold-l:  #7A5800;
+  --purple:  #5B30C4;
+  --purple-l:#4C28A8;
+  --green:   #059669;
+}
+[data-theme="light"] body{background:var(--bg);color:var(--white)}
+[data-theme="light"] body::before{
+  background-image:
+    linear-gradient(rgba(30,50,180,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(30,50,180,.04) 1px,transparent 1px);
+}
+[data-theme="light"] .navbar{
+  background:rgba(238,242,255,.94);
+  border-bottom-color:rgba(30,50,180,.12);
+}
+[data-theme="light"] .hero{background:var(--bg)}
+[data-theme="light"] .hero-overlay{
+  background:linear-gradient(to left,rgba(238,242,255,.2) 0%,rgba(238,242,255,.7) 55%,rgba(238,242,255,.88) 100%);
+}
+[data-theme="light"] .grad-text{color:var(--gold)}
+[data-theme="light"] .offers-strip{
+  background:linear-gradient(135deg,#D4C87A 0%,#E8D98A 50%,#D4C87A 100%);
+}
+[data-theme="light"] .offer-item{color:#5A4000}
+[data-theme="light"] .offer-sep{color:rgba(90,64,0,.35)}
+[data-theme="light"] .why-card,
+[data-theme="light"] .svc-card,
+[data-theme="light"] .review-card,
+[data-theme="light"] .pf-card{
+  background:rgba(255,255,255,.7);
+  border-color:rgba(30,50,180,.1);
+}
+[data-theme="light"] .why-card:hover{background:rgba(255,255,255,.9)}
+[data-theme="light"] .footer{background:#D9E2FF}
+[data-theme="light"] .cta-section{background:var(--bg2)}
+[data-theme="light"] .order-form{background:rgba(255,255,255,.7)}
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea,
+[data-theme="light"] .form-group select{
+  background:rgba(255,255,255,.8);
+  color:var(--white);
+  border-color:rgba(30,50,180,.15);
+}
+[data-theme="light"] .hero-stats{background:rgba(255,255,255,.5)}
+[data-theme="light"] .h-stat{background:rgba(255,255,255,.6)}
+[data-theme="light"] .chat-win{background:rgba(238,242,255,.98)}
+
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;padding:6px;border-radius:8px;transition:background .2s}
 .hamburger:hover{background:rgba(255,255,255,.06)}
 .hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:transform .3s,opacity .3s}
