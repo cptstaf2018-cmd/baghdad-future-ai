@@ -211,18 +211,48 @@ body::before{
 .h-stat sup{font-size:13px;color:var(--gold-l);font-weight:800}
 .h-stat small{font-size:11px;color:rgba(232,230,240,.3);display:block;margin-top:4px}
 
-/* ══════════ MARQUEE ══════════ */
-.marquee-section{
+/* ══════════ OFFERS STRIP ══════════ */
+.offers-strip{
   position:relative;z-index:1;
-  border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  padding:14px 0;overflow:hidden;
-  background:rgba(255,255,255,.015);
+  background:linear-gradient(135deg,#120D00 0%,#1A1200 50%,#120D00 100%);
+  border-top:1px solid rgba(200,168,72,.3);
+  border-bottom:1px solid rgba(200,168,72,.3);
+  padding:15px 0;overflow:hidden;
 }
-.marquee-track{display:flex;gap:52px;animation:marqueeAnim 28s linear infinite;width:max-content}
-@keyframes marqueeAnim{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.marquee-item{font-size:13px;color:rgba(232,230,240,.28);white-space:nowrap;display:flex;align-items:center;gap:14px}
-.marquee-item::before{content:'◆';color:var(--purple);font-size:8px}
+.offers-strip::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(200,168,72,.08) 0%,transparent 15%,transparent 85%,rgba(200,168,72,.08) 100%);
+  pointer-events:none;
+}
+.offers-track{
+  display:flex;align-items:center;gap:32px;
+  animation:offersScroll 35s linear infinite;
+  width:max-content;
+}
+.offers-track:hover{animation-play-state:paused}
+@keyframes offersScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.offer-item{
+  font-size:14px;font-weight:700;
+  color:var(--gold-l);
+  white-space:nowrap;letter-spacing:.01em;
+}
+.offer-sep{
+  color:rgba(200,168,72,.35);font-size:9px;flex-shrink:0;
+}
+
+/* ══════════ PORTFOLIO TRACK ══════════ */
+.pf-track-wrap{
+  overflow:hidden;margin-top:var(--s5);
+  -webkit-mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  mask:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+}
+.pf-track{
+  display:flex;gap:20px;
+  animation:pfScroll 50s linear infinite;
+  width:max-content;
+}
+.pf-track:hover{animation-play-state:paused}
+@keyframes pfScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ══════════ ABOUT ══════════ */
 .about-section{padding:var(--s10) 0;background:var(--bg2);border-top:1px solid var(--border)}
@@ -352,6 +382,7 @@ body::before{
   border-radius:var(--r-lg);overflow:hidden;
   background:rgba(255,255,255,.03);border:1px solid var(--border);
   transition:all .3s;cursor:pointer;display:flex;flex-direction:column;
+  width:300px;flex-shrink:0;
 }
 .pf-card:hover{border-color:rgba(255,255,255,.14);transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.6)}
 .pf-img-wrap{position:relative;overflow:hidden;height:185px;background:var(--bg3)}
