@@ -252,7 +252,7 @@ body::before{
   width:max-content;
 }
 .pf-track:hover{animation-play-state:paused}
-@keyframes pfScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes pfScroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 
 /* ══════════ ABOUT ══════════ */
 .about-section{padding:var(--s10) 0;background:var(--bg2);border-top:1px solid var(--border)}
