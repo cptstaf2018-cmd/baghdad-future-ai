@@ -11,9 +11,9 @@ button{border:none;cursor:pointer;font-family:inherit}
 input,textarea,select{font-family:inherit;font-size:inherit}
 
 :root{
-  --bg:       #07070A;
-  --bg2:      #0C0C12;
-  --bg3:      #101018;
+  --bg:       #020818;
+  --bg2:      #030D1F;
+  --bg3:      #051228;
   --border:   rgba(255,255,255,.07);
   --border-g: rgba(200,168,72,.22);
   --gold:     #C8A848;
@@ -104,7 +104,7 @@ body::before{
 .navbar{
   position:fixed;top:0;inset-inline:0;z-index:100;
   height:var(--nav-h);
-  background:rgba(7,7,10,.88);
+  background:rgba(2,8,24,.92);
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border);
 }
