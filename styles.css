@@ -545,19 +545,13 @@ body::before{
   border-top:1px solid var(--border);
   display:flex;align-items:center;gap:16px;
 }
-.ceo-avatar{
-  width:90px;height:90px;border-radius:50%;
-  object-fit:cover;object-position:center 15%;
-  border:2px solid rgba(217,119,87,.4);
-  box-shadow:0 0 24px rgba(217,119,87,.15);flex-shrink:0;
+.footer-team-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:700;color:var(--brown);
+  background:rgba(217,119,87,.08);
+  border:1px solid rgba(217,119,87,.18);
+  padding:8px 20px;border-radius:30px;
 }
-.footer-ceo-info{display:flex;align-items:center;gap:12px}
-.ceo-label{
-  font-size:11px;font-weight:700;color:var(--coral);
-  background:rgba(217,119,87,.1);border:1px solid rgba(217,119,87,.2);
-  padding:3px 10px;border-radius:30px;letter-spacing:.06em;
-}
-.ceo-name{font-size:16px;font-weight:700;color:var(--ink)}
 .footer-bottom{
   max-width:var(--max);margin-inline:auto;
   padding-inline:var(--s4);padding-block:var(--s3);
