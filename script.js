@@ -26,8 +26,8 @@ mobileMenu.querySelectorAll('a').forEach(a => {
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
   navbar.style.background = window.scrollY > 40
-    ? 'rgba(11,11,15,0.97)'
-    : 'rgba(11,11,15,0.85)';
+    ? 'rgba(250,249,247,0.98)'
+    : 'rgba(250,249,247,0.92)';
 }, { passive: true });
 
 /* ── REVEAL ON SCROLL ── */
@@ -307,25 +307,6 @@ setTimeout(() => {
     chatLabel.style.animation = 'pulse-label 2s ease infinite';
   }
 }, 5000);
-
-/* ══════════════════════════════════════
-   THEME TOGGLE (Dark / Light)
-══════════════════════════════════════ */
-const themeBtn = document.getElementById('theme-btn');
-const savedTheme = localStorage.getItem('theme') || 'dark';
-
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  themeBtn.textContent = theme === 'dark' ? '🌙' : '☀️';
-  localStorage.setItem('theme', theme);
-}
-
-applyTheme(savedTheme);
-
-themeBtn.addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('data-theme');
-  applyTheme(current === 'dark' ? 'light' : 'dark');
-});
 
 /* ══════════════════════════════════════
    LANGUAGE TOGGLE (AR / EN)
