@@ -1,0 +1,166 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - main [ref=e4]:
+      - main [ref=e5]:
+        - generic [ref=e13]:
+          - generic [ref=e15]:
+            - button "Open sidebar" [ref=e19] [cursor=pointer]:
+              - img
+            - generic [ref=e21]:
+              - button "Components" [ref=e22] [cursor=pointer]
+              - generic [ref=e23]: /
+              - generic [ref=e24]:
+                - button "UmairXD" [ref=e25] [cursor=pointer]
+                - generic [ref=e26]: /
+                - generic [ref=e27]: Landing Page
+            - generic [ref=e28]:
+              - generic:
+                - button "Search":
+                  - img
+                  - generic: Search
+                  - generic:
+                    - img
+                    - generic: K
+              - generic [ref=e29]:
+                - button "Copy prompt" [ref=e30] [cursor=pointer]:
+                  - img [ref=e31]
+                  - generic [ref=e35]: Copy prompt
+                - button "Copy code" [ref=e36] [cursor=pointer]:
+                  - generic [ref=e37]:
+                    - generic:
+                      - img
+                    - img [ref=e39]
+                  - generic [ref=e43]: Copy code
+                - button "View code" [ref=e44] [cursor=pointer]:
+                  - img [ref=e45]
+                  - generic [ref=e48]: View code
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e52]:
+                - button [ref=e53] [cursor=pointer]:
+                  - img
+                - button [ref=e54] [cursor=pointer]:
+                  - generic [ref=e55]:
+                    - generic:
+                      - img
+                    - generic [ref=e56]:
+                      - img
+                - button [ref=e57] [cursor=pointer]:
+                  - img
+              - generic [ref=e59]:
+                - button [ref=e60] [cursor=pointer]:
+                  - img
+                - button [ref=e61] [cursor=pointer]:
+                  - img
+                - button [ref=e63] [cursor=pointer]:
+                  - img
+              - iframe [ref=e67]:
+                - generic [ref=f1e5]:
+                  - generic [ref=f1e8]:
+                    - generic [ref=f1e9]:
+                      - generic [ref=f1e13]: Welcome
+                      - button "Go to Welcome" [ref=f1e14]
+                    - generic [ref=f1e15]:
+                      - generic [ref=f1e19]: Innovation
+                      - button "Go to Innovation" [ref=f1e20]
+                    - generic [ref=f1e21]:
+                      - generic [ref=f1e25]: Discovery
+                      - button "Go to Discovery" [ref=f1e26]
+                    - generic [ref=f1e27]:
+                      - generic [ref=f1e31]: Future
+                      - button "Go to Future" [ref=f1e32]
+                  - generic [ref=f1e35]:
+                    - heading "Explore Our World" [level=1] [ref=f1e36]:
+                      - generic [ref=f1e37]:
+                        - generic [ref=f1e38]: Explore
+                        - generic [ref=f1e39]: Our World
+                    - generic [ref=f1e40]:
+                      - paragraph [ref=f1e41]: Journey through an immersive experience where technology meets innovation. Watch as perspectives shift and possibilities unfold with every interaction, creating a symphony of digital artistry.
+                      - generic [ref=f1e42]:
+                        - generic [ref=f1e45]: Interactive Experience
+                        - generic [ref=f1e48]: Scroll to Explore
+                    - generic [ref=f1e49]:
+                      - button "Begin Journey" [ref=f1e50]: Begin Journey
+                      - button "Learn More" [ref=f1e52]
+                  - generic [ref=f1e54]:
+                    - heading "Connected Worldwide" [level=1] [ref=f1e55]:
+                      - generic [ref=f1e56]: Connected Worldwide
+                    - paragraph [ref=f1e58]: From every corner of the globe, we witness the interconnected web of human achievement. Each connection represents progress, every interaction drives innovation forward into uncharted territories.
+                  - generic [ref=f1e60]:
+                    - heading "Expanding Possibilities" [level=1] [ref=f1e61]:
+                      - generic [ref=f1e62]:
+                        - generic [ref=f1e63]: Expanding
+                        - generic [ref=f1e64]: Possibilities
+                    - paragraph [ref=f1e66]: As we push beyond familiar boundaries, new worlds of opportunity emerge from the horizon. What seemed impossible yesterday becomes tomorrow's foundation for extraordinary achievements.
+                    - generic [ref=f1e67]:
+                      - generic [ref=f1e71]:
+                        - heading "Limitless Exploration" [level=3] [ref=f1e72]
+                        - paragraph [ref=f1e73]: Discover new dimensions of possibility and innovation
+                      - generic [ref=f1e77]:
+                        - heading "Seamless Integration" [level=3] [ref=f1e78]
+                        - paragraph [ref=f1e79]: Where cutting-edge technology meets human intuition
+                      - generic [ref=f1e83]:
+                        - heading "Future-Ready Solutions" [level=3] [ref=f1e84]
+                        - paragraph [ref=f1e85]: Built for tomorrow's challenges and opportunities
+                  - generic [ref=f1e87]:
+                    - heading "Our Shared Tomorrow" [level=1] [ref=f1e88]:
+                      - generic [ref=f1e89]:
+                        - generic [ref=f1e90]: Our Shared
+                        - generic [ref=f1e91]: Tomorrow
+                    - paragraph [ref=f1e93]: In this moment of unity, we see not just a planet, but a canvas of infinite human potential. Every connection represents hope, every innovation builds bridges to our collective future of endless possibilities.
+                    - generic [ref=f1e94]:
+                      - button "Join the Movement" [ref=f1e95]: Join the Movement
+                      - button "Explore More" [ref=f1e97]
+            - generic [ref=e70]:
+              - generic [ref=e72]:
+                - link "Components" [ref=e73] [cursor=pointer]:
+                  - /url: /community/components
+                - generic [ref=e74]: •
+                - link "UmairXD" [ref=e75] [cursor=pointer]:
+                  - /url: /community/UmairXD
+                - generic [ref=e76]: •
+                - generic [ref=e77]: Landing Page
+              - heading "Landing Page" [level=3] [ref=e78]
+              - paragraph [ref=e79]: A 3D Interactive Landing page
+              - heading "Created by" [level=3] [ref=e80]
+              - generic [ref=e81]:
+                - link "Umair Waheed" [ref=e82] [cursor=pointer]:
+                  - /url: /community/UmairXD
+                  - img "Umair Waheed" [ref=e84]
+                - generic [ref=e85]:
+                  - link "Umair Waheed" [ref=e86] [cursor=pointer]:
+                    - /url: /community/UmairXD
+                  - paragraph [ref=e87]: "@UmairXD"
+              - heading "Installation" [level=3] [ref=e88]
+              - button "Click to copy code or select text" [ref=e90] [cursor=pointer]:
+                - code [ref=e93]:
+                  - generic [ref=e94]: npx shadcn@latest add https://21st.dev/r/m.umairwaheedansari/landing-page
+              - generic [ref=e95]:
+                - heading "How to use" [level=3] [ref=e96]
+                - generic [ref=e97]:
+                  - button "Copy prompt" [ref=e98] [cursor=pointer]:
+                    - img [ref=e99]
+                    - text: Copy prompt
+                  - button "Copy code" [ref=e103] [cursor=pointer]:
+                    - generic [ref=e104]:
+                      - generic:
+                        - img
+                      - img [ref=e106]
+                    - text: Copy code
+                  - button "View code" [ref=e110] [cursor=pointer]:
+                    - img [ref=e111]
+                    - text: View code
+                - button "Click to copy code or select text" [ref=e115] [cursor=pointer]:
+                  - code [ref=e118]:
+                    - generic [ref=e119]: import Component from "@/components/ui/landing-page";
+                    - generic [ref=e120]: "export default function DemoOne() {"
+                    - generic [ref=e121]: return <Component />;
+                    - generic [ref=e122]: "}"
+              - generic [ref=e124]:
+                - generic [ref=e125]: Created 9/19/2025
+                - generic [ref=e126]: Updated 9/19/2025
+    - region "Notifications alt+T"
+  - alert [ref=e128]
+  - generic:
+    - iframe
+    - iframe

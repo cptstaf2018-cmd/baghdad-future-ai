@@ -1,0 +1,624 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "بغداد المستقبل AI" [ref=e5] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e6]:
+        - link "تواصل معنا" [ref=e7] [cursor=pointer]:
+          - /url: "#contact"
+        - button "Toggle language" [ref=e8] [cursor=pointer]: EN
+        - button "قائمة" [ref=e9] [cursor=pointer]
+  - generic [ref=e13]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e21]: رؤيتنا
+        - button "Go to رؤيتنا" [ref=e22] [cursor=pointer]
+      - generic [ref=e23]:
+        - generic [ref=e27]: ابتكار
+        - button "Go to ابتكار" [ref=e28] [cursor=pointer]
+      - generic [ref=e29]:
+        - generic [ref=e33]: اكتشاف
+        - button "Go to اكتشاف" [ref=e34] [cursor=pointer]
+      - generic [ref=e35]:
+        - generic [ref=e39]: مستقبلنا
+        - button "Go to مستقبلنا" [ref=e40] [cursor=pointer]
+    - generic [ref=e43]:
+      - heading "نبني مستقبلاً رقمياً ذكياً للمؤسسات العراقية" [level=1] [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: نبني مستقبلاً رقمياً
+          - generic [ref=e47]: ذكياً للمؤسسات العراقية
+      - generic [ref=e48]:
+        - paragraph [ref=e49]: شريكك التقني الموثوق في الذكاء الاصطناعي وأنظمة الإدارة والتحول الرقمي للوزارات والمستشفيات والمؤسسات الكبرى.
+        - generic [ref=e50]:
+          - generic [ref=e53]: تجربة تفاعلية
+          - generic [ref=e56]: مرر للاستكشاف
+      - generic [ref=e57]:
+        - button "اطلب استشارة مجانية" [ref=e58] [cursor=pointer]: اطلب استشارة مجانية
+        - button "شاهد أعمالنا" [ref=e60] [cursor=pointer]
+    - generic [ref=e62]:
+      - heading "متصلون بالعالم" [level=1] [ref=e63]:
+        - generic [ref=e64]: متصلون بالعالم
+      - paragraph [ref=e66]: من كل أرجاء العراق والمنطقة، نبني شبكة متكاملة من الحلول التقنية. كل مؤسسة نخدمها تُمثّل خطوة نحو مستقبل رقمي أكثر كفاءة وذكاءً.
+    - generic [ref=e68]:
+      - heading "نوسّع الممكن إمكانياتك" [level=1] [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: نوسّع الممكن
+          - generic [ref=e72]: إمكانياتك
+      - paragraph [ref=e74]: مع كل مشروع نُنجزه، نكتشف آفاقاً جديدة من الإمكانيات. ما بدا مستحيلاً بالأمس يصبح أساساً لإنجازات غير عادية في الغد.
+      - generic [ref=e75]:
+        - generic [ref=e79]:
+          - heading "ذكاء اصطناعي وأتمتة" [level=3] [ref=e80]
+          - paragraph [ref=e81]: روبوتات محادثة ذكية، تحليل بيانات، وأتمتة العمليات المؤسسية
+        - generic [ref=e85]:
+          - heading "أنظمة ERP مخصصة" [level=3] [ref=e86]
+          - paragraph [ref=e87]: إدارة شاملة للموارد البشرية، المالية، والمخزون من منصة واحدة
+        - generic [ref=e91]:
+          - heading "تحول رقمي متكامل" [level=3] [ref=e92]
+          - paragraph [ref=e93]: بنية تحتية آمنة بمعايير دولية ودعم مستمر بلا انقطاع
+    - generic [ref=e95]:
+      - heading "مستقبلنا المشترك" [level=1] [ref=e96]:
+        - generic [ref=e97]:
+          - generic [ref=e98]: مستقبلنا
+          - generic [ref=e99]: المشترك
+      - paragraph [ref=e101]: في هذه اللحظة من التحول الرقمي، نرى ليس فقط شركات ومؤسسات، بل إمكانيات إنسانية لا محدودة. كل اتصال يمثل أملاً، وكل ابتكار يبني جسراً نحو مستقبل مشترك.
+      - generic [ref=e102]:
+        - button "انضم إلى رحلتنا" [ref=e103] [cursor=pointer]: انضم إلى رحلتنا
+        - button "استكشف خدماتنا" [ref=e105] [cursor=pointer]
+  - generic [ref=e107]:
+    - generic [ref=e108]: يثقون بنا
+    - generic [ref=e110]:
+      - generic [ref=e111]: وزارة الصحة ◆
+      - generic [ref=e112]: مستشفى ابن النفيس ◆
+      - generic [ref=e113]: جامعة بغداد ◆
+      - generic [ref=e114]: مجمع الرواد التجاري ◆
+      - generic [ref=e115]: عيادة الشفاء ◆
+      - generic [ref=e116]: شركة الرافدين ◆
+      - generic [ref=e117]: مركز أربيل الطبي ◆
+      - generic [ref=e118]: وزارة الصحة ◆
+      - generic [ref=e119]: مستشفى ابن النفيس ◆
+      - generic [ref=e120]: جامعة بغداد ◆
+      - generic [ref=e121]: مجمع الرواد التجاري ◆
+      - generic [ref=e122]: عيادة الشفاء ◆
+      - generic [ref=e123]: شركة الرافدين ◆
+      - generic [ref=e124]: مركز أربيل الطبي
+  - generic [ref=e127]:
+    - generic [ref=e128]:
+      - generic [ref=e129]: من نحن
+      - heading "شركة تقنية عراقية رائدة في التحول الرقمي" [level=2] [ref=e130]
+      - paragraph [ref=e131]: "تأسست بغداد المستقبل AI عام 2023 بهدف واحد: بناء منظومة تقنية متكاملة تخدم المؤسسات العراقية الكبرى. نجمع بين الخبرة المحلية العميقة والتقنيات العالمية الحديثة لتقديم حلول رقمية حقيقية قابلة للتوسع والتطوير."
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - generic [ref=e134]: 💡
+          - generic [ref=e135]:
+            - strong [ref=e136]: الابتكار المستمر
+            - paragraph [ref=e137]: نواكب أحدث التقنيات العالمية
+        - generic [ref=e138]:
+          - generic [ref=e139]: 🛡️
+          - generic [ref=e140]:
+            - strong [ref=e141]: الأمان والموثوقية
+            - paragraph [ref=e142]: بنية تحتية آمنة بمعايير دولية
+        - generic [ref=e143]:
+          - generic [ref=e144]: 🤝
+          - generic [ref=e145]:
+            - strong [ref=e146]: شراكة حقيقية
+            - paragraph [ref=e147]: ندعمك ما بعد التسليم بدون توقف
+        - generic [ref=e148]:
+          - generic [ref=e149]: 📍
+          - generic [ref=e150]:
+            - strong [ref=e151]: خبرة محلية عميقة
+            - paragraph [ref=e152]: نفهم السوق العراقي والبيئة المؤسسية
+    - generic [ref=e153]:
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e156]: 🏢
+          - generic [ref=e157]:
+            - generic [ref=e158]: بغداد المستقبل AI
+            - generic [ref=e159]: شركة تقنية متخصصة
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]: "+150"
+            - generic [ref=e163]: مشروع
+          - generic [ref=e164]:
+            - generic [ref=e165]: "2"
+            - generic [ref=e166]: فرع
+          - generic [ref=e167]:
+            - generic [ref=e168]: Iraq
+            - generic [ref=e169]: "& الخليج"
+        - generic [ref=e170]:
+          - generic [ref=e171]: الذكاء الاصطناعي
+          - generic [ref=e172]: SaaS
+          - generic [ref=e173]: ERP
+          - generic [ref=e174]: الرعاية الصحية
+      - generic [ref=e176]:
+        - generic [ref=e179]: أنظمة نشطة الآن
+        - generic [ref=e180]: 24/7
+        - generic [ref=e181]: دعم فني مستمر
+      - generic [ref=e182]:
+        - generic [ref=e183]: 📍
+        - generic [ref=e184]: أربيل · بغداد
+  - generic [ref=e186]:
+    - generic [ref=e187]:
+      - generic [ref=e188]: خدماتنا
+      - heading "حلول تقنية متكاملة لكل احتياجات مؤسستك" [level=2] [ref=e189]
+    - generic [ref=e190]:
+      - generic [ref=e191]:
+        - img [ref=e193]
+        - heading "تطوير المواقع والتطبيقات" [level=3] [ref=e196]
+        - paragraph [ref=e197]: مواقع مؤسسية، بوابات حكومية، تطبيقات جوال بمعايير عالمية وتجربة مستخدم احترافية.
+      - generic [ref=e198]:
+        - img [ref=e200]
+        - heading "أنظمة إدارة الأعمال" [level=3] [ref=e204]
+        - paragraph [ref=e205]: أنظمة ERP وCRM مخصصة لإدارة الموارد البشرية، المالية، والمخزون بكفاءة عالية.
+      - generic [ref=e206]:
+        - img [ref=e208]
+        - heading "الذكاء الاصطناعي والأتمتة" [level=3] [ref=e211]
+        - paragraph [ref=e212]: روبوتات محادثة ذكية، تحليل البيانات، أتمتة العمليات، ونماذج تنبؤية متقدمة.
+      - generic [ref=e213]:
+        - img [ref=e215]
+        - heading "المتاجر الإلكترونية" [level=3] [ref=e218]
+        - paragraph [ref=e219]: منصات تجارة إلكترونية متكاملة مع بوابات دفع، إدارة مخزون، ولوحات تحكم ذكية.
+      - generic [ref=e220]:
+        - img [ref=e222]
+        - heading "أنظمة الحضور البيومترية" [level=3] [ref=e227]
+        - paragraph [ref=e228]: أنظمة حضور مركزية بتقنية بصمة الإصبع والوجه مع تقارير فورية وتكامل مع الرواتب.
+      - generic [ref=e229]:
+        - img [ref=e231]
+        - heading "تحليل البيانات والتقارير" [level=3] [ref=e232]
+        - paragraph [ref=e233]: لوحات تحكم تفاعلية، تقارير مخصصة، وتحليلات ذكية تدعم القرار المؤسسي.
+  - generic [ref=e235]:
+    - generic [ref=e236]:
+      - generic [ref=e237]: منتجاتنا
+      - heading "منتجاتنا البرمجية الجاهزة للتطبيق" [level=2] [ref=e238]
+      - paragraph [ref=e239]: حلول برمجية متكاملة مصممة خصيصاً للبيئة العراقية والمؤسسية
+    - generic [ref=e240]:
+      - 'link "متاح الآن 🏥 كلينيك — نظام إدارة العيادات منصة SaaS متكاملة لإدارة العيادات والمراكز الطبية: المواعيد، المرضى، الفواتير، والتقارير. إدارة مواعيد ذكية سجلات طبية إلكترونية نظام فواتير متكامل تقارير وإحصائيات فورية زيارة المنصة ←" [ref=e241] [cursor=pointer]':
+        - /url: https://clinicplt.vercel.app/login
+        - generic [ref=e242]: متاح الآن
+        - generic [ref=e243]: 🏥
+        - heading "كلينيك — نظام إدارة العيادات" [level=3] [ref=e244]
+        - paragraph [ref=e245]: "منصة SaaS متكاملة لإدارة العيادات والمراكز الطبية: المواعيد، المرضى، الفواتير، والتقارير."
+        - list [ref=e246]:
+          - listitem [ref=e247]: إدارة مواعيد ذكية
+          - listitem [ref=e248]: سجلات طبية إلكترونية
+          - listitem [ref=e249]: نظام فواتير متكامل
+          - listitem [ref=e250]: تقارير وإحصائيات فورية
+        - generic [ref=e251]: زيارة المنصة ←
+      - generic [ref=e252]:
+        - generic [ref=e253]: 👁️
+        - heading "نظام الحضور المركزي" [level=3] [ref=e254]
+        - paragraph [ref=e255]: تتبع حضور الموظفين عبر بصمة الإصبع والوجه مع تكامل كامل مع أنظمة الرواتب والإدارة.
+        - list [ref=e256]:
+          - listitem [ref=e257]: تعرف على الوجه والبصمة
+          - listitem [ref=e258]: إدارة مركزية لعدة فروع
+          - listitem [ref=e259]: تكامل مع نظام الرواتب
+        - generic [ref=e260]: قريباً
+      - generic [ref=e261]:
+        - generic [ref=e262]: ⚙️
+        - heading "نظام ERP المؤسسي" [level=3] [ref=e263]
+        - paragraph [ref=e264]: "إدارة شاملة للموارد المؤسسية: المالية، الموارد البشرية، المشتريات، والمخزون من منصة واحدة."
+        - list [ref=e265]:
+          - listitem [ref=e266]: إدارة مالية متكاملة
+          - listitem [ref=e267]: إدارة الموارد البشرية
+          - listitem [ref=e268]: لوحة تحكم مركزية
+        - generic [ref=e269]: قريباً
+      - generic [ref=e270]:
+        - generic [ref=e271]: 📊
+        - heading "منصة تحليل البيانات" [level=3] [ref=e272]
+        - paragraph [ref=e273]: لوحات تحكم ذكية وتقارير تفاعلية تحول بياناتك إلى قرارات استراتيجية دقيقة.
+        - list [ref=e274]:
+          - listitem [ref=e275]: مرئيات بيانات تفاعلية
+          - listitem [ref=e276]: تنبؤات ذكاء اصطناعي
+          - listitem [ref=e277]: تقارير مخصصة
+        - generic [ref=e278]: قريباً
+  - generic [ref=e280]:
+    - generic [ref=e281]:
+      - generic [ref=e282]: القطاعات
+      - heading "خبرة موثّقة في أبرز القطاعات الحيوية" [level=2] [ref=e283]
+    - generic [ref=e284]:
+      - generic [ref=e285]:
+        - generic [ref=e286]: 🏛️
+        - heading "الحكومة والوزارات" [level=3] [ref=e287]
+        - paragraph [ref=e288]: بوابات حكومية، أنظمة إدارة، تحول رقمي للمؤسسات الحكومية
+      - generic [ref=e289]:
+        - generic [ref=e290]: 🏥
+        - heading "المستشفيات والرعاية الصحية" [level=3] [ref=e291]
+        - paragraph [ref=e292]: أنظمة إدارة مستشفيات، سجلات طبية، مواعيد، ومتابعة المرضى
+      - generic [ref=e293]:
+        - generic [ref=e294]: 🎓
+        - heading "الجامعات والتعليم" [level=3] [ref=e295]
+        - paragraph [ref=e296]: منصات تعليمية، أنظمة إدارة الطلاب، حضور إلكتروني، وبوابات أكاديمية
+      - generic [ref=e297]:
+        - generic [ref=e298]: 🏢
+        - heading "الشركات والمؤسسات" [level=3] [ref=e299]
+        - paragraph [ref=e300]: أنظمة ERP، CRM، إدارة المشاريع، وحلول رقمية لتحسين الكفاءة التشغيلية
+      - generic [ref=e301]:
+        - generic [ref=e302]: 🛒
+        - heading "التجزئة والتجارة" [level=3] [ref=e303]
+        - paragraph [ref=e304]: متاجر إلكترونية، أنظمة نقاط البيع POS، وإدارة المخزون والفروع
+      - generic [ref=e305]:
+        - generic [ref=e306]: 🏗️
+        - heading "المقاولات والصناعة" [level=3] [ref=e307]
+        - paragraph [ref=e308]: أنظمة إدارة المشاريع والموارد للشركات الإنشائية والصناعية الكبرى
+  - generic [ref=e311]:
+    - generic [ref=e312]:
+      - generic [ref=e313]: لماذا نحن
+      - heading "لماذا تختار بغداد المستقبل AI؟" [level=2] [ref=e314]
+      - generic [ref=e315]:
+        - generic [ref=e316]:
+          - generic [ref=e317]: "01"
+          - generic [ref=e318]:
+            - heading "خبرة محلية عميقة" [level=4] [ref=e319]
+            - paragraph [ref=e320]: نفهم تحديات البيئة العراقية والمتطلبات المؤسسية المحلية بعمق
+        - generic [ref=e321]:
+          - generic [ref=e322]: "02"
+          - generic [ref=e323]:
+            - heading "حلول مخصصة لك" [level=4] [ref=e324]
+            - paragraph [ref=e325]: لا نبيع قوالب جاهزة — نبني حلاً مصمماً خصيصاً لاحتياجات مؤسستك
+        - generic [ref=e326]:
+          - generic [ref=e327]: "03"
+          - generic [ref=e328]:
+            - heading "دعم مستمر بلا انقطاع" [level=4] [ref=e329]
+            - paragraph [ref=e330]: فريق دعم فني متخصص متاح 24/7 لضمان استمرارية عمل أنظمتك
+        - generic [ref=e331]:
+          - generic [ref=e332]: "04"
+          - generic [ref=e333]:
+            - heading "ضمان النتائج" [level=4] [ref=e334]
+            - paragraph [ref=e335]: نلتزم بمعايير واضحة للأداء والجودة — نتائج قابلة للقياس أو نُعيد لك استثمارك
+    - generic [ref=e337]:
+      - generic [ref=e338]:
+        - generic [ref=e339]: 🔒
+        - generic [ref=e340]: SSL آمن
+      - generic [ref=e341]:
+        - generic [ref=e342]: ☁️
+        - generic [ref=e343]: Cloud
+      - generic [ref=e344]:
+        - generic [ref=e345]: 🤖
+        - generic [ref=e346]: AI مدعوم
+      - generic [ref=e347]:
+        - generic [ref=e348]: ⚡
+        - generic [ref=e349]: 99.9% Uptime
+      - generic [ref=e350]:
+        - generic [ref=e351]: 📱
+        - generic [ref=e352]: Mobile First
+      - generic [ref=e353]:
+        - generic [ref=e354]: 🛡️
+        - generic [ref=e355]: أمان معياري
+      - generic [ref=e356]:
+        - generic [ref=e357]: 🌐
+        - generic [ref=e358]: متعدد اللغات
+      - generic [ref=e359]:
+        - generic [ref=e360]: 📊
+        - generic [ref=e361]: تحليلات
+      - generic [ref=e362]:
+        - generic [ref=e363]: 🔄
+        - generic [ref=e364]: تحديث مستمر
+  - generic [ref=e365]:
+    - generic [ref=e367]:
+      - generic [ref=e368]: أعمالنا
+      - heading "مشاريع حقيقية لعملاء حقيقيين" [level=2] [ref=e369]
+    - generic [ref=e371]:
+      - link "كلينيك — إدارة العيادات نظام طبي كلينيك — إدارة العيادات نظام SaaS متكامل للعيادات والمراكز الطبية ✅ عميل حقيقي" [ref=e372] [cursor=pointer]:
+        - /url: https://clinicplt.vercel.app/login
+        - img "كلينيك — إدارة العيادات" [ref=e374]
+        - generic [ref=e375]:
+          - generic [ref=e376]: نظام طبي
+          - strong [ref=e377]: كلينيك — إدارة العيادات
+          - paragraph [ref=e378]: نظام SaaS متكامل للعيادات والمراكز الطبية
+          - generic [ref=e379]: ✅ عميل حقيقي
+      - link "KYN App تطبيق ذكي KYN App منصة ذكية متكاملة بتجربة مستخدم احترافية ✅ عميل حقيقي" [ref=e380] [cursor=pointer]:
+        - /url: https://kyn-app.vercel.app/
+        - img "KYN App" [ref=e382]
+        - generic [ref=e383]:
+          - generic [ref=e384]: تطبيق ذكي
+          - strong [ref=e385]: KYN App
+          - paragraph [ref=e386]: منصة ذكية متكاملة بتجربة مستخدم احترافية
+          - generic [ref=e387]: ✅ عميل حقيقي
+      - link "Darbonna Taxi تطبيق نقل Darbonna Taxi منصة حجز سيارات أجرة ذكية مع تتبع مباشر ✅ عميل حقيقي" [ref=e388] [cursor=pointer]:
+        - /url: https://darbonna-taxi.vercel.app/
+        - img "Darbonna Taxi" [ref=e390]
+        - generic [ref=e391]:
+          - generic [ref=e392]: تطبيق نقل
+          - strong [ref=e393]: Darbonna Taxi
+          - paragraph [ref=e394]: منصة حجز سيارات أجرة ذكية مع تتبع مباشر
+          - generic [ref=e395]: ✅ عميل حقيقي
+      - link "Mall POS System نظام مبيعات Mall POS System نظام نقاط بيع يدير 50 فرع مع تقارير مركزية ✅ عميل حقيقي" [ref=e396] [cursor=pointer]:
+        - /url: https://mall-pos-system-fniugb.abacusai.app/
+        - img "Mall POS System" [ref=e398]
+        - generic [ref=e399]:
+          - generic [ref=e400]: نظام مبيعات
+          - strong [ref=e401]: Mall POS System
+          - paragraph [ref=e402]: نظام نقاط بيع يدير 50 فرع مع تقارير مركزية
+          - generic [ref=e403]: ✅ عميل حقيقي
+      - link "صالون كلاس تكريت موقع تجاري صالون كلاس تكريت موقع صالون تجميل فاخر مع نظام حجوزات ✅ عميل حقيقي" [ref=e404] [cursor=pointer]:
+        - /url: https://superlative-cheesecake-4963e9.netlify.app/
+        - img "صالون كلاس تكريت" [ref=e406]
+        - generic [ref=e407]:
+          - generic [ref=e408]: موقع تجاري
+          - strong [ref=e409]: صالون كلاس تكريت
+          - paragraph [ref=e410]: موقع صالون تجميل فاخر مع نظام حجوزات
+          - generic [ref=e411]: ✅ عميل حقيقي
+      - link "متجر إلكتروني احترافي متجر إلكتروني متجر إلكتروني احترافي منصة تسوق متكاملة مع إدارة منتجات وسلة شراء ✅ عميل حقيقي" [ref=e412] [cursor=pointer]:
+        - /url: https://zesty-licorice-3717d7.netlify.app/
+        - img "متجر إلكتروني احترافي" [ref=e414]
+        - generic [ref=e415]:
+          - generic [ref=e416]: متجر إلكتروني
+          - strong [ref=e417]: متجر إلكتروني احترافي
+          - paragraph [ref=e418]: منصة تسوق متكاملة مع إدارة منتجات وسلة شراء
+          - generic [ref=e419]: ✅ عميل حقيقي
+      - link "كلينيك — إدارة العيادات نظام طبي كلينيك — إدارة العيادات نظام SaaS متكامل للعيادات والمراكز الطبية ✅ عميل حقيقي" [ref=e420] [cursor=pointer]:
+        - /url: https://clinicplt.vercel.app/login
+        - img "كلينيك — إدارة العيادات" [ref=e422]
+        - generic [ref=e423]:
+          - generic [ref=e424]: نظام طبي
+          - strong [ref=e425]: كلينيك — إدارة العيادات
+          - paragraph [ref=e426]: نظام SaaS متكامل للعيادات والمراكز الطبية
+          - generic [ref=e427]: ✅ عميل حقيقي
+      - link "KYN App تطبيق ذكي KYN App منصة ذكية متكاملة بتجربة مستخدم احترافية ✅ عميل حقيقي" [ref=e428] [cursor=pointer]:
+        - /url: https://kyn-app.vercel.app/
+        - img "KYN App" [ref=e430]
+        - generic [ref=e431]:
+          - generic [ref=e432]: تطبيق ذكي
+          - strong [ref=e433]: KYN App
+          - paragraph [ref=e434]: منصة ذكية متكاملة بتجربة مستخدم احترافية
+          - generic [ref=e435]: ✅ عميل حقيقي
+      - link "Darbonna Taxi تطبيق نقل Darbonna Taxi منصة حجز سيارات أجرة ذكية مع تتبع مباشر ✅ عميل حقيقي" [ref=e436] [cursor=pointer]:
+        - /url: https://darbonna-taxi.vercel.app/
+        - img "Darbonna Taxi" [ref=e438]
+        - generic [ref=e439]:
+          - generic [ref=e440]: تطبيق نقل
+          - strong [ref=e441]: Darbonna Taxi
+          - paragraph [ref=e442]: منصة حجز سيارات أجرة ذكية مع تتبع مباشر
+          - generic [ref=e443]: ✅ عميل حقيقي
+      - link "Mall POS System نظام مبيعات Mall POS System نظام نقاط بيع يدير 50 فرع مع تقارير مركزية ✅ عميل حقيقي" [ref=e444] [cursor=pointer]:
+        - /url: https://mall-pos-system-fniugb.abacusai.app/
+        - img "Mall POS System" [ref=e446]
+        - generic [ref=e447]:
+          - generic [ref=e448]: نظام مبيعات
+          - strong [ref=e449]: Mall POS System
+          - paragraph [ref=e450]: نظام نقاط بيع يدير 50 فرع مع تقارير مركزية
+          - generic [ref=e451]: ✅ عميل حقيقي
+      - link "صالون كلاس تكريت موقع تجاري صالون كلاس تكريت موقع صالون تجميل فاخر مع نظام حجوزات ✅ عميل حقيقي" [ref=e452] [cursor=pointer]:
+        - /url: https://superlative-cheesecake-4963e9.netlify.app/
+        - img "صالون كلاس تكريت" [ref=e454]
+        - generic [ref=e455]:
+          - generic [ref=e456]: موقع تجاري
+          - strong [ref=e457]: صالون كلاس تكريت
+          - paragraph [ref=e458]: موقع صالون تجميل فاخر مع نظام حجوزات
+          - generic [ref=e459]: ✅ عميل حقيقي
+      - link "متجر إلكتروني احترافي متجر إلكتروني متجر إلكتروني احترافي منصة تسوق متكاملة مع إدارة منتجات وسلة شراء ✅ عميل حقيقي" [ref=e460] [cursor=pointer]:
+        - /url: https://zesty-licorice-3717d7.netlify.app/
+        - img "متجر إلكتروني احترافي" [ref=e462]
+        - generic [ref=e463]:
+          - generic [ref=e464]: متجر إلكتروني
+          - strong [ref=e465]: متجر إلكتروني احترافي
+          - paragraph [ref=e466]: منصة تسوق متكاملة مع إدارة منتجات وسلة شراء
+          - generic [ref=e467]: ✅ عميل حقيقي
+  - generic [ref=e468]:
+    - generic [ref=e470]:
+      - generic [ref=e471]: آراء العملاء
+      - heading "ماذا قال عملاؤنا؟" [level=2] [ref=e472]
+    - generic [ref=e474]:
+      - generic [ref=e475]:
+        - generic [ref=e476]: ★★★★★
+        - paragraph [ref=e477]: "\"النظام ساعدنا على استقبال الطلبات بسرعة كبيرة بدون أي خطأ. ممتاز جداً!\""
+        - generic [ref=e478]:
+          - generic [ref=e479]: أ
+          - generic [ref=e480]:
+            - strong [ref=e481]: أحمد الكعبي
+            - text: 📘 Facebook
+      - generic [ref=e482]:
+        - generic [ref=e483]: ★★★★★
+        - paragraph [ref=e484]: "\"تصميم الموقع احترافي جداً والتسليم كان قبل الموعد. شكراً فريق بغداد المستقبل!\""
+        - generic [ref=e485]:
+          - generic [ref=e486]: س
+          - generic [ref=e487]:
+            - strong [ref=e488]: سارة محمد
+            - text: 📸 Instagram
+      - generic [ref=e489]:
+        - generic [ref=e490]: ★★★★★
+        - paragraph [ref=e491]: "\"الفريق محترف وعندهم خبرة واضحة، النظام يشتغل بشكل ممتاز ومرن.\""
+        - generic [ref=e492]:
+          - generic [ref=e493]: ك
+          - generic [ref=e494]:
+            - strong [ref=e495]: كريم عبدالله
+            - text: 📘 Facebook
+      - generic [ref=e496]:
+        - generic [ref=e497]: ★★★★★
+        - paragraph [ref=e498]: "\"واو! المتجر الإلكتروني فاق توقعاتي. المبيعات زادت من الأسبوع الأول!\""
+        - generic [ref=e499]:
+          - generic [ref=e500]: ن
+          - generic [ref=e501]:
+            - strong [ref=e502]: نور الحسيني
+            - text: 📸 Instagram
+      - generic [ref=e503]:
+        - generic [ref=e504]: ★★★★★
+        - paragraph [ref=e505]: "\"التعامل مع الفريق سريع ومرن، والنظام يعمل بدون توقف. أنصح الجميع!\""
+        - generic [ref=e506]:
+          - generic [ref=e507]: م
+          - generic [ref=e508]:
+            - strong [ref=e509]: مصطفى الجبوري
+            - text: 📘 Facebook
+      - generic [ref=e510]:
+        - generic [ref=e511]: ★★★★★
+        - paragraph [ref=e512]: "\"نظام الحجوزات الذكي وفّر علينا ساعات يومياً. استثمار يستحق بكل تأكيد!\""
+        - generic [ref=e513]:
+          - generic [ref=e514]: ح
+          - generic [ref=e515]:
+            - strong [ref=e516]: حيدر الموسوي
+            - text: 📘 Facebook
+      - generic [ref=e517]:
+        - generic [ref=e518]: ★★★★★
+        - paragraph [ref=e519]: "\"النظام ساعدنا على استقبال الطلبات بسرعة كبيرة بدون أي خطأ. ممتاز جداً!\""
+        - generic [ref=e520]:
+          - generic [ref=e521]: أ
+          - generic [ref=e522]:
+            - strong [ref=e523]: أحمد الكعبي
+            - text: 📘 Facebook
+      - generic [ref=e524]:
+        - generic [ref=e525]: ★★★★★
+        - paragraph [ref=e526]: "\"تصميم الموقع احترافي جداً والتسليم كان قبل الموعد. شكراً فريق بغداد المستقبل!\""
+        - generic [ref=e527]:
+          - generic [ref=e528]: س
+          - generic [ref=e529]:
+            - strong [ref=e530]: سارة محمد
+            - text: 📸 Instagram
+      - generic [ref=e531]:
+        - generic [ref=e532]: ★★★★★
+        - paragraph [ref=e533]: "\"الفريق محترف وعندهم خبرة واضحة، النظام يشتغل بشكل ممتاز ومرن.\""
+        - generic [ref=e534]:
+          - generic [ref=e535]: ك
+          - generic [ref=e536]:
+            - strong [ref=e537]: كريم عبدالله
+            - text: 📘 Facebook
+      - generic [ref=e538]:
+        - generic [ref=e539]: ★★★★★
+        - paragraph [ref=e540]: "\"واو! المتجر الإلكتروني فاق توقعاتي. المبيعات زادت من الأسبوع الأول!\""
+        - generic [ref=e541]:
+          - generic [ref=e542]: ن
+          - generic [ref=e543]:
+            - strong [ref=e544]: نور الحسيني
+            - text: 📸 Instagram
+      - generic [ref=e545]:
+        - generic [ref=e546]: ★★★★★
+        - paragraph [ref=e547]: "\"التعامل مع الفريق سريع ومرن، والنظام يعمل بدون توقف. أنصح الجميع!\""
+        - generic [ref=e548]:
+          - generic [ref=e549]: م
+          - generic [ref=e550]:
+            - strong [ref=e551]: مصطفى الجبوري
+            - text: 📘 Facebook
+      - generic [ref=e552]:
+        - generic [ref=e553]: ★★★★★
+        - paragraph [ref=e554]: "\"نظام الحجوزات الذكي وفّر علينا ساعات يومياً. استثمار يستحق بكل تأكيد!\""
+        - generic [ref=e555]:
+          - generic [ref=e556]: ح
+          - generic [ref=e557]:
+            - strong [ref=e558]: حيدر الموسوي
+            - text: 📘 Facebook
+  - generic [ref=e560]:
+    - generic [ref=e561]: ابدأ مشروعك
+    - heading "مستعد لتحويل مؤسستك رقمياً؟" [level=2] [ref=e562]
+    - paragraph [ref=e563]: تواصل معنا اليوم لاستشارة مجانية ودراسة احتياجاتك بدون أي التزام
+    - generic [ref=e564]:
+      - link "اطلب استشارة مجانية" [ref=e565] [cursor=pointer]:
+        - /url: "#contact"
+      - link "شاهد أعمالنا" [ref=e566] [cursor=pointer]:
+        - /url: "#portfolio"
+  - generic [ref=e568]:
+    - generic [ref=e569]:
+      - generic [ref=e570]: تواصل معنا
+      - heading "تواصل معنا وابدأ مشروعك اليوم" [level=2] [ref=e571]
+    - generic [ref=e572]:
+      - generic [ref=e573]:
+        - generic [ref=e574]:
+          - generic [ref=e575]: 📍
+          - generic [ref=e576]:
+            - strong [ref=e577]: الفرع الأول — أربيل
+            - text: شارع 100، أربيل، العراق
+        - generic [ref=e578]:
+          - generic [ref=e579]: 📍
+          - generic [ref=e580]:
+            - strong [ref=e581]: الفرع الثاني — بغداد
+            - text: المنصور، قرب تمثال أبو جعفر المنصور
+        - generic [ref=e582]:
+          - generic [ref=e583]: 📱
+          - generic [ref=e584]:
+            - strong [ref=e585]: الهاتف
+            - generic [ref=e586]:
+              - link "07706688044" [ref=e587] [cursor=pointer]:
+                - /url: tel:07706688044
+              - text: ·
+              - link "07806688044" [ref=e588] [cursor=pointer]:
+                - /url: tel:07806688044
+        - generic [ref=e589]:
+          - generic [ref=e590]: ✉️
+          - generic [ref=e591]:
+            - strong [ref=e592]: البريد الإلكتروني
+            - link "cptstaf2018@gmail.com" [ref=e594] [cursor=pointer]:
+              - /url: mailto:cptstaf2018@gmail.com
+      - generic [ref=e595]:
+        - generic [ref=e596]:
+          - generic [ref=e597]:
+            - generic [ref=e598]: الاسم الكامل
+            - textbox "أدخل اسمك الكامل" [ref=e599]
+          - generic [ref=e600]:
+            - generic [ref=e601]: رقم الواتساب
+            - textbox "07xxxxxxxxx" [ref=e602]
+        - generic [ref=e603]:
+          - generic [ref=e604]:
+            - generic [ref=e605]: نوع المؤسسة
+            - combobox [ref=e606]:
+              - option "اختر..." [selected]
+              - option "وزارة / جهة حكومية"
+              - option "مستشفى / مركز طبي"
+              - option "جامعة / مؤسسة تعليمية"
+              - option "شركة خاصة"
+              - option "أخرى"
+          - generic [ref=e607]:
+            - generic [ref=e608]: الخدمة المطلوبة
+            - combobox [ref=e609]:
+              - option "اختر الخدمة..." [selected]
+              - option "تطوير موقع / تطبيق"
+              - option "نظام إدارة أعمال"
+              - option "ذكاء اصطناعي وأتمتة"
+              - option "نظام حضور بيومتري"
+              - option "متجر إلكتروني"
+              - option "تحليل بيانات"
+              - option "باقة متكاملة"
+        - generic [ref=e610]:
+          - generic [ref=e611]: وصف المشروع
+          - textbox "اشرح احتياجات مؤسستك باختصار..." [ref=e612]
+        - button "إرسال عبر واتساب" [ref=e613] [cursor=pointer]:
+          - img [ref=e614]
+          - generic [ref=e616]: إرسال عبر واتساب
+  - contentinfo [ref=e617]:
+    - generic [ref=e620]:
+      - generic [ref=e621]:
+        - generic [ref=e622]: بغداد المستقبل AI
+        - paragraph [ref=e623]: شريكك التقني الموثوق في بناء مستقبل رقمي ذكي للمؤسسات العراقية والعربية.
+        - generic [ref=e624]:
+          - link "Facebook" [ref=e625] [cursor=pointer]:
+            - /url: https://www.facebook.com/www.cptsaad
+            - img [ref=e626]
+          - link "Instagram" [ref=e628] [cursor=pointer]:
+            - /url: https://www.instagram.com/baghdad_future_ai
+            - img [ref=e629]
+          - link "LinkedIn" [ref=e631] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/baghdad-future-ai-a888b335a/
+            - img [ref=e632]
+          - link "TikTok" [ref=e634] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@b.f.ai
+            - img [ref=e635]
+          - link "YouTube" [ref=e637] [cursor=pointer]:
+            - /url: https://www.youtube.com/@زيزوالشمري-م9ك
+            - img [ref=e638]
+      - generic [ref=e640]:
+        - heading "الخدمات" [level=4] [ref=e641]
+        - list [ref=e642]:
+          - listitem [ref=e643]: تطوير المواقع والتطبيقات
+          - listitem [ref=e644]: أنظمة إدارة الأعمال
+          - listitem [ref=e645]: الذكاء الاصطناعي والأتمتة
+          - listitem [ref=e646]: المتاجر الإلكترونية
+          - listitem [ref=e647]: أنظمة الحضور البيومترية
+          - listitem [ref=e648]: تحليل البيانات
+      - generic [ref=e649]:
+        - heading "تواصل معنا" [level=4] [ref=e650]
+        - list [ref=e651]:
+          - listitem [ref=e652]: 📍 أربيل، شارع 100
+          - listitem [ref=e653]: 📍 بغداد، المنصور
+          - listitem [ref=e654]:
+            - link "📱 07706688044" [ref=e655] [cursor=pointer]:
+              - /url: tel:07706688044
+          - listitem [ref=e656]:
+            - link "📱 07806688044" [ref=e657] [cursor=pointer]:
+              - /url: tel:07806688044
+          - listitem [ref=e658]:
+            - link "✉️ cptstaf2018@gmail.com" [ref=e659] [cursor=pointer]:
+              - /url: mailto:cptstaf2018@gmail.com
+    - generic [ref=e662]:
+      - generic [ref=e663]:
+        - img [ref=e664]
+        - generic [ref=e669]: فريق بغداد المستقبل AI
+      - paragraph [ref=e670]: © 2025 شركة بغداد المستقبل AI — جميع الحقوق محفوظة
+  - link "WhatsApp" [ref=e671] [cursor=pointer]:
+    - /url: https://wa.me/9647706688044
+    - img [ref=e672]

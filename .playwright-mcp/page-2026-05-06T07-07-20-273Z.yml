@@ -1,0 +1,23 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]: كلينيك
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - heading "أهلاً بك" [level=2] [ref=e13]
+        - paragraph [ref=e14]: ادخل برقم واتساب العيادة
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: رقم الواتساب
+          - textbox "07701234567" [ref=e18]
+        - generic [ref=e19]:
+          - generic [ref=e20]: كلمة المرور
+          - textbox [ref=e21]
+        - button "تسجيل الدخول" [ref=e22]
+      - paragraph [ref=e23]: "للإدارة: استخدم الإيميل بدلاً من الرقم"
+    - paragraph [ref=e24]:
+      - text: عيادة جديدة؟
+      - link "سجّل مجاناً" [ref=e25] [cursor=pointer]:
+        - /url: /register
+  - alert [ref=e26]
