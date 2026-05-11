@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="شركة بغداد المستقبل AI — حلول رقمية ذكية: تطوير مواقع، أنظمة أعمال، أتمتة بالذكاء الاصطناعي">
-  <title>بغداد المستقبل AI | تطوير مواقع وأنظمة ذكية</title>
+  <title>بغداد المستقبل AI | شركة تقنية متخصصة في الذكاء الاصطناعي والحلول المؤسسية</title>
+  <meta name="description" content="بغداد المستقبل AI — شريكك التقني الموثوق في العراق. حلول ذكاء اصطناعي، أنظمة إدارة، تحول رقمي للوزارات والمستشفيات والجامعات والشركات.">
+  <meta property="og:title" content="بغداد المستقبل AI">
+  <meta property="og:description" content="نبني مستقبلاً رقمياً ذكياً للمؤسسات العراقية">
+  <meta property="og:url" content="https://baghdad-future-ai.my/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,149 +18,203 @@
 <!-- ══ NAVBAR ══ -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <div class="nav-logo">بغداد المستقبل <span>AI</span></div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#why" class="nav-a" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a></li>
-      <li><a href="#services" class="nav-a" data-ar="الخدمات" data-en="Services">الخدمات</a></li>
-      <li><a href="#portfolio" class="nav-a" data-ar="إنجازاتنا" data-en="Portfolio">إنجازاتنا</a></li>
-      <li><a href="#testimonials" class="nav-a" data-ar="آراء العملاء" data-en="Reviews">آراء العملاء</a></li>
-      <li><a href="#order" class="nav-a" data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</a></li>
-    </ul>
-    <a href="https://wa.me/9647706688044" target="_blank" class="btn btn-wa nav-wa" data-ar="واتساب" data-en="WhatsApp">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
-      <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+    <a href="#home" class="nav-logo">
+      بغداد المستقبل <span>AI</span>
     </a>
-    <button class="lang-btn" id="lang-btn" title="Switch Language">EN</button>
-    <button class="hamburger" id="hamburger" aria-label="قائمة">
-      <span></span><span></span><span></span>
-    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-a" data-ar="من نحن" data-en="About">من نحن</a></li>
+      <li><a href="#services" class="nav-a" data-ar="الخدمات" data-en="Services">الخدمات</a></li>
+      <li><a href="#products" class="nav-a" data-ar="المنتجات" data-en="Products">المنتجات</a></li>
+      <li><a href="#industries" class="nav-a" data-ar="القطاعات" data-en="Industries">القطاعات</a></li>
+      <li><a href="#portfolio" class="nav-a" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a></li>
+      <li><a href="#contact" class="nav-a" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://wa.me/9647706688044" target="_blank" class="btn-wa-nav">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+        <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+      </a>
+      <button class="lang-btn" id="lang-btn">EN</button>
+      <button class="hamburger" id="hamburger" aria-label="قائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    <a href="#why">لماذا نحن</a>
-    <a href="#services">الخدمات</a>
-    <a href="#portfolio">إنجازاتنا</a>
-    <a href="#testimonials">آراء العملاء</a>
-    <a href="#order">اطلب الآن</a>
+    <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+    <a href="#services" data-ar="الخدمات" data-en="Services">الخدمات</a>
+    <a href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
+    <a href="#industries" data-ar="القطاعات" data-en="Industries">القطاعات</a>
+    <a href="#portfolio" data-ar="أعمالنا" data-en="Portfolio">أعمالنا</a>
+    <a href="#contact" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
   </div>
 </nav>
 
 <!-- ══ HERO ══ -->
 <section class="hero" id="home">
-  <video class="hero-video" autoplay muted loop playsinline preload="auto">
-    <source src="./mp4/3D.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-orb-1"></div>
-  <div class="hero-orb-2"></div>
+  <div class="hero-mesh"></div>
+  <div class="hero-grid-overlay"></div>
   <div class="hero-inner">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      <span data-ar="متاح للمشاريع الجديدة الآن" data-en="Available for New Projects Now">متاح للمشاريع الجديدة الآن</span>
+    <div class="hero-eyebrow reveal">
+      <span class="eyebrow-dot"></span>
+      <span data-ar="شركة تقنية عراقية متخصصة" data-en="Iraqi Technology Company">شركة تقنية عراقية متخصصة</span>
     </div>
-    <h1>
-      <span data-ar="منافسك يتقدم كل يوم" data-en="Your competitor advances every day">منافسك يتقدم كل يوم</span><br>
-      <span class="grad-text" data-ar="حان وقتك الآن" data-en="Your time is NOW">حان وقتك الآن</span>
+    <h1 class="hero-title reveal">
+      <span data-ar="نبني مستقبلاً رقمياً" data-en="Building an Intelligent">نبني مستقبلاً رقمياً</span><br>
+      <span class="hero-accent" data-ar="ذكياً للمؤسسات العراقية" data-en="Digital Future for Iraq">ذكياً للمؤسسات العراقية</span>
     </h1>
-    <p class="hero-sub" data-ar="مواقع تبيع. أنظمة تدير. ذكاء اصطناعي يخدم عملاءك — كل شيء يشتغل بدونك." data-en="Websites that sell. Systems that manage. AI that serves your clients — everything works without you.">مواقع تبيع. أنظمة تدير. ذكاء اصطناعي يخدم عملاءك — كل شيء يشتغل بدونك.</p>
-    <div class="hero-btns">
-      <a href="#order" class="btn btn-accent btn-lg" data-ar="احصل على عرضك المجاني" data-en="Get Your Free Quote">احصل على عرضك المجاني</a>
-      <a href="#services" class="btn-outline" data-ar="شاهد خدماتنا ←" data-en="See Our Services →">شاهد خدماتنا ←</a>
+    <p class="hero-sub reveal" data-ar="شريكك التقني الموثوق في الذكاء الاصطناعي، أنظمة الإدارة، والتحول الرقمي للوزارات والمستشفيات والمؤسسات الكبرى." data-en="Your trusted technology partner in AI, management systems, and digital transformation for ministries, hospitals, and enterprises.">شريكك التقني الموثوق في الذكاء الاصطناعي، أنظمة الإدارة، والتحول الرقمي للوزارات والمستشفيات والمؤسسات الكبرى.</p>
+    <div class="hero-btns reveal">
+      <a href="#contact" class="btn-primary" data-ar="اطلب استشارة مجانية" data-en="Request Free Consultation">اطلب استشارة مجانية</a>
+      <a href="#about" class="btn-secondary" data-ar="تعرف علينا" data-en="Learn About Us">تعرف علينا</a>
     </div>
-    <div class="hero-stats">
-      <div class="h-stat"><span class="cnt" data-target="2023">0</span><small data-ar="سنة التأسيس" data-en="Founded">سنة التأسيس</small></div>
-      <div class="h-stat"><span class="cnt" data-target="2">0</span><small data-ar="فرع بالعراق" data-en="Iraq Branches">فرع بالعراق</small></div>
-      <div class="h-stat"><span class="cnt" data-target="300">0</span><sup>+</sup><small data-ar="عميل راضٍ" data-en="Happy Clients">عميل راضٍ</small></div>
-      <div class="h-stat"><span class="cnt" data-target="150">0</span><sup>+</sup><small data-ar="مشروع منجز" data-en="Projects Done">مشروع منجز</small></div>
+    <div class="hero-stats reveal">
+      <div class="hstat">
+        <span class="hstat-num"><span class="cnt" data-target="50">0</span>+</span>
+        <span class="hstat-label" data-ar="مشروع منجز" data-en="Projects Done">مشروع منجز</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-num"><span class="cnt" data-target="20">0</span>+</span>
+        <span class="hstat-label" data-ar="عميل مؤسسي" data-en="Enterprise Clients">عميل مؤسسي</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-num">99.9%</span>
+        <span class="hstat-label" data-ar="موثوقية النظام" data-en="System Reliability">موثوقية النظام</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-num">2023</span>
+        <span class="hstat-label" data-ar="سنة التأسيس" data-en="Founded">سنة التأسيس</span>
+      </div>
     </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
   </div>
 </section>
 
-<!-- ══ OFFERS STRIP ══ -->
-<div class="offers-strip">
-  <div class="offers-track">
-    <span class="offer-item">🔥 عرض حصري — موقع احترافي كامل خلال 7 أيام فقط</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">⚡ استشارة مجانية — تواصل معنا الآن على الواتساب</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">🤖 نظام ذكي يرد ويبيع بدلاً عنك — 24 ساعة بدون توقف</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">💰 ضمان كامل — نتائج حقيقية أو نُعيد لك المبلغ</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">🚀 أماكن محدودة هذا الشهر — احجز مكانك الآن</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">✨ متجر إلكتروني كامل مع نظام دفع — ابدأ البيع اليوم</span>
-    <span class="offer-sep">◆</span>
-    <!-- duplicate -->
-    <span class="offer-item">🔥 عرض حصري — موقع احترافي كامل خلال 7 أيام فقط</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">⚡ استشارة مجانية — تواصل معنا الآن على الواتساب</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">🤖 نظام ذكي يرد ويبيع بدلاً عنك — 24 ساعة بدون توقف</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">💰 ضمان كامل — نتائج حقيقية أو نُعيد لك المبلغ</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">🚀 أماكن محدودة هذا الشهر — احجز مكانك الآن</span>
-    <span class="offer-sep">◆</span>
-    <span class="offer-item">✨ متجر إلكتروني كامل مع نظام دفع — ابدأ البيع اليوم</span>
-    <span class="offer-sep">◆</span>
+<!-- ══ TRUSTED BY ══ -->
+<div class="trusted-strip">
+  <div class="trusted-inner">
+    <span class="trusted-label" data-ar="يثقون بنا" data-en="Trusted By">يثقون بنا</span>
+    <div class="trusted-track-wrap">
+      <div class="trusted-track">
+        <span>وزارة الصحة</span>
+        <span class="sep">◆</span>
+        <span>مستشفى ابن النفيس</span>
+        <span class="sep">◆</span>
+        <span>جامعة بغداد</span>
+        <span class="sep">◆</span>
+        <span>مجمع الرواد التجاري</span>
+        <span class="sep">◆</span>
+        <span>عيادة الشفاء</span>
+        <span class="sep">◆</span>
+        <span>شركة الرافدين</span>
+        <span class="sep">◆</span>
+        <span>مركز أربيل الطبي</span>
+        <span class="sep">◆</span>
+        <span>وزارة الصحة</span>
+        <span class="sep">◆</span>
+        <span>مستشفى ابن النفيس</span>
+        <span class="sep">◆</span>
+        <span>جامعة بغداد</span>
+        <span class="sep">◆</span>
+        <span>مجمع الرواد التجاري</span>
+        <span class="sep">◆</span>
+        <span>عيادة الشفاء</span>
+        <span class="sep">◆</span>
+        <span>شركة الرافدين</span>
+        <span class="sep">◆</span>
+        <span>مركز أربيل الطبي</span>
+        <span class="sep">◆</span>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- ══ ABOUT ══ -->
-<section class="about-section" id="about">
-  <div class="about-inner">
-    <div class="about-img-wrap">
-      <img src="./images/2.jpeg" alt="Baghdad Future AI" loading="lazy">
-      <div class="about-img-badge">
-        <span class="aib-year">2023</span>
-        <span class="aib-label">تأسست</span>
-      </div>
-    </div>
-    <div class="about-body">
-      <span class="section-label" data-ar="نبذة عنا" data-en="About Us">نبذة عنا</span>
-      <h2 class="about-heading">بغداد المستقبل<br><span class="txt-accent">AI & Web Systems</span></h2>
-      <div class="about-para">
-        <p data-ar="شركة بغداد المستقبل متخصصة في بناء الحلول الرقمية والأنظمة الذكية المعتمدة على الذكاء الاصطناعي وتطوير الويب الحديث." data-en="Baghdad Future is a company specialized in building digital solutions and intelligent systems powered by artificial intelligence and modern web development.">شركة بغداد المستقبل متخصصة في بناء الحلول الرقمية والأنظمة الذكية المعتمدة على الذكاء الاصطناعي وتطوير الويب الحديث.</p>
-      </div>
-      <div class="about-para">
-        <p data-ar="نساعد الشركات على التحول الرقمي عبر أنظمة أتمتة، مواقع حديثة، وحلول مخصصة ترفع الكفاءة وتقلل الوقت والجهد." data-en="We help businesses achieve digital transformation through automation systems, modern websites, and custom solutions that boost efficiency and reduce time and effort.">نساعد الشركات على التحول الرقمي عبر أنظمة أتمتة، مواقع حديثة، وحلول مخصصة ترفع الكفاءة وتقلل الوقت والجهد.</p>
-      </div>
-      <div class="about-para">
-        <p data-ar="نركز على منتجات تقنية عملية وقابلة للتوسع، مصممة لتحقيق نتائج حقيقية في الأداء والإنتاجية ونمو الأعمال." data-en="We focus on practical and scalable technology products designed to deliver real results in performance, productivity, and business growth.">نركز على منتجات تقنية عملية وقابلة للتوسع، مصممة لتحقيق نتائج حقيقية في الأداء والإنتاجية ونمو الأعمال.</p>
-      </div>
-      <div class="about-pills">
-        <span class="about-pill" data-ar="ذكاء اصطناعي" data-en="Artificial Intelligence">ذكاء اصطناعي</span>
-        <span class="about-pill" data-ar="تطوير ويب" data-en="Web Development">تطوير ويب</span>
-        <span class="about-pill" data-ar="أتمتة الأعمال" data-en="Business Automation">أتمتة الأعمال</span>
-        <span class="about-pill" data-ar="متاجر إلكترونية" data-en="E-Commerce">متاجر إلكترونية</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ WHY US ══ -->
-<section class="section why-section" id="why">
+<section class="section about-section" id="about">
   <div class="container">
-    <span class="section-label" data-ar="ميزتنا" data-en="Our Edge">ميزتنا</span>
-    <h2 class="section-title" data-ar="لماذا تختارنا؟" data-en="Why Choose Us?">لماذا تختارنا؟</h2>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="why-num">01</div>
-        <div class="why-icon">⚡</div>
-        <h3 data-ar="تنتهي مشاكلك من اليوم الأول" data-en="Problems solved from day one">تنتهي مشاكلك من اليوم الأول</h3>
-        <p data-ar="ما تحتاج تنتظر أشهر — مشروعك يكون جاهزاً وشغّال خلال أيام، بدون تأخير وبدون أعذار" data-en="No months of waiting — your project is ready and running within days, no delays, no excuses.">ما تحتاج تنتظر أشهر — مشروعك يكون جاهزاً وشغّال خلال أيام، بدون تأخير وبدون أعذار</p>
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-tag" data-ar="من نحن" data-en="About Us">من نحن</span>
+        <h2 class="section-title" data-ar="شركة تقنية عراقية<br>تقود التحول الرقمي" data-en="Iraqi Tech Company<br>Leading Digital Transformation">شركة تقنية عراقية<br>تقود التحول الرقمي</h2>
+        <p class="about-desc" data-ar="تأسست بغداد المستقبل AI عام 2023 بهدف واحد: بناء منظومة تقنية متكاملة تخدم المؤسسات العراقية الكبرى. نجمع بين الخبرة المحلية العميقة والتقنيات العالمية الحديثة لتقديم حلول رقمية حقيقية قابلة للتوسع والتطوير." data-en="Baghdad Future AI was founded in 2023 with one goal: building an integrated technology ecosystem that serves major Iraqi institutions. We combine deep local expertise with modern global technologies to deliver real, scalable digital solutions.">تأسست بغداد المستقبل AI عام 2023 بهدف واحد: بناء منظومة تقنية متكاملة تخدم المؤسسات العراقية الكبرى. نجمع بين الخبرة المحلية العميقة والتقنيات العالمية الحديثة لتقديم حلول رقمية حقيقية قابلة للتوسع والتطوير.</p>
+        <div class="about-values">
+          <div class="value-item reveal">
+            <div class="value-icon">💡</div>
+            <div>
+              <strong data-ar="الابتكار المستمر" data-en="Continuous Innovation">الابتكار المستمر</strong>
+              <p data-ar="نواكب أحدث التقنيات العالمية" data-en="We keep pace with the latest global technologies">نواكب أحدث التقنيات العالمية</p>
+            </div>
+          </div>
+          <div class="value-item reveal">
+            <div class="value-icon">🛡️</div>
+            <div>
+              <strong data-ar="الأمان والموثوقية" data-en="Security & Reliability">الأمان والموثوقية</strong>
+              <p data-ar="بنية تحتية آمنة بمعايير دولية" data-en="Secure infrastructure with international standards">بنية تحتية آمنة بمعايير دولية</p>
+            </div>
+          </div>
+          <div class="value-item reveal">
+            <div class="value-icon">🤝</div>
+            <div>
+              <strong data-ar="شراكة حقيقية" data-en="True Partnership">شراكة حقيقية</strong>
+              <p data-ar="ندعمك ما بعد التسليم بدون توقف" data-en="We support you post-delivery without stop">ندعمك ما بعد التسليم بدون توقف</p>
+            </div>
+          </div>
+          <div class="value-item reveal">
+            <div class="value-icon">📍</div>
+            <div>
+              <strong data-ar="خبرة محلية عميقة" data-en="Deep Local Expertise">خبرة محلية عميقة</strong>
+              <p data-ar="نفهم السوق العراقي والبيئة المؤسسية" data-en="We understand the Iraqi market and institutional environment">نفهم السوق العراقي والبيئة المؤسسية</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="why-card reveal">
-        <div class="why-num">02</div>
-        <div class="why-icon">🤖</div>
-        <h3 data-ar="عملك يشتغل حتى وأنت نايم" data-en="Your business runs while you sleep">عملك يشتغل حتى وأنت نايم</h3>
-        <p data-ar="نبني لك أنظمة ذكية ترد على عملائك، تنظّم طلباتك، وتزيد مبيعاتك — 24 ساعة بدون موظف إضافي" data-en="We build smart systems that respond to clients, organize orders, and boost sales — 24/7, no extra staff.">نبني لك أنظمة ذكية ترد على عملائك، تنظّم طلباتك، وتزيد مبيعاتك — 24 ساعة بدون موظف إضافي</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-num">03</div>
-        <div class="why-icon">💰</div>
-        <h3 data-ar="استثمار يرجع لك ضعفين" data-en="Investment that doubles back">استثمار يرجع لك ضعفين</h3>
-        <p data-ar="كل مشروع نبنيه مصمم يزيد دخلك الفعلي — مو بس موقع حلو، نتيجة حقيقية تحس فيها بكيسك" data-en="Every project we build is designed to grow your actual income — not just a pretty website, real results.">كل مشروع نبنيه مصمم يزيد دخلك الفعلي — مو بس موقع حلو، نتيجة حقيقية تحس فيها بكيسك</p>
+      <div class="about-visual reveal">
+        <div class="about-card-main">
+          <div class="acm-top">
+            <div class="acm-icon">🏢</div>
+            <div>
+              <div class="acm-title" data-ar="بغداد المستقبل AI" data-en="Baghdad Future AI">بغداد المستقبل AI</div>
+              <div class="acm-sub" data-ar="شركة تقنية متخصصة" data-en="Specialized Tech Company">شركة تقنية متخصصة</div>
+            </div>
+          </div>
+          <div class="acm-stats">
+            <div class="acm-stat">
+              <span class="acm-num">+150</span>
+              <span class="acm-lbl" data-ar="مشروع" data-en="Projects">مشروع</span>
+            </div>
+            <div class="acm-stat">
+              <span class="acm-num">2</span>
+              <span class="acm-lbl" data-ar="فرع" data-en="Branches">فرع</span>
+            </div>
+            <div class="acm-stat">
+              <span class="acm-num">Iraq</span>
+              <span class="acm-lbl" data-ar="& الخليج" data-en="& Gulf">& الخليج</span>
+            </div>
+          </div>
+          <div class="acm-tags">
+            <span data-ar="الذكاء الاصطناعي" data-en="AI">الذكاء الاصطناعي</span>
+            <span data-ar="SaaS" data-en="SaaS">SaaS</span>
+            <span data-ar="ERP" data-en="ERP">ERP</span>
+            <span data-ar="الرعاية الصحية" data-en="Healthcare">الرعاية الصحية</span>
+          </div>
+        </div>
+        <div class="about-card-secondary">
+          <div class="acs-row">
+            <span class="acs-dot green"></span>
+            <span data-ar="أنظمة نشطة الآن" data-en="Systems Active Now">أنظمة نشطة الآن</span>
+          </div>
+          <div class="acs-num">24/7</div>
+          <div class="acs-label" data-ar="دعم فني مستمر" data-en="Continuous Technical Support">دعم فني مستمر</div>
+        </div>
+        <div class="about-card-third reveal">
+          <div class="act-icon">📍</div>
+          <div data-ar="أربيل · بغداد" data-en="Erbil · Baghdad">أربيل · بغداد</div>
+        </div>
       </div>
     </div>
   </div>
@@ -166,283 +223,320 @@
 <!-- ══ SERVICES ══ -->
 <section class="section services-section" id="services">
   <div class="container">
-    <div class="svc-head">
-      <div>
-        <span class="section-label" data-ar="خدماتنا" data-en="Our Services">خدماتنا</span>
-        <h2 class="section-title" data-ar="ماذا نصنع لك؟" data-en="What do we build for you?">ماذا نصنع لك؟</h2>
-      </div>
+    <div class="section-head">
+      <span class="section-tag" data-ar="خدماتنا" data-en="Our Services">خدماتنا</span>
+      <h2 class="section-title" data-ar="حلول تقنية متكاملة<br>لكل احتياجات مؤسستك" data-en="Integrated Tech Solutions<br>for Every Institutional Need">حلول تقنية متكاملة<br>لكل احتياجات مؤسستك</h2>
     </div>
-    <div class="svc-grid">
+    <div class="services-grid">
 
-      <div class="svc-card svc-featured reveal">
-        <div class="svc-popular" data-ar="الأكثر طلباً" data-en="Most Popular">الأكثر طلباً</div>
-        <div class="svc-n" data-ar="01 — مميز" data-en="01 — Featured">01 — مميز</div>
-        <div class="svc-icon-wrap">⚙️</div>
-        <h3 data-ar="نظام يدير عملك عنك" data-en="A System That Manages Your Business">نظام يدير عملك عنك</h3>
-        <p data-ar="بدل ما تتابع كل شيء بإيدك — نبني لك نظاماً يتابع عملائك، طلباتك، وأرباحك كلها من مكان واحد" data-en="Instead of tracking everything manually — we build a system that follows your clients, orders, and profits all from one place.">بدل ما تتابع كل شيء بإيدك — نبني لك نظاماً يتابع عملائك، طلباتك، وأرباحك كلها من مكان واحد</p>
-        <ul class="svc-list">
-          <li data-ar="✓ تعرف مين عميلك ووش يطلب" data-en="✓ Know who your client is and what they want">✓ تعرف مين عميلك ووش يطلب</li>
-          <li data-ar="✓ ما تنسى أي طلب أو موعد" data-en="✓ Never miss an order or appointment">✓ ما تنسى أي طلب أو موعد</li>
-          <li data-ar="✓ تشوف أرباحك لحظة بلحظة" data-en="✓ See your profits in real time">✓ تشوف أرباحك لحظة بلحظة</li>
-        </ul>
-        <button class="btn btn-accent svc-cta" onclick="openChat()" data-ar="ابدأ الآن" data-en="Start Now">ابدأ الآن</button>
+      <div class="svc-card reveal">
+        <div class="svc-icon-box" style="background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="1.8" width="26" height="26"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 data-ar="تطوير المواقع والتطبيقات" data-en="Web & App Development">تطوير المواقع والتطبيقات</h3>
+        <p data-ar="مواقع مؤسسية، بوابات حكومية، تطبيقات جوال بمعايير عالمية وتجربة مستخدم احترافية." data-en="Corporate websites, government portals, mobile apps with international standards and professional UX.">مواقع مؤسسية، بوابات حكومية، تطبيقات جوال بمعايير عالمية وتجربة مستخدم احترافية.</p>
       </div>
 
       <div class="svc-card reveal">
-        <div class="svc-n" data-ar="02" data-en="02">02</div>
-        <div class="svc-icon-wrap">🌐</div>
-        <h3 data-ar="موقعك على الإنترنت" data-en="Your Website Online">موقعك على الإنترنت</h3>
-        <p data-ar="نبني لك موقعاً يبيع عنك حتى لو أنت مو موجود" data-en="We build you a website that sells for you even when you're not there.">نبني لك موقعاً يبيع عنك حتى لو أنت مو موجود</p>
-        <ul class="svc-list">
-          <li data-ar="✓ موقع يظهر في نتائج البحث" data-en="✓ Website that appears in search results">✓ موقع يظهر في نتائج البحث</li>
-          <li data-ar="✓ تصميم يخلي الزبون يثق فيك فوراً" data-en="✓ Design that builds instant client trust">✓ تصميم يخلي الزبون يثق فيك فوراً</li>
-          <li data-ar="✓ متجر إلكتروني يبيع 24/7" data-en="✓ Online store that sells 24/7">✓ متجر إلكتروني يبيع 24/7</li>
-        </ul>
-        <button class="btn btn-ghost svc-cta" onclick="openChat()" data-ar="احجز استشارة" data-en="Book Consultation">احجز استشارة</button>
+        <div class="svc-icon-box" style="background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="1.8" width="26" height="26"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 data-ar="أنظمة إدارة الأعمال" data-en="Business Management Systems">أنظمة إدارة الأعمال</h3>
+        <p data-ar="أنظمة ERP وCRM مخصصة لإدارة الموارد البشرية، المالية، والمخزون بكفاءة عالية." data-en="Custom ERP and CRM systems to manage HR, finance, and inventory with high efficiency.">أنظمة ERP وCRM مخصصة لإدارة الموارد البشرية، المالية، والمخزون بكفاءة عالية.</p>
       </div>
 
       <div class="svc-card reveal">
-        <div class="svc-n" data-ar="03" data-en="03">03</div>
-        <div class="svc-icon-wrap">🤖</div>
-        <h3 data-ar="مساعد ذكي بالواتساب" data-en="AI WhatsApp Assistant">مساعد ذكي بالواتساب</h3>
-        <p data-ar="موظف افتراضي يرد على عملائك ويبيع لهم حتى الساعة 3 الفجر" data-en="A virtual employee that responds to your clients and sells for them until 3am.">موظف افتراضي يرد على عملائك ويبيع لهم حتى الساعة 3 الفجر</p>
-        <ul class="svc-list">
-          <li data-ar="✓ يرد على عملائك فوراً بدونك" data-en="✓ Responds to clients instantly without you">✓ يرد على عملائك فوراً بدونك</li>
-          <li data-ar="✓ يحجز ويؤكد المواعيد تلقائياً" data-en="✓ Books and confirms appointments automatically">✓ يحجز ويؤكد المواعيد تلقائياً</li>
-          <li data-ar="✓ يزيد مبيعاتك وأنت نايم" data-en="✓ Grows your sales while you sleep">✓ يزيد مبيعاتك وأنت نايم</li>
-        </ul>
-        <button class="btn btn-ghost svc-cta" onclick="openChat()" data-ar="احجز استشارة" data-en="Book Consultation">احجز استشارة</button>
+        <div class="svc-icon-box" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="1.8" width="26" height="26"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <h3 data-ar="الذكاء الاصطناعي والأتمتة" data-en="AI & Automation">الذكاء الاصطناعي والأتمتة</h3>
+        <p data-ar="روبوتات محادثة ذكية، تحليل البيانات، أتمتة العمليات، ونماذج تنبؤية متقدمة." data-en="Smart chatbots, data analysis, process automation, and advanced predictive models.">روبوتات محادثة ذكية، تحليل البيانات، أتمتة العمليات، ونماذج تنبؤية متقدمة.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon-box" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" width="26" height="26"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </div>
+        <h3 data-ar="المتاجر الإلكترونية" data-en="E-Commerce Solutions">المتاجر الإلكترونية</h3>
+        <p data-ar="منصات تجارة إلكترونية متكاملة مع بوابات دفع، إدارة مخزون، ولوحات تحكم ذكية." data-en="Integrated e-commerce platforms with payment gateways, inventory management, and smart dashboards.">منصات تجارة إلكترونية متكاملة مع بوابات دفع، إدارة مخزون، ولوحات تحكم ذكية.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon-box" style="background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="1.8" width="26" height="26"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 data-ar="أنظمة الحضور البيومترية" data-en="Biometric Attendance Systems">أنظمة الحضور البيومترية</h3>
+        <p data-ar="أنظمة حضور مركزية بتقنية بصمة الإصبع والوجه مع تقارير فورية وتكامل مع الرواتب." data-en="Central attendance systems with fingerprint and face recognition, instant reports and payroll integration.">أنظمة حضور مركزية بتقنية بصمة الإصبع والوجه مع تقارير فورية وتكامل مع الرواتب.</p>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon-box" style="background:rgba(217,119,87,.1);border-color:rgba(217,119,87,.2)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="1.8" width="26" height="26"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <h3 data-ar="تحليل البيانات والتقارير" data-en="Data Analytics & Reports">تحليل البيانات والتقارير</h3>
+        <p data-ar="لوحات تحكم تفاعلية، تقارير مخصصة، وتحليلات ذكية تدعم القرار المؤسسي." data-en="Interactive dashboards, custom reports, and smart analytics supporting institutional decision-making.">لوحات تحكم تفاعلية، تقارير مخصصة، وتحليلات ذكية تدعم القرار المؤسسي.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ══ HOW WE WORK ══ -->
-<section class="section how-section">
+<!-- ══ PRODUCTS ══ -->
+<section class="section products-section" id="products">
   <div class="container">
-    <span class="section-label" data-ar="طريقة عملنا" data-en="How We Work">طريقة عملنا</span>
-    <h2 class="section-title" data-ar="3 خطوات وأنت جاهز" data-en="3 Steps and You're Ready">3 خطوات وأنت جاهز</h2>
-    <div class="steps-grid">
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <h3 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h3>
-        <p data-ar="أرسل لنا فكرتك عبر واتساب أو النموذج — نرد عليك خلال ساعة ونحدد موعد استشارة مجانية" data-en="Send us your idea via WhatsApp or the form — we reply within an hour and schedule a free consultation.">أرسل لنا فكرتك عبر واتساب أو النموذج — نرد عليك خلال ساعة ونحدد موعد استشارة مجانية</p>
+    <div class="section-head">
+      <span class="section-tag" data-ar="منتجاتنا" data-en="Our Products">منتجاتنا</span>
+      <h2 class="section-title" data-ar="منصات SaaS جاهزة<br>للتطبيق الفوري" data-en="Ready-to-Deploy<br>SaaS Platforms">منصات SaaS جاهزة<br>للتطبيق الفوري</h2>
+      <p class="section-sub" data-ar="حلول برمجية متكاملة مصممة خصيصاً للبيئة العراقية والمؤسسية" data-en="Integrated software solutions designed specifically for the Iraqi and institutional environment">حلول برمجية متكاملة مصممة خصيصاً للبيئة العراقية والمؤسسية</p>
+    </div>
+    <div class="products-grid">
+
+      <a href="https://clinicplt.vercel.app/login" target="_blank" class="product-card featured reveal">
+        <div class="product-badge" data-ar="متاح الآن" data-en="Live Now">متاح الآن</div>
+        <div class="product-icon">🏥</div>
+        <h3 data-ar="كلينيك — نظام إدارة العيادات" data-en="Clinicplt — Clinic Management">كلينيك — نظام إدارة العيادات</h3>
+        <p data-ar="منصة SaaS متكاملة لإدارة العيادات والمراكز الطبية: المواعيد، المرضى، الفواتير، والتقارير." data-en="Integrated SaaS platform for managing clinics and medical centers: appointments, patients, billing, and reports.">منصة SaaS متكاملة لإدارة العيادات والمراكز الطبية: المواعيد، المرضى، الفواتير، والتقارير.</p>
+        <ul class="product-features">
+          <li data-ar="إدارة مواعيد ذكية" data-en="Smart appointment management">إدارة مواعيد ذكية</li>
+          <li data-ar="سجلات طبية إلكترونية" data-en="Electronic medical records">سجلات طبية إلكترونية</li>
+          <li data-ar="نظام فواتير متكامل" data-en="Integrated billing system">نظام فواتير متكامل</li>
+          <li data-ar="تقارير وإحصائيات فورية" data-en="Instant reports & statistics">تقارير وإحصائيات فورية</li>
+        </ul>
+        <span class="product-link" data-ar="زيارة المنصة ←" data-en="Visit Platform ←">زيارة المنصة ←</span>
+      </a>
+
+      <div class="product-card reveal">
+        <div class="product-icon">👁️</div>
+        <h3 data-ar="نظام الحضور المركزي" data-en="Central Attendance System">نظام الحضور المركزي</h3>
+        <p data-ar="تتبع حضور الموظفين عبر بصمة الإصبع والوجه مع تكامل كامل مع أنظمة الرواتب والإدارة." data-en="Employee attendance tracking via fingerprint and facial recognition with full integration with payroll and management systems.">تتبع حضور الموظفين عبر بصمة الإصبع والوجه مع تكامل كامل مع أنظمة الرواتب والإدارة.</p>
+        <ul class="product-features">
+          <li data-ar="تعرف على الوجه والبصمة" data-en="Face & fingerprint recognition">تعرف على الوجه والبصمة</li>
+          <li data-ar="إدارة مركزية لعدة فروع" data-en="Central management for multiple branches">إدارة مركزية لعدة فروع</li>
+          <li data-ar="تكامل مع نظام الرواتب" data-en="Payroll system integration">تكامل مع نظام الرواتب</li>
+        </ul>
+        <span class="product-soon" data-ar="قريباً" data-en="Coming Soon">قريباً</span>
       </div>
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <h3 data-ar="نصمم لك الحل" data-en="We Design Your Solution">نصمم لك الحل</h3>
-        <p data-ar="نفهم احتياجاتك بالضبط ونبني لك نظاماً أو موقعاً مخصصاً يحل مشكلتك الفعلية" data-en="We understand your exact needs and build a custom system or website that solves your real problem.">نفهم احتياجاتك بالضبط ونبني لك نظاماً أو موقعاً مخصصاً يحل مشكلتك الفعلية</p>
+
+      <div class="product-card reveal">
+        <div class="product-icon">⚙️</div>
+        <h3 data-ar="نظام ERP المؤسسي" data-en="Enterprise ERP System">نظام ERP المؤسسي</h3>
+        <p data-ar="إدارة شاملة للموارد المؤسسية: المالية، الموارد البشرية، المشتريات، والمخزون من منصة واحدة." data-en="Comprehensive institutional resource management: finance, HR, procurement, and inventory from one platform.">إدارة شاملة للموارد المؤسسية: المالية، الموارد البشرية، المشتريات، والمخزون من منصة واحدة.</p>
+        <ul class="product-features">
+          <li data-ar="إدارة مالية متكاملة" data-en="Integrated financial management">إدارة مالية متكاملة</li>
+          <li data-ar="إدارة الموارد البشرية" data-en="Human resources management">إدارة الموارد البشرية</li>
+          <li data-ar="لوحة تحكم مركزية" data-en="Central control dashboard">لوحة تحكم مركزية</li>
+        </ul>
+        <span class="product-soon" data-ar="قريباً" data-en="Coming Soon">قريباً</span>
       </div>
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <h3 data-ar="تستلم وتربح" data-en="Receive & Profit">تستلم وتربح</h3>
-        <p data-ar="تستلم مشروعك جاهزاً وشغّالاً — مع تدريب كامل ودعم فني مستمر بعد التسليم" data-en="Receive your project ready to go — with full training and ongoing technical support after delivery.">تستلم مشروعك جاهزاً وشغّالاً — مع تدريب كامل ودعم فني مستمر بعد التسليم</p>
+
+      <div class="product-card reveal">
+        <div class="product-icon">📊</div>
+        <h3 data-ar="منصة تحليل البيانات" data-en="Data Analytics Platform">منصة تحليل البيانات</h3>
+        <p data-ar="لوحات تحكم ذكية وتقارير تفاعلية تحول بياناتك إلى قرارات استراتيجية دقيقة." data-en="Smart dashboards and interactive reports that transform your data into precise strategic decisions.">لوحات تحكم ذكية وتقارير تفاعلية تحول بياناتك إلى قرارات استراتيجية دقيقة.</p>
+        <ul class="product-features">
+          <li data-ar="مرئيات بيانات تفاعلية" data-en="Interactive data visualizations">مرئيات بيانات تفاعلية</li>
+          <li data-ar="تنبؤات ذكاء اصطناعي" data-en="AI predictions">تنبؤات ذكاء اصطناعي</li>
+          <li data-ar="تقارير مخصصة" data-en="Custom reports">تقارير مخصصة</li>
+        </ul>
+        <span class="product-soon" data-ar="قريباً" data-en="Coming Soon">قريباً</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ INDUSTRIES ══ -->
+<section class="section industries-section" id="industries">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag" data-ar="القطاعات" data-en="Industries">القطاعات</span>
+      <h2 class="section-title" data-ar="نخدم المؤسسات الكبرى<br>في كل القطاعات" data-en="Serving Major Institutions<br>Across All Sectors">نخدم المؤسسات الكبرى<br>في كل القطاعات</h2>
+    </div>
+    <div class="industries-grid">
+      <div class="ind-card reveal">
+        <div class="ind-icon">🏛️</div>
+        <h3 data-ar="الحكومة والوزارات" data-en="Government & Ministries">الحكومة والوزارات</h3>
+        <p data-ar="بوابات حكومية، أنظمة إدارة، تحول رقمي للمؤسسات الحكومية" data-en="Government portals, management systems, digital transformation for government institutions">بوابات حكومية، أنظمة إدارة، تحول رقمي للمؤسسات الحكومية</p>
+      </div>
+      <div class="ind-card reveal">
+        <div class="ind-icon">🏥</div>
+        <h3 data-ar="المستشفيات والرعاية الصحية" data-en="Hospitals & Healthcare">المستشفيات والرعاية الصحية</h3>
+        <p data-ar="أنظمة إدارة مستشفيات، سجلات طبية، مواعيد، ومتابعة المرضى" data-en="Hospital management systems, medical records, appointments, and patient follow-up">أنظمة إدارة مستشفيات، سجلات طبية، مواعيد، ومتابعة المرضى</p>
+      </div>
+      <div class="ind-card reveal">
+        <div class="ind-icon">🎓</div>
+        <h3 data-ar="الجامعات والتعليم" data-en="Universities & Education">الجامعات والتعليم</h3>
+        <p data-ar="منصات تعليمية، أنظمة إدارة الطلاب، حضور إلكتروني، وبوابات أكاديمية" data-en="Educational platforms, student management systems, electronic attendance, and academic portals">منصات تعليمية، أنظمة إدارة الطلاب، حضور إلكتروني، وبوابات أكاديمية</p>
+      </div>
+      <div class="ind-card reveal">
+        <div class="ind-icon">🏢</div>
+        <h3 data-ar="الشركات والمؤسسات" data-en="Corporations & Enterprises">الشركات والمؤسسات</h3>
+        <p data-ar="أنظمة ERP، CRM، إدارة المشاريع، وحلول رقمية لتحسين الكفاءة التشغيلية" data-en="ERP, CRM, project management, and digital solutions to improve operational efficiency">أنظمة ERP، CRM، إدارة المشاريع، وحلول رقمية لتحسين الكفاءة التشغيلية</p>
+      </div>
+      <div class="ind-card reveal">
+        <div class="ind-icon">🛒</div>
+        <h3 data-ar="التجزئة والتجارة" data-en="Retail & Commerce">التجزئة والتجارة</h3>
+        <p data-ar="متاجر إلكترونية، أنظمة نقاط البيع POS، وإدارة المخزون والفروع" data-en="E-commerce stores, POS systems, and branch/inventory management">متاجر إلكترونية، أنظمة نقاط البيع POS، وإدارة المخزون والفروع</p>
+      </div>
+      <div class="ind-card reveal">
+        <div class="ind-icon">🏗️</div>
+        <h3 data-ar="المقاولات والصناعة" data-en="Construction & Industry">المقاولات والصناعة</h3>
+        <p data-ar="أنظمة إدارة المشاريع والموارد للشركات الإنشائية والصناعية الكبرى" data-en="Project and resource management systems for major construction and industrial companies">أنظمة إدارة المشاريع والموارد للشركات الإنشائية والصناعية الكبرى</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY US ══ -->
+<section class="section whyus-section">
+  <div class="container">
+    <div class="whyus-grid">
+      <div class="whyus-text">
+        <span class="section-tag" data-ar="لماذا نحن" data-en="Why Choose Us">لماذا نحن</span>
+        <h2 class="section-title" data-ar="شريك تقني تثق به<br>لمشاريعك المؤسسية" data-en="A Technology Partner You Trust<br>for Your Institutional Projects">شريك تقني تثق به<br>لمشاريعك المؤسسية</h2>
+        <div class="why-items">
+          <div class="why-item reveal">
+            <div class="why-num">01</div>
+            <div>
+              <h4 data-ar="خبرة محلية عميقة" data-en="Deep Local Expertise">خبرة محلية عميقة</h4>
+              <p data-ar="نفهم تحديات البيئة العراقية والمتطلبات المؤسسية المحلية بعمق" data-en="We deeply understand Iraqi environment challenges and local institutional requirements">نفهم تحديات البيئة العراقية والمتطلبات المؤسسية المحلية بعمق</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-num">02</div>
+            <div>
+              <h4 data-ar="حلول مخصصة لك" data-en="Custom Solutions for You">حلول مخصصة لك</h4>
+              <p data-ar="لا نبيع قوالب جاهزة — نبني حلاً مصمماً خصيصاً لاحتياجات مؤسستك" data-en="We don't sell ready templates — we build solutions designed specifically for your institution's needs">لا نبيع قوالب جاهزة — نبني حلاً مصمماً خصيصاً لاحتياجات مؤسستك</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-num">03</div>
+            <div>
+              <h4 data-ar="دعم مستمر بلا انقطاع" data-en="Continuous Support">دعم مستمر بلا انقطاع</h4>
+              <p data-ar="فريق دعم فني متخصص متاح 24/7 لضمان استمرارية عمل أنظمتك" data-en="Specialized technical support team available 24/7 to ensure your systems continuity">فريق دعم فني متخصص متاح 24/7 لضمان استمرارية عمل أنظمتك</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-num">04</div>
+            <div>
+              <h4 data-ar="ضمان النتائج" data-en="Results Guarantee">ضمان النتائج</h4>
+              <p data-ar="نلتزم بمعايير واضحة للأداء والجودة — نتائج قابلة للقياس أو نُعيد لك استثمارك" data-en="We commit to clear performance and quality standards — measurable results or we return your investment">نلتزم بمعايير واضحة للأداء والجودة — نتائج قابلة للقياس أو نُعيد لك استثمارك</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="whyus-visual reveal">
+        <div class="trust-grid">
+          <div class="trust-badge"><span>🔒</span><span data-ar="SSL آمن" data-en="SSL Secure">SSL آمن</span></div>
+          <div class="trust-badge"><span>☁️</span><span data-ar="Cloud" data-en="Cloud">Cloud</span></div>
+          <div class="trust-badge"><span>🤖</span><span data-ar="AI مدعوم" data-en="AI Powered">AI مدعوم</span></div>
+          <div class="trust-badge"><span>⚡</span><span>99.9% Uptime</span></div>
+          <div class="trust-badge"><span>📱</span><span data-ar="Mobile First" data-en="Mobile First">Mobile First</span></div>
+          <div class="trust-badge"><span>🛡️</span><span data-ar="أمان معياري" data-en="Standard Security">أمان معياري</span></div>
+          <div class="trust-badge"><span>🌐</span><span data-ar="متعدد اللغات" data-en="Multilingual">متعدد اللغات</span></div>
+          <div class="trust-badge"><span>📊</span><span data-ar="تحليلات" data-en="Analytics">تحليلات</span></div>
+          <div class="trust-badge"><span>🔄</span><span data-ar="تحديث مستمر" data-en="Continuous Updates">تحديث مستمر</span></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ══ PORTFOLIO ══ -->
-<section class="section pf-section" id="portfolio">
+<section class="section portfolio-section" id="portfolio">
   <div class="container">
-    <span class="section-label" data-ar="معرض أعمالنا" data-en="Our Portfolio">معرض أعمالنا</span>
-    <h2 class="section-title" data-ar="مشاريعنا وأعمالنا" data-en="Our Projects & Work">مشاريعنا وأعمالنا</h2>
-    <p class="section-sub" data-ar="مرّر فوق أي مشروع للتوقف — اضغط لزيارته مباشرة" data-en="Hover to pause — click to visit directly">مرّر فوق أي مشروع للتوقف — اضغط لزيارته مباشرة</p>
+    <div class="section-head">
+      <span class="section-tag" data-ar="أعمالنا" data-en="Our Work">أعمالنا</span>
+      <h2 class="section-title" data-ar="مشاريع أثبتت نجاحها<br>على أرض الواقع" data-en="Projects That Proved Their Success<br>in the Real World">مشاريع أثبتت نجاحها<br>على أرض الواقع</h2>
+    </div>
   </div>
+  <div class="pf-scroll-wrap">
+    <div class="pf-scroll-track">
 
-  <div class="pf-track-wrap">
-    <div class="pf-track">
-
-      <a href="https://kyn-app.vercel.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-kyn.jpg" alt="KYN App" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
+      <a href="https://clinicplt.vercel.app/login" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#EEF2FF,#C7D2FE)">
+          <div class="pf-img-icon">🏥</div>
         </div>
-        <div class="pf-info">
-          <span class="pf-tag">📱 تطبيق ذكي</span>
+        <div class="pf-body">
+          <span class="pf-cat" data-ar="نظام طبي" data-en="Medical System">نظام طبي</span>
+          <strong data-ar="كلينيك — إدارة العيادات" data-en="Clinicplt — Clinic Management">كلينيك — إدارة العيادات</strong>
+          <p data-ar="نظام SaaS متكامل للعيادات والمراكز الطبية" data-en="Integrated SaaS system for clinics and medical centers">نظام SaaS متكامل للعيادات والمراكز الطبية</p>
+          <span class="pf-badge-live">✅ عميل حقيقي</span>
+        </div>
+      </a>
+
+      <a href="https://kyn-app.vercel.app/" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#F0FDF4,#BBF7D0)">
+          <div class="pf-img-icon">📱</div>
+        </div>
+        <div class="pf-body">
+          <span class="pf-cat" data-ar="تطبيق ذكي" data-en="Smart App">تطبيق ذكي</span>
           <strong>KYN App</strong>
-          <p>منصة ذكية متكاملة بتجربة مستخدم احترافية</p>
+          <p data-ar="منصة ذكية متكاملة بتجربة مستخدم احترافية" data-en="Integrated smart platform with professional user experience">منصة ذكية متكاملة بتجربة مستخدم احترافية</p>
+          <span class="pf-badge-live">✅ عميل حقيقي</span>
         </div>
       </a>
 
-      <a href="https://zesty-licorice-3717d7.netlify.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-tikmart.jpg" alt="متجر إلكتروني" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
+      <a href="https://darbonna-taxi.vercel.app/" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#FFF7ED,#FED7AA)">
+          <div class="pf-img-icon">🚖</div>
         </div>
-        <div class="pf-info">
-          <span class="pf-tag">🛒 متجر إلكتروني</span>
-          <strong>متجر إلكتروني احترافي</strong>
-          <p>متجر متكامل مع إدارة منتجات وتجربة تسوق سلسة</p>
-        </div>
-      </a>
-
-      <a href="https://darbonna-taxi.vercel.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-darbonna.jpg" alt="Darbonna Taxi" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🚖 تطبيق نقل</span>
+        <div class="pf-body">
+          <span class="pf-cat" data-ar="تطبيق نقل" data-en="Transport App">تطبيق نقل</span>
           <strong>Darbonna Taxi</strong>
-          <p>منصة حجز سيارات أجرة ذكية مع تتبع مباشر</p>
+          <p data-ar="منصة حجز سيارات أجرة ذكية مع تتبع مباشر" data-en="Smart taxi booking platform with live tracking">منصة حجز سيارات أجرة ذكية مع تتبع مباشر</p>
+          <span class="pf-badge-live">✅ عميل حقيقي</span>
         </div>
       </a>
 
-      <a href="https://mall-pos-system-fniugb.abacusai.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-tikmart.jpg" alt="Mall POS" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
+      <a href="https://mall-pos-system-fniugb.abacusai.app/" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#F0F9FF,#BAE6FD)">
+          <div class="pf-img-icon">🏪</div>
         </div>
-        <div class="pf-info">
-          <span class="pf-tag">🏪 نظام مبيعات</span>
-          <strong>Mall POS — نظام نقاط البيع</strong>
-          <p>نظام بيع يدير 50 فرع مع تقارير ولوحة تحكم مركزية</p>
-        </div>
-      </a>
-
-      <a href="https://gregarious-dodol-f11d3f.netlify.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-onetouch.jpg" alt="موقع احترافي" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🌐 موقع احترافي</span>
-          <strong>موقع احترافي متكامل</strong>
-          <p>تصميم عصري وتجربة مستخدم سلسة</p>
+        <div class="pf-body">
+          <span class="pf-cat" data-ar="نظام مبيعات" data-en="Sales System">نظام مبيعات</span>
+          <strong>Mall POS System</strong>
+          <p data-ar="نظام نقاط بيع يدير 50 فرع مع تقارير مركزية" data-en="POS system managing 50 branches with central reports">نظام نقاط بيع يدير 50 فرع مع تقارير مركزية</p>
+          <span class="pf-badge-live">✅ عميل حقيقي</span>
         </div>
       </a>
 
-      <a href="https://glowing-rugelach-33ae09.netlify.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-erbil.jpg" alt="نادي اربيل" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">مشاهدة الديمو ↗</span></div>
-          <span class="pf-badge demo">🧪 ديمو</span>
+      <a href="https://superlative-cheesecake-4963e9.netlify.app/" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#FDF4FF,#E9D5FF)">
+          <div class="pf-img-icon">💅</div>
         </div>
-        <div class="pf-info">
-          <span class="pf-tag">⚽ موقع رياضي</span>
-          <strong>نادي اربيل — نموذج</strong>
-          <p>نموذج موقع نادي رياضي احترافي قابل للتخصيص</p>
-        </div>
-      </a>
-
-      <a href="https://karmaclub-sandy.vercel.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-karma.jpg" alt="نادي الكرمة" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">مشاهدة الديمو ↗</span></div>
-          <span class="pf-badge demo">🧪 ديمو</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🏆 نادي رياضي</span>
-          <strong>نادي الكرمة — نموذج</strong>
-          <p>موقع نادي رياضي مع أخبار وجداول المباريات</p>
+        <div class="pf-body">
+          <span class="pf-cat" data-ar="موقع تجاري" data-en="Business Website">موقع تجاري</span>
+          <strong data-ar="صالون كلاس تكريت" data-en="Salon Class Tikrit">صالون كلاس تكريت</strong>
+          <p data-ar="موقع صالون تجميل فاخر مع نظام حجوزات" data-en="Luxury beauty salon website with booking system">موقع صالون تجميل فاخر مع نظام حجوزات</p>
+          <span class="pf-badge-live">✅ عميل حقيقي</span>
         </div>
       </a>
 
-      <a href="https://superlative-cheesecake-4963e9.netlify.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-salon.jpg" alt="صالون كلاس تكريت" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
+      <a href="https://zesty-licorice-3717d7.netlify.app/" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#FFFBEB,#FDE68A)">
+          <div class="pf-img-icon">🛒</div>
         </div>
-        <div class="pf-info">
-          <span class="pf-tag">💅 صالون تجميل</span>
-          <strong>صالون كلاس تكريت</strong>
-          <p>موقع صالون تجميل نسائي فاخر مع نظام حجوزات</p>
-        </div>
-      </a>
-
-      <a href="https://clinicplt.vercel.app/login" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-clinic.jpg" alt="كلينيك — نظام إدارة العيادة" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🏥 نظام طبي</span>
-          <strong>كلينيك — نظام إدارة العيادة</strong>
-          <p>نظام متكامل لإدارة العيادات مع حجوزات المرضى وسجلاتهم</p>
+        <div class="pf-body">
+          <span class="pf-cat" data-ar="متجر إلكتروني" data-en="E-Commerce">متجر إلكتروني</span>
+          <strong data-ar="متجر إلكتروني احترافي" data-en="Professional Online Store">متجر إلكتروني احترافي</strong>
+          <p data-ar="منصة تسوق متكاملة مع إدارة منتجات وسلة شراء" data-en="Integrated shopping platform with product management and cart">منصة تسوق متكاملة مع إدارة منتجات وسلة شراء</p>
+          <span class="pf-badge-live">✅ عميل حقيقي</span>
         </div>
       </a>
 
-      <!-- نسخة ثانية للاستمرارية -->
-      <a href="https://kyn-app.vercel.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-kyn.jpg" alt="KYN App" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">📱 تطبيق ذكي</span>
-          <strong>KYN App</strong>
-          <p>منصة ذكية متكاملة بتجربة مستخدم احترافية</p>
-        </div>
+      <!-- duplicate for loop -->
+      <a href="https://clinicplt.vercel.app/login" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#EEF2FF,#C7D2FE)"><div class="pf-img-icon">🏥</div></div>
+        <div class="pf-body"><span class="pf-cat" data-ar="نظام طبي" data-en="Medical System">نظام طبي</span><strong data-ar="كلينيك — إدارة العيادات" data-en="Clinicplt — Clinic Management">كلينيك — إدارة العيادات</strong><p data-ar="نظام SaaS متكامل للعيادات والمراكز الطبية" data-en="Integrated SaaS system for clinics and medical centers">نظام SaaS متكامل للعيادات والمراكز الطبية</p><span class="pf-badge-live">✅ عميل حقيقي</span></div>
       </a>
-      <a href="https://zesty-licorice-3717d7.netlify.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-tikmart.jpg" alt="متجر إلكتروني" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🛒 متجر إلكتروني</span>
-          <strong>متجر إلكتروني احترافي</strong>
-          <p>متجر متكامل مع إدارة منتجات وتجربة تسوق سلسة</p>
-        </div>
+      <a href="https://kyn-app.vercel.app/" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#F0FDF4,#BBF7D0)"><div class="pf-img-icon">📱</div></div>
+        <div class="pf-body"><span class="pf-cat" data-ar="تطبيق ذكي" data-en="Smart App">تطبيق ذكي</span><strong>KYN App</strong><p data-ar="منصة ذكية متكاملة بتجربة مستخدم احترافية" data-en="Integrated smart platform with professional user experience">منصة ذكية متكاملة بتجربة مستخدم احترافية</p><span class="pf-badge-live">✅ عميل حقيقي</span></div>
       </a>
-      <a href="https://darbonna-taxi.vercel.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-darbonna.jpg" alt="Darbonna Taxi" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🚖 تطبيق نقل</span>
-          <strong>Darbonna Taxi</strong>
-          <p>منصة حجز سيارات أجرة ذكية مع تتبع مباشر</p>
-        </div>
-      </a>
-      <a href="https://mall-pos-system-fniugb.abacusai.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-tikmart.jpg" alt="Mall POS" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🏪 نظام مبيعات</span>
-          <strong>Mall POS — نظام نقاط البيع</strong>
-          <p>نظام بيع يدير 50 فرع مع تقارير ولوحة تحكم مركزية</p>
-        </div>
-      </a>
-      <a href="https://karmaclub-sandy.vercel.app/" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-karma.jpg" alt="نادي الكرمة" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">مشاهدة الديمو ↗</span></div>
-          <span class="pf-badge demo">🧪 ديمو</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🏆 نادي رياضي</span>
-          <strong>نادي الكرمة — نموذج</strong>
-          <p>موقع نادي رياضي مع أخبار وجداول المباريات</p>
-        </div>
-      </a>
-      <a href="https://clinicplt.vercel.app/login" target="_blank" class="pf-card">
-        <div class="pf-img-wrap">
-          <img src="./images/pf-clinic.jpg" alt="كلينيك — نظام إدارة العيادة" loading="lazy">
-          <div class="pf-overlay"><span class="pf-visit-btn">زيارة الموقع ↗</span></div>
-          <span class="pf-badge real">✅ عميل حقيقي</span>
-        </div>
-        <div class="pf-info">
-          <span class="pf-tag">🏥 نظام طبي</span>
-          <strong>كلينيك — نظام إدارة العيادة</strong>
-          <p>نظام متكامل لإدارة العيادات مع حجوزات المرضى وسجلاتهم</p>
-        </div>
+      <a href="https://darbonna-taxi.vercel.app/" target="_blank" class="pf-item">
+        <div class="pf-img" style="background:linear-gradient(135deg,#FFF7ED,#FED7AA)"><div class="pf-img-icon">🚖</div></div>
+        <div class="pf-body"><span class="pf-cat" data-ar="تطبيق نقل" data-en="Transport App">تطبيق نقل</span><strong>Darbonna Taxi</strong><p data-ar="منصة حجز سيارات أجرة ذكية مع تتبع مباشر" data-en="Smart taxi booking platform with live tracking">منصة حجز سيارات أجرة ذكية مع تتبع مباشر</p><span class="pf-badge-live">✅ عميل حقيقي</span></div>
       </a>
 
     </div>
@@ -450,285 +544,245 @@
 </section>
 
 <!-- ══ TESTIMONIALS ══ -->
-<section class="section testimonials-section" id="testimonials">
+<section class="section testimonials-section">
   <div class="container">
-    <span class="section-label" data-ar="عملاؤنا يتحدثون" data-en="Our Clients Speak">عملاؤنا يتحدثون</span>
-    <h2 class="section-title" data-ar="ماذا قالوا عنا؟" data-en="What Did They Say?">ماذا قالوا عنا؟</h2>
+    <div class="section-head">
+      <span class="section-tag" data-ar="آراء العملاء" data-en="Client Reviews">آراء العملاء</span>
+      <h2 class="section-title" data-ar="ماذا قال عملاؤنا؟" data-en="What Did Our Clients Say?">ماذا قال عملاؤنا؟</h2>
+    </div>
   </div>
-  <div class="reviews-track-wrap">
+  <div class="reviews-wrap">
     <div class="reviews-track">
-
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#C8A030,#8B6A00)">أ</div>
-          <div><strong>أحمد الكعبي</strong><span class="review-platform">📘 Facebook</span></div>
-        </div>
         <div class="stars">★★★★★</div>
         <p>"النظام ساعدنا على استقبال الطلبات بسرعة كبيرة بدون أي خطأ. ممتاز جداً!"</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#2563EB,#1d4ed8)">أ</div><div><strong>أحمد الكعبي</strong><span>📘 Facebook</span></div></div>
       </div>
-
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#7B5FFF,#4F3BB8)">س</div>
-          <div><strong>سارة محمد</strong><span class="review-platform">📸 Instagram</span></div>
-        </div>
         <div class="stars">★★★★★</div>
         <p>"تصميم الموقع احترافي جداً والتسليم كان قبل الموعد. شكراً فريق بغداد المستقبل!"</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#10B981,#059669)">س</div><div><strong>سارة محمد</strong><span>📸 Instagram</span></div></div>
       </div>
-
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#059669,#065F46)">ك</div>
-          <div><strong>كريم عبدالله</strong><span class="review-platform">📘 Facebook</span></div>
-        </div>
-        <div class="stars">★★★★☆</div>
+        <div class="stars">★★★★★</div>
         <p>"الفريق محترف وعندهم خبرة واضحة، النظام يشتغل بشكل ممتاز ومرن."</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#06B6D4,#0891b2)">ك</div><div><strong>كريم عبدالله</strong><span>📘 Facebook</span></div></div>
       </div>
-
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#C8A030,#8B6A00)">ن</div>
-          <div><strong>نور الحسيني</strong><span class="review-platform">📸 Instagram</span></div>
-        </div>
         <div class="stars">★★★★★</div>
         <p>"واو! المتجر الإلكتروني فاق توقعاتي. المبيعات زادت من الأسبوع الأول!"</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#D97757,#C0613B)">ن</div><div><strong>نور الحسيني</strong><span>📸 Instagram</span></div></div>
       </div>
-
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#DC2626,#991B1B)">م</div>
-          <div><strong>مصطفى الجبوري</strong><span class="review-platform">📘 Facebook</span></div>
-        </div>
         <div class="stars">★★★★★</div>
         <p>"التعامل مع الفريق سريع ومرن، والنظام يعمل بدون توقف. أنصح الجميع!"</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED)">م</div><div><strong>مصطفى الجبوري</strong><span>📘 Facebook</span></div></div>
       </div>
-
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#7B5FFF,#4F3BB8)">ر</div>
-          <div><strong>رنا العزاوي</strong><span class="review-platform">📸 Instagram</span></div>
-        </div>
-        <div class="stars">★★★☆☆</div>
-        <p>"خدمة جيدة والموقع شغال. بعض التعديلات احتاجت وقت أكثر من المتوقع."</p>
-      </div>
-
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#C8A030,#8B6A00)">ح</div>
-          <div><strong>حيدر الموسوي</strong><span class="review-platform">📘 Facebook</span></div>
-        </div>
         <div class="stars">★★★★★</div>
         <p>"نظام الحجوزات الذكي وفّر علينا ساعات يومياً. استثمار يستحق بكل تأكيد!"</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#F59E0B,#D97706)">ح</div><div><strong>حيدر الموسوي</strong><span>📘 Facebook</span></div></div>
       </div>
-
-      <!-- نسخة ثانية للاستمرارية -->
+      <!-- duplicate -->
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#C8A030,#8B6A00)">أ</div>
-          <div><strong>أحمد الكعبي</strong><span class="review-platform">📘 Facebook</span></div>
-        </div>
         <div class="stars">★★★★★</div>
         <p>"النظام ساعدنا على استقبال الطلبات بسرعة كبيرة بدون أي خطأ. ممتاز جداً!"</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#2563EB,#1d4ed8)">أ</div><div><strong>أحمد الكعبي</strong><span>📘 Facebook</span></div></div>
       </div>
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#7B5FFF,#4F3BB8)">س</div>
-          <div><strong>سارة محمد</strong><span class="review-platform">📸 Instagram</span></div>
-        </div>
         <div class="stars">★★★★★</div>
         <p>"تصميم الموقع احترافي جداً والتسليم كان قبل الموعد. شكراً فريق بغداد المستقبل!"</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#10B981,#059669)">س</div><div><strong>سارة محمد</strong><span>📸 Instagram</span></div></div>
       </div>
       <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#059669,#065F46)">ك</div>
-          <div><strong>كريم عبدالله</strong><span class="review-platform">📘 Facebook</span></div>
-        </div>
-        <div class="stars">★★★★☆</div>
+        <div class="stars">★★★★★</div>
         <p>"الفريق محترف وعندهم خبرة واضحة، النظام يشتغل بشكل ممتاز ومرن."</p>
+        <div class="review-author"><div class="review-av" style="background:linear-gradient(135deg,#06B6D4,#0891b2)">ك</div><div><strong>كريم عبدالله</strong><span>📘 Facebook</span></div></div>
       </div>
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#C8A030,#8B6A00)">ن</div>
-          <div><strong>نور الحسيني</strong><span class="review-platform">📸 Instagram</span></div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p>"واو! المتجر الإلكتروني فاق توقعاتي. المبيعات زادت من الأسبوع الأول!"</p>
-      </div>
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#DC2626,#991B1B)">م</div>
-          <div><strong>مصطفى الجبوري</strong><span class="review-platform">📘 Facebook</span></div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p>"التعامل مع الفريق سريع ومرن، والنظام يعمل بدون توقف. أنصح الجميع!"</p>
-      </div>
-      <div class="review-card">
-        <div class="review-top">
-          <div class="review-av" style="background:linear-gradient(135deg,#C8A030,#8B6A00)">ح</div>
-          <div><strong>حيدر الموسوي</strong><span class="review-platform">📘 Facebook</span></div>
-        </div>
-        <div class="stars">★★★★★</div>
-        <p>"نظام الحجوزات الذكي وفّر علينا ساعات يومياً. استثمار يستحق بكل تأكيد!"</p>
-      </div>
-
     </div>
   </div>
 </section>
 
 <!-- ══ CTA ══ -->
 <section class="cta-section">
-  <div class="cta-glow"></div>
+  <div class="cta-bg"></div>
   <div class="cta-inner reveal">
-    <h2>
-      <span data-ar="ابدأ مشروعك" data-en="Start Your Project">ابدأ مشروعك</span><br>
-      <span class="grad-text" data-ar="الآن مجاناً" data-en="For Free, Now">الآن مجاناً</span>
-    </h2>
-    <p data-ar="تواصل معنا اليوم واحصل على استشارة مجانية بدون أي التزام" data-en="Contact us today and get a free consultation with no commitment.">تواصل معنا اليوم واحصل على استشارة مجانية بدون أي التزام</p>
-    <a href="#order" class="btn btn-accent btn-lg" data-ar="ابدأ مشروعك — مجاناً" data-en="Start Your Project — Free">ابدأ مشروعك — مجاناً</a>
+    <span class="section-tag light" data-ar="ابدأ مشروعك" data-en="Start Your Project">ابدأ مشروعك</span>
+    <h2 data-ar="مستعد لتحويل مؤسستك رقمياً؟" data-en="Ready to Digitally Transform Your Institution?">مستعد لتحويل مؤسستك رقمياً؟</h2>
+    <p data-ar="تواصل معنا اليوم لاستشارة مجانية ودراسة احتياجاتك بدون أي التزام" data-en="Contact us today for a free consultation and study of your needs with no commitment">تواصل معنا اليوم لاستشارة مجانية ودراسة احتياجاتك بدون أي التزام</p>
+    <div class="cta-btns">
+      <a href="#contact" class="btn-primary" data-ar="اطلب استشارة مجانية" data-en="Request Free Consultation">اطلب استشارة مجانية</a>
+      <a href="https://wa.me/9647706688044" target="_blank" class="btn-wa-cta">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+        <span data-ar="تواصل واتساب" data-en="WhatsApp Us">تواصل واتساب</span>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- ══ ORDER FORM ══ -->
-<section class="section order-section" id="order">
+<!-- ══ CONTACT ══ -->
+<section class="section contact-section" id="contact">
   <div class="container">
-    <span class="section-label" data-ar="ابدأ الآن" data-en="Start Now">ابدأ الآن</span>
-    <h2 class="section-title" data-ar="اطلب مشروعك" data-en="Request Your Project">اطلب مشروعك</h2>
-    <p class="section-sub" data-ar="أرسل تفاصيل مشروعك وسنرد عليك خلال ساعة" data-en="Send your project details and we'll reply within an hour.">أرسل تفاصيل مشروعك وسنرد عليك خلال ساعة</p>
-    <form class="order-form reveal" id="order-form" novalidate>
-      <div class="form-group">
-        <label for="f-name" data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل</label>
-        <input type="text" id="f-name" placeholder="أدخل اسمك الكامل" data-ar="أدخل اسمك الكامل" data-en="Enter your full name" required autocomplete="off">
+    <div class="section-head">
+      <span class="section-tag" data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</span>
+      <h2 class="section-title" data-ar="نحن هنا للإجابة<br>على كل أسئلتك" data-en="We're Here to Answer<br>All Your Questions">نحن هنا للإجابة<br>على كل أسئلتك</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="cinfo-item">
+          <div class="cinfo-icon">📍</div>
+          <div>
+            <strong data-ar="الفرع الأول — أربيل" data-en="Branch 1 — Erbil">الفرع الأول — أربيل</strong>
+            <span data-ar="شارع 100، أربيل، العراق" data-en="Street 100, Erbil, Iraq">شارع 100، أربيل، العراق</span>
+          </div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon">📍</div>
+          <div>
+            <strong data-ar="الفرع الثاني — بغداد" data-en="Branch 2 — Baghdad">الفرع الثاني — بغداد</strong>
+            <span data-ar="المنصور، قرب تمثال أبو جعفر المنصور" data-en="Mansour, near Abu Jaafar Al-Mansour Statue">المنصور، قرب تمثال أبو جعفر المنصور</span>
+          </div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon">📱</div>
+          <div>
+            <strong data-ar="الهاتف" data-en="Phone">الهاتف</strong>
+            <span><a href="tel:07706688044">07706688044</a> · <a href="tel:07806688044">07806688044</a></span>
+          </div>
+        </div>
+        <div class="cinfo-item">
+          <div class="cinfo-icon">✉️</div>
+          <div>
+            <strong data-ar="البريد الإلكتروني" data-en="Email">البريد الإلكتروني</strong>
+            <span><a href="mailto:cptstaf2018@gmail.com">cptstaf2018@gmail.com</a></span>
+          </div>
+        </div>
+        <a href="https://wa.me/9647706688044" target="_blank" class="wa-contact-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+          <span data-ar="تواصل عبر واتساب" data-en="Chat on WhatsApp">تواصل عبر واتساب</span>
+        </a>
       </div>
-      <div class="form-group">
-        <label for="f-service">نوع الخدمة</label>
-        <select id="f-service">
-          <option value="">اختر الخدمة...</option>
-          <option>تطوير موقع</option>
-          <option>نظام أعمال</option>
-          <option>أتمتة بالذكاء الاصطناعي</option>
-          <option>باقة متكاملة</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="f-desc" data-ar="وصف المشروع" data-en="Project Description">وصف المشروع</label>
-        <textarea id="f-desc" rows="4" placeholder="اشرح فكرتك باختصار..." data-ar="اشرح فكرتك باختصار..." data-en="Briefly describe your idea..." required></textarea>
-      </div>
-      <button type="submit" class="btn btn-accent btn-full" data-ar="إرسال عبر واتساب" data-en="Send via WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
-        إرسال عبر واتساب
-      </button>
-    </form>
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-ar="الاسم الكامل" data-en="Full Name">الاسم الكامل</label>
+            <input type="text" id="f-name" placeholder="أدخل اسمك الكامل" required>
+          </div>
+          <div class="form-group">
+            <label data-ar="رقم الواتساب" data-en="WhatsApp Number">رقم الواتساب</label>
+            <input type="tel" id="f-phone" placeholder="07xxxxxxxxx" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label data-ar="نوع المؤسسة" data-en="Institution Type">نوع المؤسسة</label>
+            <select id="f-org">
+              <option value="">اختر...</option>
+              <option data-ar="وزارة / جهة حكومية" data-en="Ministry / Government">وزارة / جهة حكومية</option>
+              <option data-ar="مستشفى / مركز طبي" data-en="Hospital / Medical Center">مستشفى / مركز طبي</option>
+              <option data-ar="جامعة / مؤسسة تعليمية" data-en="University / Educational">جامعة / مؤسسة تعليمية</option>
+              <option data-ar="شركة خاصة" data-en="Private Company">شركة خاصة</option>
+              <option data-ar="أخرى" data-en="Other">أخرى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-ar="الخدمة المطلوبة" data-en="Required Service">الخدمة المطلوبة</label>
+            <select id="f-service">
+              <option value="">اختر الخدمة...</option>
+              <option>تطوير موقع / تطبيق</option>
+              <option>نظام إدارة أعمال</option>
+              <option>ذكاء اصطناعي وأتمتة</option>
+              <option>نظام حضور بيومتري</option>
+              <option>متجر إلكتروني</option>
+              <option>تحليل بيانات</option>
+              <option>باقة متكاملة</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-ar="وصف المشروع" data-en="Project Description">وصف المشروع</label>
+          <textarea id="f-desc" rows="4" placeholder="اشرح احتياجات مؤسستك باختصار..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+          <span data-ar="إرسال عبر واتساب" data-en="Send via WhatsApp">إرسال عبر واتساب</span>
+        </button>
+      </form>
+    </div>
   </div>
 </section>
 
 <!-- ══ FOOTER ══ -->
 <footer class="footer">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <div class="footer-logo">بغداد المستقبل <span>AI</span></div>
-      <p>حلول رقمية ذكية مدعومة بالذكاء الاصطناعي</p>
-      <div class="socials">
-        <a href="https://www.facebook.com/www.cptsaad" target="_blank" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/baghdad_future_ai?igsh=M2h4d211NXNram4y&utm_source=qr" target="_blank" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
-        <a href="https://www.threads.com/@baghdad_future_ai?igshid=NTc4MTIwNjQ2YQ==" target="_blank" aria-label="Threads">
-          <svg viewBox="0 0 192 192" fill="currentColor" width="18" height="18"><path d="M141.537 88.988a66.667 66.667 0 0 0-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.14-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 7.047 4.652 16.124 6.927 25.557 6.412 12.458-.683 22.231-5.436 29.049-14.127 5.178-6.6 8.453-15.153 9.899-25.93 5.937 3.583 10.337 8.298 12.767 13.966 4.132 9.635 4.373 25.468-8.546 38.376-11.319 11.308-24.925 16.2-45.488 16.351-22.809-.169-40.06-7.484-51.275-21.742C35.236 139.966 29.808 120.682 29.605 96c.203-24.682 5.63-43.966 16.133-57.317C56.954 24.425 74.204 17.11 97.013 16.94c22.975.17 40.526 7.52 52.171 21.847 5.71 7.026 10.015 15.86 12.853 26.162l16.147-4.308c-3.44-12.68-8.853-23.606-16.219-32.668C147.036 9.607 125.202.195 97.07 0h-.113C68.882.195 47.292 9.642 32.788 28.08 19.882 44.485 13.224 67.315 13.001 95.932v.136c.223 28.617 6.881 51.447 19.787 67.854C47.292 182.358 68.882 191.805 96.957 192h.113c24.96-.173 42.554-6.708 57.048-21.189 18.963-18.945 18.392-42.692 12.142-57.27-4.484-10.454-13.033-18.945-24.723-24.553ZM98.44 129.507c-10.44.588-21.286-4.098-21.82-14.135-.397-7.442 5.296-15.746 22.461-16.735 1.966-.113 3.895-.169 5.79-.169 6.235 0 12.068.606 17.37 1.765-1.978 24.702-13.825 28.713-23.801 29.274Z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/baghdad-future-ai-a888b335a/" target="_blank" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@b.f.ai?lang=en" target="_blank" aria-label="TikTok">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@زيزوالشمري-م9ك" target="_blank" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-        </a>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">بغداد المستقبل <span>AI</span></div>
+          <p data-ar="شريكك التقني الموثوق في بناء مستقبل رقمي ذكي للمؤسسات العراقية والعربية." data-en="Your trusted technology partner in building an intelligent digital future for Iraqi and Arab institutions.">شريكك التقني الموثوق في بناء مستقبل رقمي ذكي للمؤسسات العراقية والعربية.</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/www.cptsaad" target="_blank" aria-label="Facebook" title="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/baghdad_future_ai" target="_blank" aria-label="Instagram" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/baghdad-future-ai-a888b335a/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@b.f.ai" target="_blank" aria-label="TikTok" title="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@زيزوالشمري-م9ك" target="_blank" aria-label="YouTube" title="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            </a>
+            <a href="https://www.threads.com/@baghdad_future_ai" target="_blank" aria-label="Threads" title="Threads">
+              <svg viewBox="0 0 192 192" fill="currentColor" width="17" height="17"><path d="M141.537 88.988a66.667 66.667 0 00-2.518-1.143c-1.482-27.307-16.403-42.94-41.457-43.1h-.34c-14.986 0-27.449 6.396-35.12 18.036l13.779 9.452c5.73-8.695 14.724-10.548 21.348-10.548h.229c8.249.053 14.474 2.452 18.503 7.129 2.932 3.405 4.893 8.111 5.864 14.05-7.314-1.243-15.224-1.626-23.68-1.14-23.82 1.371-39.134 15.264-38.105 34.568.522 9.792 5.4 18.216 13.735 23.719 7.047 4.652 16.124 6.927 25.557 6.412 12.458-.683 22.231-5.436 29.049-14.127 5.178-6.6 8.453-15.153 9.899-25.93 5.937 3.583 10.337 8.298 12.767 13.966 4.132 9.635 4.373 25.468-8.546 38.376-11.319 11.308-24.925 16.2-45.488 16.351-22.809-.169-40.06-7.484-51.275-21.742C35.236 139.966 29.808 120.682 29.605 96c.203-24.682 5.63-43.966 16.133-57.317C56.954 24.425 74.204 17.11 97.013 16.94c22.975.17 40.526 7.52 52.171 21.847 5.71 7.026 10.015 15.86 12.853 26.162l16.147-4.308c-3.44-12.68-8.853-23.606-16.219-32.668C147.036 9.607 125.202.195 97.07 0h-.113C68.882.195 47.292 9.642 32.788 28.08 19.882 44.485 13.224 67.315 13.001 95.932v.136c.223 28.617 6.881 51.447 19.787 67.854C47.292 182.358 68.882 191.805 96.957 192h.113c24.96-.173 42.554-6.708 57.048-21.189 18.963-18.945 18.392-42.692 12.142-57.27-4.484-10.454-13.033-18.945-24.723-24.553ZM98.44 129.507c-10.44.588-21.286-4.098-21.82-14.135-.397-7.442 5.296-15.746 22.461-16.735 1.966-.113 3.895-.169 5.79-.169 6.235 0 12.068.606 17.37 1.765-1.978 24.702-13.825 28.713-23.801 29.274Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-ar="الخدمات" data-en="Services">الخدمات</h4>
+          <ul>
+            <li data-ar="تطوير المواقع والتطبيقات" data-en="Web & App Development">تطوير المواقع والتطبيقات</li>
+            <li data-ar="أنظمة إدارة الأعمال" data-en="Business Management Systems">أنظمة إدارة الأعمال</li>
+            <li data-ar="الذكاء الاصطناعي والأتمتة" data-en="AI & Automation">الذكاء الاصطناعي والأتمتة</li>
+            <li data-ar="المتاجر الإلكترونية" data-en="E-Commerce">المتاجر الإلكترونية</li>
+            <li data-ar="أنظمة الحضور البيومترية" data-en="Biometric Systems">أنظمة الحضور البيومترية</li>
+            <li data-ar="تحليل البيانات" data-en="Data Analytics">تحليل البيانات</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h4>
+          <ul>
+            <li>📍 <span data-ar="أربيل، شارع 100" data-en="Erbil, Street 100">أربيل، شارع 100</span></li>
+            <li>📍 <span data-ar="بغداد، المنصور" data-en="Baghdad, Mansour">بغداد، المنصور</span></li>
+            <li><a href="tel:07706688044">📱 07706688044</a></li>
+            <li><a href="tel:07806688044">📱 07806688044</a></li>
+            <li><a href="mailto:cptstaf2018@gmail.com">✉️ cptstaf2018@gmail.com</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-
-    <div class="footer-col">
-      <h4 data-ar="خدماتنا" data-en="Services">خدماتنا</h4>
-      <ul>
-        <li>تطوير المواقع والتطبيقات</li>
-        <li>أنظمة إدارة الأعمال</li>
-        <li>المتاجر الإلكترونية</li>
-        <li>أنظمة نقاط البيع POS</li>
-        <li>لوحات التحكم والتقارير</li>
-        <li>روبوتات الواتساب الذكية</li>
-        <li>أتمتة الأعمال بالذكاء الاصطناعي</li>
-        <li>أنظمة الحجوزات والمواعيد</li>
-        <li>تصميم واجهات المستخدم UI/UX</li>
-        <li>قواعد البيانات والـ APIs</li>
-        <li>الاستضافة وإدارة الخوادم</li>
-        <li>تحليل البيانات والتقارير</li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h4>
-      <ul>
-        <li>📍 الفرع الأول: العراق، أربيل، شارع 100</li>
-        <li>📍 الفرع الثاني: بغداد، المنصور، قرب تمثال أبو جعفر المنصور</li>
-        <li><a href="tel:07706688044">📱 07706688044</a></li>
-        <li><a href="tel:07806688044">📱 07806688044</a></li>
-        <li><a href="mailto:cptstaf2018@gmail.com">✉️ cptstaf2018@gmail.com</a></li>
-      </ul>
-      <a href="https://wa.me/9647706688044" target="_blank" class="qr-wrap">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/9647706688044&margin=8" alt="QR واتساب" class="qr-img">
-        <span class="qr-label">امسح للتواصل المباشر</span>
-      </a>
-    </div>
   </div>
-
-  <div class="footer-ceo-bar">
-    <div class="footer-team-badge">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <span data-ar="فريق بغداد المستقبل AI" data-en="Baghdad Future AI Team">فريق بغداد المستقبل AI</span>
-    </div>
-  </div>
-
   <div class="footer-bottom">
-    <p>© 2025 شركة بغداد المستقبل AI — جميع الحقوق محفوظة</p>
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <div class="footer-team-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="16" height="16"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          <span data-ar="فريق بغداد المستقبل AI" data-en="Baghdad Future AI Team">فريق بغداد المستقبل AI</span>
+        </div>
+        <p data-ar="© 2025 شركة بغداد المستقبل AI — جميع الحقوق محفوظة" data-en="© 2025 Baghdad Future AI Company — All Rights Reserved">© 2025 شركة بغداد المستقبل AI — جميع الحقوق محفوظة</p>
+      </div>
+    </div>
   </div>
 </footer>
 
-<!-- ══ CHATBOT ══ -->
-<div class="chatbot" id="chatbot">
-  <div class="chat-label" id="chat-label">تواصل مع نظامنا الذكي</div>
-  <button class="chat-fab" id="chat-fab" aria-label="فتح المحادثة">
-    <svg class="fab-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-    <svg class="fab-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    <span class="fab-dot" id="fab-dot"></span>
-  </button>
-  <div class="chat-win" id="chat-win" aria-hidden="true">
-    <div class="chat-head">
-      <div class="chat-av">AI</div>
-      <div class="chat-info">
-        <strong>مساعد بغداد المستقبل</strong>
-        <span><span class="online-dot"></span> متصل الآن</span>
-      </div>
-      <button class="chat-x" id="chat-x" aria-label="إغلاق">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="chat-msgs" id="chat-msgs"></div>
-    <div class="chat-quick" id="chat-quick">
-      <button onclick="sendQuick('ما هي أسعاركم؟')">الأسعار 💰</button>
-      <button onclick="sendQuick('ما هي خدماتكم؟')">الخدمات 🛠️</button>
-      <button onclick="sendQuick('كيف أتواصل معكم؟')">تواصل 📞</button>
-      <button onclick="sendQuick('كم مدة التنفيذ؟')">المدة ⏱️</button>
-    </div>
-    <div class="chat-input-row">
-      <input type="text" id="chat-input" placeholder="اكتب رسالتك..." maxlength="200" autocomplete="off">
-      <button id="chat-send" aria-label="إرسال">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-      </button>
-    </div>
-  </div>
-</div>
+<!-- ══ WHATSAPP FAB ══ -->
+<a href="https://wa.me/9647706688044" target="_blank" class="wa-fab" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.528 5.855L.057 23.943l6.255-1.641A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.811 9.811 0 01-5.001-1.366l-.36-.214-3.714.974.994-3.622-.234-.373A9.817 9.817 0 012.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/></svg>
+  <span class="wa-fab-pulse"></span>
+</a>
 
 <script src="script.js"></script>
 </body>
