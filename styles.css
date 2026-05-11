@@ -325,10 +325,21 @@ body::before{
   animation:pulse 2s infinite;
 }
 .hero-title{
-  font-size:clamp(38px,3.8vw,62px);font-weight:900;
-  line-height:1.1;letter-spacing:-2px;
-  color:#fff;margin-bottom:20px;width:100%;
+  margin-bottom:24px;width:100%;
   animation:heroIn .8s .25s ease both;
+  display:flex;flex-direction:column;gap:6px;
+}
+.htitle-main{
+  display:block;
+  font-size:clamp(44px,4.8vw,76px);
+  font-weight:900;line-height:1.05;
+  letter-spacing:-2.5px;color:#fff;
+}
+.htitle-sub{
+  display:block;
+  font-size:clamp(28px,3vw,48px);
+  font-weight:700;line-height:1.1;
+  letter-spacing:-1px;
 }
 .hero-accent{
   background:linear-gradient(135deg,#93C5FD 0%,#38BDF8 40%,#34D399 100%);
