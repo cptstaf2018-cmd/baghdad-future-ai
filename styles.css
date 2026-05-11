@@ -453,10 +453,14 @@ body::before{
 }
 .pf-item:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(15,23,42,.1);border-color:rgba(37,99,235,.2)}
 .pf-img{
-  height:155px;display:flex;align-items:center;justify-content:center;
-  position:relative;overflow:hidden;
+  height:175px;overflow:hidden;position:relative;
+  background:var(--bg3);
 }
-.pf-img-icon{font-size:48px;opacity:.7}
+.pf-img img{
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  display:block;transition:transform .5s ease;
+}
+.pf-item:hover .pf-img img{transform:scale(1.05)}
 .pf-body{padding:18px;display:flex;flex-direction:column;gap:6px;flex:1}
 .pf-cat{
   font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
