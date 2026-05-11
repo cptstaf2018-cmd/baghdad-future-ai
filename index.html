@@ -47,23 +47,69 @@
   </div>
 </nav>
 
+<!-- ══ PROGRESS BAR ══ -->
+<div class="site-progress" id="site-progress"></div>
+
+<!-- ══ SCROLL NAV ══ -->
+<nav class="scroll-nav" id="scroll-nav" aria-label="Page navigation">
+  <button class="snav-dot active" data-target="home" title="الرئيسية"></button>
+  <button class="snav-dot" data-target="about" title="من نحن"></button>
+  <button class="snav-dot" data-target="services" title="الخدمات"></button>
+  <button class="snav-dot" data-target="products" title="المنتجات"></button>
+  <button class="snav-dot" data-target="industries" title="القطاعات"></button>
+  <button class="snav-dot" data-target="portfolio" title="أعمالنا"></button>
+  <button class="snav-dot" data-target="contact" title="تواصل"></button>
+</nav>
+
 <!-- ══ HERO ══ -->
 <section class="hero" id="home">
-  <div class="hero-mesh"></div>
+  <!-- Deep space background layers -->
+  <div class="hero-bg-base"></div>
+  <div class="hero-nebula neb-1"></div>
+  <div class="hero-nebula neb-2"></div>
+  <div class="hero-nebula neb-3"></div>
   <div class="hero-grid-overlay"></div>
+
+  <!-- Star field -->
+  <div class="hero-stars">
+    <span class="star" style="top:8%;left:12%;animation-delay:0s"></span>
+    <span class="star" style="top:15%;left:38%;animation-delay:.7s"></span>
+    <span class="star" style="top:22%;left:62%;animation-delay:1.4s"></span>
+    <span class="star" style="top:35%;left:88%;animation-delay:.3s"></span>
+    <span class="star" style="top:55%;left:75%;animation-delay:2s"></span>
+    <span class="star" style="top:70%;left:55%;animation-delay:.9s"></span>
+    <span class="star" style="top:80%;left:30%;animation-delay:1.7s"></span>
+    <span class="star" style="top:90%;left:8%;animation-delay:.5s"></span>
+    <span class="star" style="top:5%;left:80%;animation-delay:2.3s"></span>
+    <span class="star" style="top:48%;left:18%;animation-delay:1.1s"></span>
+    <span class="star star-lg" style="top:25%;left:5%;animation-delay:.2s"></span>
+    <span class="star star-lg" style="top:65%;left:92%;animation-delay:1.5s"></span>
+    <span class="star star-lg" style="top:42%;left:48%;animation-delay:2.8s"></span>
+  </div>
+
+  <!-- Globe -->
+  <div class="hero-globe-wrap" id="hero-globe-wrap">
+    <div class="globe-ring-1"></div>
+    <div class="globe-ring-2"></div>
+    <div class="globe-sphere"></div>
+    <div class="globe-halo"></div>
+    <div class="globe-flare"></div>
+  </div>
+
+  <!-- Hero Content -->
   <div class="hero-inner">
     <div class="hero-eyebrow reveal">
       <span class="eyebrow-dot"></span>
-      <span data-ar="شركة تقنية عراقية متخصصة" data-en="Iraqi Technology Company">شركة تقنية عراقية متخصصة</span>
+      <span data-ar="شركة تقنية عراقية متخصصة" data-en="Iraqi Technology Specialist">شركة تقنية عراقية متخصصة</span>
     </div>
     <h1 class="hero-title reveal">
       <span data-ar="نبني مستقبلاً رقمياً" data-en="Building an Intelligent">نبني مستقبلاً رقمياً</span><br>
       <span class="hero-accent" data-ar="ذكياً للمؤسسات العراقية" data-en="Digital Future for Iraq">ذكياً للمؤسسات العراقية</span>
     </h1>
-    <p class="hero-sub reveal" data-ar="شريكك التقني الموثوق في الذكاء الاصطناعي، أنظمة الإدارة، والتحول الرقمي للوزارات والمستشفيات والمؤسسات الكبرى." data-en="Your trusted technology partner in AI, management systems, and digital transformation for ministries, hospitals, and enterprises.">شريكك التقني الموثوق في الذكاء الاصطناعي، أنظمة الإدارة، والتحول الرقمي للوزارات والمستشفيات والمؤسسات الكبرى.</p>
+    <p class="hero-sub reveal" data-ar="شريكك التقني الموثوق في الذكاء الاصطناعي وأنظمة الإدارة والتحول الرقمي للوزارات والمستشفيات والمؤسسات الكبرى." data-en="Your trusted technology partner in AI, management systems, and digital transformation for ministries, hospitals, and enterprises.">شريكك التقني الموثوق في الذكاء الاصطناعي وأنظمة الإدارة والتحول الرقمي للوزارات والمستشفيات والمؤسسات الكبرى.</p>
     <div class="hero-btns reveal">
       <a href="#contact" class="btn-primary" data-ar="اطلب استشارة مجانية" data-en="Request Free Consultation">اطلب استشارة مجانية</a>
-      <a href="#about" class="btn-secondary" data-ar="تعرف علينا" data-en="Learn About Us">تعرف علينا</a>
+      <a href="#portfolio" class="btn-secondary" data-ar="شاهد أعمالنا" data-en="View Our Work">شاهد أعمالنا</a>
     </div>
     <div class="hero-stats reveal">
       <div class="hstat">
@@ -78,7 +124,7 @@
       <div class="hstat-div"></div>
       <div class="hstat">
         <span class="hstat-num">99.9%</span>
-        <span class="hstat-label" data-ar="موثوقية النظام" data-en="System Reliability">موثوقية النظام</span>
+        <span class="hstat-label" data-ar="موثوقية النظام" data-en="Uptime Reliability">موثوقية النظام</span>
       </div>
       <div class="hstat-div"></div>
       <div class="hstat">
@@ -87,8 +133,9 @@
       </div>
     </div>
   </div>
+
   <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
   </div>
 </section>
 

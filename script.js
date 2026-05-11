@@ -1,5 +1,34 @@
 'use strict';
 
+/* ── PROGRESS BAR ── */
+const progressBar = document.getElementById('site-progress');
+function updateProgress() {
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  const pct  = docH > 0 ? window.scrollY / docH : 0;
+  if (progressBar) progressBar.style.transform = 'scaleX(' + pct + ')';
+}
+
+/* ── SCROLL NAV DOTS ── */
+const snavDots = document.querySelectorAll('.snav-dot');
+const snavSections = Array.from(snavDots).map(d => document.getElementById(d.dataset.target));
+function updateScrollNav() {
+  const mid = window.innerHeight / 2;
+  let closest = 0, minDist = Infinity;
+  snavSections.forEach((sec, i) => {
+    if (!sec) return;
+    const rect = sec.getBoundingClientRect();
+    const dist = Math.abs(rect.top + rect.height / 2 - mid);
+    if (dist < minDist) { minDist = dist; closest = i; }
+  });
+  snavDots.forEach((d, i) => d.classList.toggle('active', i === closest));
+}
+snavDots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    const sec = document.getElementById(dot.dataset.target);
+    if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
 /* ── NAVBAR ── */
 const navbar    = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
@@ -17,7 +46,11 @@ mobileMenu.querySelectorAll('a').forEach(a => {
 });
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
+  updateProgress();
+  updateScrollNav();
 }, { passive: true });
+updateProgress();
+updateScrollNav();
 
 /* ── REVEAL ON SCROLL ── */
 const revealObserver = new IntersectionObserver((entries) => {
