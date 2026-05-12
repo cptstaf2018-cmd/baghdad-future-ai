@@ -47,12 +47,12 @@ export default function HeroScroll() {
     },
     {
       id: 'innovation',
-      badge: t('شبكة حلول', 'Solution Network'),
-      title: t('من بغداد وأربيل', 'From Baghdad & Erbil'),
-      subtitle: t('إلى كل مؤسسة تبحث عن نمو حقيقي', 'to every institution ready to grow'),
+      badge: t('شريكك التقني', 'Your Tech Partner'),
+      title: t('نحوّل فكرتك إلى منتج حقيقي', 'We Turn Your Idea into a Real Product'),
+      subtitle: t('من اليوم الأول حتى الإطلاق وما بعده', 'From Day One to Launch and Beyond'),
       description: t(
-        'نحوّل الاحتياج التشغيلي اليومي إلى أنظمة عملية: لوحات تحكم، قواعد بيانات، تكاملات، أتمتة، وتجارب استخدام يفهمها الفريق من اليوم الأول.',
-        'We turn daily operational needs into practical systems: dashboards, databases, integrations, automation, and user experiences teams understand from day one.',
+        'نبني معك أنظمة تشغيلية فعلية: لوحات تحكم، قواعد بيانات، تكاملات، أتمتة، وتجارب استخدام يفهمها فريقك من اليوم الأول — بدون تعقيد وبدون هدر في الوقت.',
+        'We build real operational systems with you: dashboards, databases, integrations, automation, and user experiences your team understands from day one — no complexity, no wasted time.',
       ),
       align: 'left' as const,
       dir,
