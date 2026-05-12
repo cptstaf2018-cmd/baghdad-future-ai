@@ -3,10 +3,10 @@ import { useLang } from '@/hooks/useLang';
 
 const globeConfig = {
   positions: [
-    { top: "50%", left: "75%", scale: 1.4 },
-    { top: "25%", left: "50%", scale: 0.9 },
-    { top: "15%", left: "90%", scale: 2   },
-    { top: "50%", left: "50%", scale: 1.8 },
+    { top: "50%", left: "78%", scale: 1.2 },
+    { top: "30%", left: "82%", scale: 0.9 },
+    { top: "20%", left: "85%", scale: 1.4 },
+    { top: "50%", left: "78%", scale: 1.5 },
   ],
 };
 

@@ -213,14 +213,13 @@ export function ScrollGlobe({
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
-            className="relative z-20 grid min-h-screen w-full grid-cols-1 items-center px-8 py-24 sm:px-12 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.7fr)] lg:px-20"
+            className="relative z-20 flex min-h-screen w-full flex-col justify-center px-8 py-24 sm:px-14 lg:px-20"
           >
             <div
               className={cn(
-                "relative w-full transition-all duration-700",
+                "relative w-full max-w-3xl transition-all duration-700",
                 textAlign,
-                section.align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl",
-                dir === "rtl" ? "mr-auto" : "ml-auto",
+                section.align === "center" && "mx-auto",
               )}
               dir={dir}
             >
@@ -232,18 +231,17 @@ export function ScrollGlobe({
               )}
 
               <h1
-                className={cn(
-                  "mb-5 font-black leading-[1.06] tracking-tight",
-                  index === 0
-                    ? "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-                    : "text-3xl sm:text-4xl md:text-5xl lg:text-6xl",
-                )}
+                className="mb-4 font-black leading-tight tracking-tight"
+                style={{ fontSize: "clamp(28px, 3.2vw, 48px)" }}
               >
-                <span className="block text-blue-900">
+                <span className="block text-blue-900 whitespace-nowrap">
                   {section.title}
                 </span>
                 {section.subtitle && (
-                  <span className="mt-2 block text-[0.52em] font-semibold leading-snug text-blue-500">
+                  <span
+                    className="mt-1 block font-semibold text-blue-500"
+                    style={{ fontSize: "clamp(16px, 1.8vw, 26px)" }}
+                  >
                     {section.subtitle}
                   </span>
                 )}
@@ -251,7 +249,7 @@ export function ScrollGlobe({
 
               <div
                 className={cn(
-                  "mb-8 text-base font-light leading-8 text-blue-600 sm:text-lg",
+                  "mb-7 text-sm leading-7 text-blue-600 sm:text-base",
                   section.align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl",
                 )}
               >
