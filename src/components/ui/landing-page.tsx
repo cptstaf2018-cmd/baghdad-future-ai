@@ -16,6 +16,7 @@ interface ScrollGlobeProps {
   }[];
   globeConfig?: {
     positions: { top: string; left: string; scale: number }[];
+    mobilePositions?: { top: string; left: string; scale: number }[];
   };
   className?: string;
 }
@@ -41,6 +42,7 @@ export function ScrollGlobe({
 }: ScrollGlobeProps) {
   const [activeSection, setActiveSection] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 768);
   const [globeTransform, setGlobeTransform] = useState(() => {
     const p = globeConfig.positions[0];
     if (!p) return "";
@@ -51,15 +53,22 @@ export function ScrollGlobe({
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const animationFrameId = useRef<number>();
 
-  const calculatedPositions = useMemo(
-    () =>
-      globeConfig.positions.map((pos) => ({
-        top: parsePercent(pos.top),
-        left: parsePercent(pos.left),
-        scale: pos.scale,
-      })),
-    [globeConfig.positions],
-  );
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const activePositions = useMemo(() => {
+    const src = (isMobile && globeConfig.mobilePositions) ? globeConfig.mobilePositions : globeConfig.positions;
+    return src.map((pos) => ({
+      top: parsePercent(pos.top),
+      left: parsePercent(pos.left),
+      scale: pos.scale,
+    }));
+  }, [isMobile, globeConfig.positions, globeConfig.mobilePositions]);
+
+  const calculatedPositions = activePositions;
 
   const updateScrollPosition = useCallback(() => {
     const scrollTop = window.pageYOffset;
@@ -182,20 +191,20 @@ export function ScrollGlobe({
         <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-blue-300/40 to-transparent" />
       </div>
 
-      {/* Globe — hidden on small screens */}
+      {/* Globe — visible on all screens, smaller on mobile */}
       <div
-        className="hidden md:block fixed z-10 pointer-events-none will-change-transform"
+        className="fixed z-10 pointer-events-none will-change-transform"
         style={{
           top: 0,
           left: 0,
-          width: 250,
-          height: 250,
+          width: isMobile ? 180 : 250,
+          height: isMobile ? 180 : 250,
           transform: globeTransform,
-          opacity: heroVisible ? (activeSection === sections.length - 1 ? 0.4 : 0.85) : 0,
+          opacity: heroVisible ? (activeSection === sections.length - 1 ? 0.35 : isMobile ? 0.55 : 0.85) : 0,
           transition: "transform 1.4s cubic-bezier(0.23,1,0.32,1), opacity 0.6s ease",
         }}
       >
-        <div className="scale-90 lg:scale-100 origin-top-left">
+        <div className={isMobile ? "scale-75 origin-top-left" : "scale-90 lg:scale-100 origin-top-left"}>
           <Globe />
         </div>
       </div>

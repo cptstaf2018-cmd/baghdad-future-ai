@@ -8,6 +8,12 @@ const globeConfig = {
     { top: "22%", left: "82%", scale: 1.7 },
     { top: "50%", left: "72%", scale: 2.1 },
   ],
+  mobilePositions: [
+    { top: "72%", left: "50%", scale: 1.0 },  // hero — centre-bottom empty area
+    { top: "68%", left: "55%", scale: 0.85 }, // innovation — lower right
+    { top: "74%", left: "45%", scale: 0.95 }, // discovery — lower centre
+    { top: "70%", left: "52%", scale: 0.9 },  // future — lower centre-right
+  ],
 };
 
 export default function HeroScroll() {
