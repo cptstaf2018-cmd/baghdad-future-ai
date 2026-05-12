@@ -16,8 +16,7 @@
   --color-muted:      #EFF6FF;
 }
 
-/* ── Reset ── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── Reset (Tailwind preflight already handles *, margin, padding) ── */
 html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Tajawal', system-ui, sans-serif;
