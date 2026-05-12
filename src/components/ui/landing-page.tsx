@@ -317,7 +317,7 @@ export function ScrollGlobe({
               )}
 
               {section.extra && (
-                <div className="mt-6 w-screen -mx-5 md:-mx-14 lg:-mx-20">
+                <div className="mt-16 w-screen -mx-5 md:-mx-14 lg:-mx-20" style={{ position: 'relative', zIndex: 5 }}>
                   {section.extra}
                 </div>
               )}

@@ -190,12 +190,13 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 .asb-track {
   display: flex;
   width: max-content;
-  animation: asbScroll 28s linear infinite;
+  animation: asbScroll 55s linear infinite;
   direction: ltr;
+  transform: translateX(0);
 }
 .asb-track:hover { animation-play-state: paused; }
 @keyframes asbScroll {
-  0%   { transform: translateX(0); }
+  0%   { transform: translateX(15%); }
   100% { transform: translateX(-50%); }
 }
 .asb-item {
