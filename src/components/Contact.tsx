@@ -17,7 +17,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `*${t('طلب استشارة جديد', 'New Consultation Request')}*\n${t('الاسم', 'Name')}: ${form.name}\n${t('الهاتف', 'Phone')}: ${form.phone}\n${t('المؤسسة', 'Org')}: ${form.org}\n${t('الخدمة', 'Service')}: ${form.service}\n${t('التفاصيل', 'Details')}: ${form.desc}`;
-    window.open(`https://wa.me/9647706688044?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/9647806688044?text=${encodeURIComponent(msg)}`, '_blank');
   };
 
   return (
