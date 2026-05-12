@@ -48,8 +48,8 @@ export default function HeroScroll() {
     {
       id: 'innovation',
       badge: t('شريكك التقني', 'Your Tech Partner'),
-      title: t('نحوّل فكرتك إلى منتج حقيقي', 'We Turn Your Idea into a Real Product'),
-      subtitle: t('من اليوم الأول حتى الإطلاق وما بعده', 'From Day One to Launch and Beyond'),
+      title: t('نخدم عملاء من كل أنحاء العالم', 'Serving Clients from Around the World'),
+      subtitle: t('بجودة عالمية وفهم محلي عميق', 'World-Class Quality, Deep Local Understanding'),
       description: t(
         'نبني معك أنظمة تشغيلية فعلية: لوحات تحكم، قواعد بيانات، تكاملات، أتمتة، وتجارب استخدام يفهمها فريقك من اليوم الأول — بدون تعقيد وبدون هدر في الوقت.',
         'We build real operational systems with you: dashboards, databases, integrations, automation, and user experiences your team understands from day one — no complexity, no wasted time.',
