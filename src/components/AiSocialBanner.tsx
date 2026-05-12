@@ -1,14 +1,14 @@
 import { useLang } from '@/hooks/useLang';
 
 const items = [
-  { en: '🔥 Why are accounts your size getting 10x more engagement? Find out FREE',   ar: '🔥 لماذا حسابات بحجمك تحصل على تفاعل أضعاف تفاعلك؟ — اعرف السبب مجاناً' },
-  { en: '⚡ We give you a full account report in 48 hours — no strings attached',     ar: '⚡ نعطيك تقرير كامل عن حسابك خلال 48 ساعة — بدون أي التزام منك' },
-  { en: '🎯 First month: we write the content, build the strategy, FREE',             ar: '🎯 الشهر الأول: نكتب المحتوى، نبني الاستراتيجية — مجاناً معك' },
-  { en: '💡 100K followers and still invisible? We fix your algorithm problem FREE',   ar: '💡 100K متابع وما تظهر؟ — نحل مشكلة الخوارزمية معك مجاناً' },
-  { en: '🚀 Try us 7 days FREE — if results don\'t show, walk away, no questions',    ar: '🚀 جربنا 7 أيام مجاناً — إذا ما شفت نتيجة، وداعاً بلا أي كلام' },
-  { en: '🎁 FREE: Your competitors\' full analysis — see exactly what they\'re doing', ar: '🎁 هدية: تحليل كامل للمنافسين — شوف بالضبط ليش هم يكبرون وأنت واقف' },
-  { en: '⭐ Join 150+ clients who doubled their reach — start FREE today',            ar: '⭐ انضم لـ 150+ عميل ضاعفوا انتشارهم — ابدأ معنا اليوم مجاناً' },
-  { en: '📩 DM us NOW and get your FREE personalized growth roadmap in 24 hours',     ar: '📩 راسلنا الآن واحصل على خارطة طريق نمو مخصصة لحسابك خلال 24 ساعة' },
+  { en: '😔 Posting every day but views keep dropping? You\'re not alone — we know exactly why',        ar: '😔 تنشر كل يوم والمشاهدات تنزل؟ — مو أنت المشكلة، الخوارزمية تجاهلتك ونحن نعرف السبب' },
+  { en: '😤 You have 100K+ followers but your reels reach only 500 people?! That\'s not normal',       ar: '😤 عندك 100K متابع والريلز توصل لـ 500 شخص فقط؟! — هذا مو طبيعي وله حل' },
+  { en: '😟 You used to get thousands of likes — now nothing. The algorithm buried your account',      ar: '😟 كنت تحصل على آلاف اللايكات والآن لا شيء — الخوارزمية دفنت حسابك ونحن نطلعه' },
+  { en: '🤦 Your content is good but nobody sees it — your account is shadowbanned without knowing',   ar: '🤦 محتواك ممتاز بس ما أحد يشوفه — حسابك مسكوت عليه ومو داري' },
+  { en: '😩 Competitors with fewer followers are beating you — you\'re doing something wrong',         ar: '😩 منافسون أقل منك متابعين يتقدمون عليك — في غلط ما تعرفه وأنت تكرر نفس الخطأ' },
+  { en: '😰 You spent months building your audience — now they\'re not seeing your content at all',    ar: '😰 بنيت جمهورك بشهور من التعب — والآن المحتوى ما يوصلهم أبداً' },
+  { en: '🧐 Something changed in the algorithm and your account never recovered — we can fix this FREE', ar: '🧐 الخوارزمية تغيرت وحسابك ما تعافى — نشخص المشكلة ونعطيك الحل مجاناً' },
+  { en: '💬 Stop guessing. Get a FREE full diagnosis of your account in 48 hours — WhatsApp us now',   ar: '💬 خلّ التخمين يكفي — احصل على تشخيص مجاني كامل لحسابك خلال 48 ساعة — راسلنا الآن' },
 ];
 
 export default function AiSocialBanner() {
