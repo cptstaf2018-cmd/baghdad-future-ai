@@ -54,7 +54,7 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 
 /* ── Shared section shell ── */
 .dt-section {
-  padding-block: 96px;
+  padding-block: 72px;
   position: relative;
   background: #F0F4FF;
 }

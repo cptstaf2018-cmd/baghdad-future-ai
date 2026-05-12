@@ -213,7 +213,8 @@ export function ScrollGlobe({
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
-            className="relative z-20 flex min-h-screen w-full flex-col items-center justify-center px-6 py-24 text-center sm:items-start sm:text-start sm:px-14 lg:px-20"
+            className="relative z-20 flex w-full flex-col items-center justify-center px-6 py-20 text-center sm:items-start sm:text-start sm:px-14 lg:px-20"
+            style={{ minHeight: index === 0 ? '88vh' : '72vh' }}
           >
             <div
               className={cn(
