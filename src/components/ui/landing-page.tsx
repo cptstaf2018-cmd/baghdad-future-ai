@@ -222,7 +222,7 @@ export function ScrollGlobe({
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
-            className="relative z-20 flex w-full flex-col justify-center px-6 py-16 md:items-start md:px-14 lg:px-20"
+            className="relative z-20 flex w-full flex-col justify-center px-5 py-12 md:items-start md:px-14 lg:px-20"
             style={{ minHeight: index === 0 ? '88vh' : '72vh' }}
           >
             <div
@@ -234,23 +234,23 @@ export function ScrollGlobe({
               dir={dir}
             >
               {section.badge && (
-                <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold text-blue-700">
-                  <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
-                  {section.badge}
+                <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 max-w-full overflow-hidden">
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
+                  <span className="truncate">{section.badge}</span>
                 </span>
               )}
 
               <h1
                 className="mb-4 font-black leading-tight tracking-tight"
-                style={{ fontSize: "clamp(28px, 3.2vw, 48px)" }}
+                style={{ fontSize: "clamp(20px, 4.5vw, 48px)" }}
               >
-                <span className="block text-blue-900 whitespace-nowrap">
+                <span className="block text-blue-900 md:whitespace-nowrap">
                   {section.title}
                 </span>
                 {section.subtitle && (
                   <span
                     className="mt-1 block font-semibold text-blue-500"
-                    style={{ fontSize: "clamp(16px, 1.8vw, 26px)" }}
+                    style={{ fontSize: "clamp(13px, 3vw, 26px)" }}
                   >
                     {section.subtitle}
                   </span>
