@@ -300,10 +300,11 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 .portfolio-section { background: #fff; border-top: 1px solid #BFDBFE; }
 .pf-scroll-wrap {
   overflow: hidden; margin-top: 48px;
+  direction: ltr;
   -webkit-mask: linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
   mask: linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
 }
-.pf-scroll-track { display: flex; gap: 18px; width: max-content; animation: pfScroll 50s linear infinite; }
+.pf-scroll-track { display: flex; gap: 18px; width: max-content; animation: pfScroll 50s linear infinite; direction: ltr; }
 .pf-scroll-track:hover { animation-play-state: paused; }
 @keyframes pfScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .pf-item {
