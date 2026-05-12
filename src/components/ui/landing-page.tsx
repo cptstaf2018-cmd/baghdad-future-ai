@@ -182,9 +182,9 @@ export function ScrollGlobe({
         <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-blue-300/40 to-transparent" />
       </div>
 
-      {/* Globe */}
+      {/* Globe — hidden on small screens */}
       <div
-        className="fixed z-10 pointer-events-none will-change-transform"
+        className="hidden md:block fixed z-10 pointer-events-none will-change-transform"
         style={{
           top: 0,
           left: 0,
@@ -213,7 +213,7 @@ export function ScrollGlobe({
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
-            className="relative z-20 flex w-full flex-col items-start justify-center px-14 py-20 lg:px-20"
+            className="relative z-20 flex w-full flex-col justify-center px-6 py-16 md:items-start md:px-14 lg:px-20"
             style={{ minHeight: index === 0 ? '88vh' : '72vh' }}
           >
             <div
@@ -289,7 +289,7 @@ export function ScrollGlobe({
               )}
 
               {section.actions && (
-                <div className={cn("flex flex-row flex-wrap gap-4", actionAlign)}>
+                <div className={cn("flex flex-col gap-3 md:flex-row md:gap-4", actionAlign)}>
                   {section.actions.map((action) => (
                     <button
                       key={action.label}
