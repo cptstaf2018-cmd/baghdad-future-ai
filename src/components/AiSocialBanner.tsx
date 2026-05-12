@@ -1,14 +1,14 @@
 import { useLang } from '@/hooks/useLang';
 
 const items = [
-  { en: '🔥 OFFER: Full Account Revival Package — First Month 50% OFF',         ar: '🔥 عرض خاص: باقة إحياء الحساب الكاملة — الشهر الأول بخصم 50%' },
-  { en: '🎁 FREE Account Audit Worth $200 — Limited Time Only',                 ar: '🎁 تحليل مجاني لحسابك بقيمة 200$ — لفترة محدودة فقط' },
-  { en: '⚡ 100K+ Followers But Zero Engagement? We Revive in 30 Days',         ar: '⚡ فوق 100K متابع لكن تفاعل صفر؟ نعيده خلال 30 يوماً' },
-  { en: '📦 Social Media Bundle: Content + Ads + Analytics — One Price',        ar: '📦 باقة السوشل ميديا: محتوى + إعلانات + تحليلات — بسعر واحد' },
-  { en: '🤝 Trusted by 150+ Clients in Iraq · Gulf · Europe',                   ar: '🤝 ثقة أكثر من 150 عميل في العراق والخليج وأوروبا' },
-  { en: '📈 Guaranteed Results or Your Money Back — No Risk',                   ar: '📈 نتائج مضمونة أو نرد لك المبلغ — بدون مخاطرة' },
-  { en: '🎯 AI Strategy for Instagram · TikTok · YouTube · Snapchat · X',       ar: '🎯 استراتيجية ذكاء اصطناعي لإنستغرام · تيك توك · يوتيوب · سناب · إكس' },
-  { en: '🚀 Book FREE Consultation NOW — WhatsApp Available 24/7',               ar: '🚀 احجز استشارتك المجانية الآن — واتساب متاح 24/7' },
+  { en: '🎁 EXCLUSIVE OFFER — Free Full Account Analysis, Limited Spots!',           ar: '🎁 عرض حصري — تحليل كامل لحسابك مجاناً، أماكن محدودة!' },
+  { en: '🔥 BREAKING: Free AI Content Strategy for the First 10 to Contact Us',      ar: '🔥 بشرى: استراتيجية محتوى مجانية بالذكاء الاصطناعي لأول 10 يتواصلون!' },
+  { en: '🎯 FREE 30-Day Growth Plan — Tailored Only for Your Account',               ar: '🎯 خطة نمو مجانية لمدة 30 يوماً — مصممة لحسابك أنت تحديداً' },
+  { en: '⚡ Exclusive: Free Engagement Revival Consultation — Today Only',            ar: '⚡ حصري: استشارة إحياء التفاعل مجاناً — اليوم فقط' },
+  { en: '🌟 GIFT: Free Competitor Analysis Report — Know Where You Stand',           ar: '🌟 هدية: تقرير تحليل المنافسين مجاناً — اعرف موقعك بالسوق' },
+  { en: '🚀 Free AI Audit: Discover Why Your Followers Stopped Engaging',            ar: '🚀 تشخيص مجاني بالذكاء الاصطناعي — اكتشف سبب توقف تفاعل متابعيك' },
+  { en: '🎉 Special Offer: Free First Content Calendar for New Clients',             ar: '🎉 عرض مميز: أول تقويم محتوى مجاناً للعملاء الجدد' },
+  { en: '💥 URGENT — Free Spot Available Now, Contact Us on WhatsApp!',              ar: '💥 عاجل — مقعد مجاني متاح الآن، تواصل معنا على الواتساب!' },
 ];
 
 export default function AiSocialBanner() {
