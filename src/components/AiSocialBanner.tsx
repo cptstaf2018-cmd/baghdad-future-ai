@@ -1,14 +1,14 @@
 import { useLang } from '@/hooks/useLang';
 
 const items = [
-  { en: '🤖 AI-Powered Social Media Growth',        ar: '🤖 نمو السوشل ميديا بالذكاء الاصطناعي' },
-  { en: '📊 Smart Account Analysis',                ar: '📊 تحليل ذكي للحسابات' },
-  { en: '⚡ Boost Engagement with AI',              ar: '⚡ رفع التفاعل بالذكاء الاصطناعي' },
-  { en: '🎯 Targeted Content Automation',           ar: '🎯 أتمتة المحتوى المستهدف' },
-  { en: '📈 Data-Driven Growth Strategy',           ar: '📈 استراتيجية نمو مدعومة بالبيانات' },
-  { en: '🌍 Meta · TikTok · LinkedIn · YouTube',   ar: '🌍 ميتا · تيك توك · لينكد إن · يوتيوب' },
-  { en: '✨ AI Content Creation & Scheduling',      ar: '✨ إنشاء المحتوى وجدولته بالذكاء الاصطناعي' },
-  { en: '🔥 Real Results — Real Clients',           ar: '🔥 نتائج حقيقية — عملاء حقيقيون' },
+  { en: '🔥 100K+ Followers? Engagement Dropped? We Fix That with AI',   ar: '🔥 حسابك فوق 100K مشترك؟ التفاعل توقف أو ضعف؟ نحلها بالذكاء الاصطناعي' },
+  { en: '📊 Deep Account Analysis — Find Why Engagement Stopped',        ar: '📊 تحليل عميق لحسابك — نكشف سبب توقف التفاعل' },
+  { en: '⚡ Revive Your Reach in 30 Days — Guaranteed Strategy',         ar: '⚡ نعيد انتشارك خلال 30 يوماً — استراتيجية مضمونة' },
+  { en: '🎯 Tailored AI Content for Accounts Above 100K',                ar: '🎯 محتوى ذكي مصمم لحسابات فوق 100 ألف متابع' },
+  { en: '📈 Turn Dead Followers into Active Engagement Again',            ar: '📈 حوّل متابعيك الصامتين إلى تفاعل حقيقي مجدداً' },
+  { en: '🌍 Instagram · TikTok · YouTube · Snapchat · X',                ar: '🌍 انستغرام · تيك توك · يوتيوب · سناب · إكس' },
+  { en: '✨ AI-Powered Posting Schedule Optimized for Your Audience',     ar: '✨ جدول نشر بالذكاء الاصطناعي مُحسَّن لجمهورك تحديداً' },
+  { en: '🚀 Free Consultation for Struggling Accounts — Contact Now',     ar: '🚀 استشارة مجانية لأصحاب الحسابات المتوقفة — تواصل الآن' },
 ];
 
 export default function AiSocialBanner() {

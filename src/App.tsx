@@ -19,8 +19,8 @@ export default function App() {
   return (
     <LangProvider>
       <Navbar />
-      <HeroScroll />
       <AiSocialBanner />
+      <HeroScroll />
       <TrustedStrip />
       <About />
       <Services />
