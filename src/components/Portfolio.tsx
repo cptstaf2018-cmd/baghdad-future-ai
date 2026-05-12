@@ -7,6 +7,7 @@ const projects = [
   { href: 'https://mall-pos-system-fniugb.abacusai.app/', img: '/images/pf-tikmart.jpg', catAr: 'نظام مبيعات', catEn: 'Sales System', nameAr: 'Mall POS System', nameEn: 'Mall POS System', descAr: 'نظام نقاط بيع يدير 50 فرع مع تقارير مركزية', descEn: 'POS system managing 50 branches with central reports' },
   { href: 'https://superlative-cheesecake-4963e9.netlify.app/', img: '/images/pf-salon.jpg', catAr: 'موقع تجاري', catEn: 'Business Website', nameAr: 'صالون كلاس تكريت', nameEn: 'Salon Class Tikrit', descAr: 'موقع صالون تجميل فاخر مع نظام حجوزات', descEn: 'Luxury beauty salon website with booking system' },
   { href: 'https://zesty-licorice-3717d7.netlify.app/', img: '/images/pf-tikmart.jpg', catAr: 'متجر إلكتروني', catEn: 'E-Commerce', nameAr: 'متجر إلكتروني احترافي', nameEn: 'Professional Online Store', descAr: 'منصة تسوق متكاملة مع إدارة منتجات وسلة شراء', descEn: 'Integrated shopping platform with product management and cart' },
+  { href: 'https://karmaclub-sandy.vercel.app/', img: '/images/pf-karma.jpg', catAr: 'موقع نادي رياضي', catEn: 'Sports Club Website', nameAr: 'نادي الكرمة الرياضي', nameEn: 'Al-Karma Sport Club', descAr: 'موقع احترافي لنادي كرة قدم عراقي في دوري النجوم — تأسس 1974', descEn: 'Professional website for an Iraqi football club in the Stars League — founded 1974' },
 ];
 
 export default function Portfolio() {
