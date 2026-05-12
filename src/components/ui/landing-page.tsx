@@ -206,20 +206,21 @@ export function ScrollGlobe({
         const textAlign =
           section.align === "center" ? "text-center" : dir === "rtl" ? "text-right" : "text-left";
         const actionAlign =
-          section.align === "center" ? "justify-center" : dir === "rtl" ? "justify-end" : "justify-start";
+          section.align === "center" ? "justify-center" : "justify-start";
 
         return (
           <section
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
-            className="relative z-20 grid min-h-screen w-full grid-cols-1 items-center overflow-hidden px-6 py-24 sm:px-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.7fr)] lg:px-16"
+            className="relative z-20 grid min-h-screen w-full grid-cols-1 items-center px-8 py-24 sm:px-12 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.7fr)] lg:px-20"
           >
             <div
               className={cn(
-                "relative w-full max-w-3xl transition-all duration-700",
+                "relative w-full transition-all duration-700",
                 textAlign,
-                section.align === "center" && "mx-auto",
+                section.align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl",
+                dir === "rtl" ? "mr-auto" : "ml-auto",
               )}
               dir={dir}
             >
@@ -256,7 +257,7 @@ export function ScrollGlobe({
               >
                 <p>{section.description}</p>
                 {index === 0 && (
-                  <div className={cn("mt-5 flex flex-wrap items-center gap-3 text-sm text-blue-400", actionAlign)}>
+                  <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-blue-400">
                     <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5">
                       <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
                       <span>{dir === "rtl" ? "تجربة تفاعلية" : "Interactive Experience"}</span>
