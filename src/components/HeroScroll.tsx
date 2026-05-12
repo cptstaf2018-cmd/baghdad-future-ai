@@ -1,4 +1,5 @@
 import { ScrollGlobe } from '@/components/ui/landing-page';
+import AiSocialBanner from '@/components/AiSocialBanner';
 import { useLang } from '@/hooks/useLang';
 
 const globeConfig = {
@@ -44,6 +45,7 @@ export default function HeroScroll() {
           onClick: () => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth', block: 'start' }),
         },
       ],
+      extra: <AiSocialBanner />,
     },
     {
       id: 'innovation',

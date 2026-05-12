@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import Globe from "@/components/ui/globe";
 import { cn } from "@/lib/utils";
 
@@ -13,6 +14,7 @@ interface ScrollGlobeProps {
     dir?: "ltr" | "rtl";
     features?: { title: string; description: string }[];
     actions?: { label: string; variant: "primary" | "secondary"; onClick?: () => void }[];
+    extra?: ReactNode;
   }[];
   globeConfig?: {
     positions: { top: string; left: string; scale: number }[];
@@ -221,7 +223,7 @@ export function ScrollGlobe({
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
             className="relative z-20 flex w-full flex-col justify-center px-5 py-12 md:items-start md:px-14 lg:px-20"
-            style={{ minHeight: index === 0 ? '88vh' : '72vh' }}
+            style={{ minHeight: index === 0 ? '72vh' : '68vh' }}
           >
             <div
               className={cn(
@@ -311,6 +313,12 @@ export function ScrollGlobe({
                       <span className="relative z-10">{action.label}</span>
                     </button>
                   ))}
+                </div>
+              )}
+
+              {section.extra && (
+                <div className="mt-6 w-screen -mx-5 md:-mx-14 lg:-mx-20">
+                  {section.extra}
                 </div>
               )}
             </div>

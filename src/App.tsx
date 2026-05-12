@@ -1,7 +1,6 @@
 import { LangProvider } from '@/hooks/useLang';
 import Navbar from '@/components/Navbar';
 import HeroScroll from '@/components/HeroScroll';
-import AiSocialBanner from '@/components/AiSocialBanner';
 import TrustedStrip from '@/components/TrustedStrip';
 import About from '@/components/About';
 import Services from '@/components/Services';
@@ -19,7 +18,6 @@ export default function App() {
   return (
     <LangProvider>
       <Navbar />
-      <AiSocialBanner />
       <HeroScroll />
       <TrustedStrip />
       <About />
