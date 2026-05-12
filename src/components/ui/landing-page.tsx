@@ -191,22 +191,20 @@ export function ScrollGlobe({
         <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-blue-300/40 to-transparent" />
       </div>
 
-      {/* Globe — visible on all screens, smaller on mobile */}
+      {/* Globe — visible on all screens */}
       <div
         className="fixed z-10 pointer-events-none will-change-transform"
         style={{
           top: 0,
           left: 0,
-          width: isMobile ? 180 : 250,
-          height: isMobile ? 180 : 250,
+          width: 250,
+          height: 250,
           transform: globeTransform,
-          opacity: heroVisible ? (activeSection === sections.length - 1 ? 0.35 : isMobile ? 0.55 : 0.85) : 0,
+          opacity: heroVisible ? (activeSection === sections.length - 1 ? 0.35 : isMobile ? 0.6 : 0.85) : 0,
           transition: "transform 1.4s cubic-bezier(0.23,1,0.32,1), opacity 0.6s ease",
         }}
       >
-        <div className={isMobile ? "scale-75 origin-top-left" : "scale-90 lg:scale-100 origin-top-left"}>
-          <Globe />
-        </div>
+        <Globe />
       </div>
 
       {/* Sections */}
