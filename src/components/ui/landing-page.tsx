@@ -182,9 +182,9 @@ export function ScrollGlobe({
         <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-blue-300/40 to-transparent" />
       </div>
 
-      {/* Globe — top:0 left:0 anchors to viewport origin so translate3d works correctly */}
+      {/* Globe — hidden on mobile, shown on sm+ */}
       <div
-        className="fixed z-10 pointer-events-none will-change-transform"
+        className="hidden sm:block fixed z-10 pointer-events-none will-change-transform"
         style={{
           top: 0,
           left: 0,
@@ -195,7 +195,7 @@ export function ScrollGlobe({
           transition: "transform 1.4s cubic-bezier(0.23,1,0.32,1), opacity 0.6s ease",
         }}
       >
-        <div className="scale-75 sm:scale-90 lg:scale-100 origin-top-left">
+        <div className="scale-90 lg:scale-100 origin-top-left">
           <Globe />
         </div>
       </div>
@@ -213,7 +213,7 @@ export function ScrollGlobe({
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
-            className="relative z-20 flex min-h-screen w-full flex-col justify-center px-8 py-24 sm:px-14 lg:px-20"
+            className="relative z-20 flex min-h-screen w-full flex-col items-center justify-center px-6 py-24 text-center sm:items-start sm:text-start sm:px-14 lg:px-20"
           >
             <div
               className={cn(
@@ -288,7 +288,7 @@ export function ScrollGlobe({
               )}
 
               {section.actions && (
-                <div className={cn("flex flex-col flex-wrap gap-3 sm:flex-row sm:gap-4", actionAlign)}>
+                <div className={cn("flex flex-col flex-wrap gap-3 sm:flex-row sm:gap-4 justify-center sm:justify-start", actionAlign)}>
                   {section.actions.map((action) => (
                     <button
                       key={action.label}
@@ -307,7 +307,14 @@ export function ScrollGlobe({
               )}
             </div>
 
-            <div className="hidden lg:block" aria-hidden="true" />
+            {/* Mobile globe — small decorative, shown only on mobile */}
+            {index === 0 && (
+              <div className="mt-8 flex justify-center sm:hidden" aria-hidden="true">
+                <div style={{ transform: "scale(0.7)", transformOrigin: "center" }}>
+                  <Globe />
+                </div>
+              </div>
+            )}
           </section>
         );
       })}
