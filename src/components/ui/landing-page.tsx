@@ -41,7 +41,12 @@ const toTransform = (position: { top: number; left: number; scale: number }) =>
 export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, className }: ScrollGlobeProps) {
   const [activeSection, setActiveSection] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [globeTransform, setGlobeTransform] = useState("");
+  const [globeTransform, setGlobeTransform] = useState(() => {
+    const p = globeConfig.positions[0];
+    if (!p) return "";
+    return toTransform({ top: parsePercent(p.top), left: parsePercent(p.left), scale: p.scale });
+  });
+  const [heroVisible, setHeroVisible] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<(HTMLElement | null)[]>([]);
   const animationFrameId = useRef<number>();
@@ -116,6 +121,18 @@ export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, classN
     }
   }, [calculatedPositions]);
 
+  // Hide globe smoothly when hero wrapper leaves viewport
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroVisible(entry.isIntersecting),
+      { threshold: 0 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div
       ref={containerRef}
@@ -185,7 +202,8 @@ export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, classN
         className="fixed z-30 h-[250px] w-[250px] pointer-events-none will-change-transform transition-all duration-[1400ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
         style={{
           transform: globeTransform,
-          filter: `opacity(${activeSection === sections.length - 1 ? 0.42 : 0.88})`,
+          opacity: heroVisible ? (activeSection === sections.length - 1 ? 0.42 : 0.88) : 0,
+          transition: "transform 1.4s cubic-bezier(0.23,1,0.32,1), opacity 0.6s ease",
         }}
       >
         <div className="scale-[0.72] sm:scale-90 lg:scale-100">

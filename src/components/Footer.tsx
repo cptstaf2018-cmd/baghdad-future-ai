@@ -43,10 +43,8 @@ export default function Footer() {
             <div className="footer-col">
               <h4>{t('تواصل معنا', 'Contact Us')}</h4>
               <ul>
-                <li>📍 {t('أربيل، شارع 100', 'Erbil, Street 100')}</li>
-                <li>📍 {t('بغداد، المنصور', 'Baghdad, Mansour')}</li>
-                <li><a href="tel:07706688044">📱 07706688044</a></li>
-                <li><a href="tel:07806688044">📱 07806688044</a></li>
+                <li>📍 {t('أربيل · بغداد، العراق', 'Erbil · Baghdad, Iraq')}</li>
+                <li><a href="tel:07706688044">📱 077 066 880 44</a></li>
                 <li><a href="mailto:cptstaf2018@gmail.com">✉️ cptstaf2018@gmail.com</a></li>
               </ul>
             </div>
