@@ -45,11 +45,11 @@ export default function HeroScroll() {
           onClick: () => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth', block: 'start' }),
         },
       ],
-      extra: <AiSocialBanner />,
     },
     {
       id: 'innovation',
       badge: t('حضور عالمي', 'Global Presence'),
+      extraTop: <AiSocialBanner />,
       title: t('عملاؤنا في العراق والخليج والعالم', 'Clients in Iraq, Gulf & Beyond'),
       subtitle: t('تقنية بلا حدود، نتائج ملموسة', 'Borderless Tech, Tangible Results'),
       description: t(

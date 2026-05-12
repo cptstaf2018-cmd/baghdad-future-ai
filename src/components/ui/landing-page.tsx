@@ -15,6 +15,7 @@ interface ScrollGlobeProps {
     features?: { title: string; description: string }[];
     actions?: { label: string; variant: "primary" | "secondary"; onClick?: () => void }[];
     extra?: ReactNode;
+    extraTop?: ReactNode;
   }[];
   globeConfig?: {
     positions: { top: string; left: string; scale: number }[];
@@ -225,6 +226,12 @@ export function ScrollGlobe({
             className="relative z-20 flex w-full flex-col justify-center px-5 py-12 md:items-start md:px-14 lg:px-20"
             style={{ minHeight: index === 0 ? '72vh' : '68vh' }}
           >
+            {section.extraTop && (
+              <div className="w-screen -mx-5 md:-mx-14 lg:-mx-20 mb-8" style={{ position: 'relative', zIndex: 5 }}>
+                {section.extraTop}
+              </div>
+            )}
+
             <div
               className={cn(
                 "relative w-full max-w-3xl transition-all duration-700",
@@ -317,7 +324,7 @@ export function ScrollGlobe({
               )}
 
               {section.extra && (
-                <div className="mt-16 w-screen -mx-5 md:-mx-14 lg:-mx-20" style={{ position: 'relative', zIndex: 5 }}>
+                <div className="mt-6 w-screen -mx-5 md:-mx-14 lg:-mx-20" style={{ position: 'relative', zIndex: 5 }}>
                   {section.extra}
                 </div>
               )}
