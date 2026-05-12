@@ -3,11 +3,11 @@ import { useLang } from '@/hooks/useLang';
 
 const globeConfig = {
   positions: [
-    { top: "48%", left: "74%", scale: 1.25 },
-    { top: "26%", left: "79%", scale: 0.9 },
-    { top: "62%", left: "73%", scale: 1.55 },
-    { top: "48%", left: "69%", scale: 1.9 },
-  ]
+    { top: "50%", left: "75%", scale: 1.4 },
+    { top: "25%", left: "50%", scale: 0.9 },
+    { top: "15%", left: "90%", scale: 2   },
+    { top: "50%", left: "50%", scale: 1.8 },
+  ],
 };
 
 export default function HeroScroll() {
@@ -19,10 +19,10 @@ export default function HeroScroll() {
       id: 'hero',
       badge: t('بغداد المستقبل AI', 'Baghdad Future AI'),
       title: t('نحو مؤسسات عراقية أذكى', 'Smarter Iraqi Institutions'),
-      subtitle: t('بالذكاء الاصطناعي والتحول الرقمي', 'through AI and digital transformation'),
+      subtitle: t('بالذكاء الاصطناعي والتحول الرقمي', 'through AI & Digital Transformation'),
       description: t(
         'نصمم ونبني أنظمة ذكاء اصطناعي، ERP، منصات SaaS، وتطبيقات مؤسسية تساعد الوزارات والمستشفيات والجامعات والشركات على العمل بسرعة ووضوح وأمان.',
-        'We design and build AI systems, ERP platforms, SaaS products, and enterprise apps that help ministries, hospitals, universities, and companies operate with speed, clarity, and security.'
+        'We design and build AI systems, ERP platforms, SaaS products, and enterprise apps that help ministries, hospitals, universities, and companies operate with speed, clarity, and security.',
       ),
       align: 'left' as const,
       dir,
@@ -42,11 +42,11 @@ export default function HeroScroll() {
     {
       id: 'innovation',
       badge: t('شبكة حلول', 'Solution Network'),
-      title: t('من بغداد وأربيل', 'From Baghdad and Erbil'),
+      title: t('من بغداد وأربيل', 'From Baghdad & Erbil'),
       subtitle: t('إلى كل مؤسسة تبحث عن نمو حقيقي', 'to every institution ready to grow'),
       description: t(
         'نحوّل الاحتياج التشغيلي اليومي إلى أنظمة عملية: لوحات تحكم، قواعد بيانات، تكاملات، أتمتة، وتجارب استخدام يفهمها الفريق من اليوم الأول.',
-        'We turn daily operational needs into practical systems: dashboards, databases, integrations, automation, and user experiences teams can understand from day one.'
+        'We turn daily operational needs into practical systems: dashboards, databases, integrations, automation, and user experiences teams understand from day one.',
       ),
       align: 'left' as const,
       dir,
@@ -55,10 +55,10 @@ export default function HeroScroll() {
       id: 'discovery',
       badge: t('قدراتنا', 'Capabilities'),
       title: t('حلول جاهزة للتوسع', 'Solutions Built to Scale'),
-      subtitle: t('ومصممة لبيئة العمل العراقية', 'and designed for Iraqi operations'),
+      subtitle: t('مصممة لبيئة العمل العراقية', 'Designed for Iraqi Operations'),
       description: t(
-        'نبدأ من المشكلة الحقيقية، ثم نبني طبقة تقنية قابلة للصيانة والتطوير: من المنتج الأولي إلى منصة مستقرة تخدم فروعاً ومستخدمين وبيانات متزايدة.',
-        'We begin with the real problem, then build a maintainable and extensible technology layer: from first release to a stable platform serving growing branches, users, and data.'
+        'نبدأ من المشكلة الحقيقية، ثم نبني طبقة تقنية قابلة للصيانة والتطوير — من المنتج الأولي إلى منصة مستقرة تخدم فروعاً ومستخدمين وبيانات متزايدة.',
+        'We start with the real problem, then build a maintainable technology layer — from first release to a stable platform serving growing branches, users, and data.',
       ),
       align: 'left' as const,
       dir,
@@ -69,7 +69,7 @@ export default function HeroScroll() {
         },
         {
           title: t('أنظمة ERP مخصصة', 'Custom ERP Systems'),
-          description: t('إدارة شاملة للموارد البشرية، المالية، والمخزون من منصة واحدة', 'Comprehensive management of HR, finance, and inventory from one platform'),
+          description: t('إدارة شاملة للموارد البشرية، المالية، والمخزون من منصة واحدة', 'Comprehensive HR, finance, and inventory management from one platform'),
         },
         {
           title: t('تحول رقمي متكامل', 'Complete Digital Transformation'),
@@ -81,10 +81,10 @@ export default function HeroScroll() {
       id: 'future',
       badge: t('ابدأ الآن', 'Start Now'),
       title: t('مشروعك القادم', 'Your Next Project'),
-      subtitle: t('يستحق نظاماً يليق بطموحه', 'deserves software worthy of its ambition'),
+      subtitle: t('يستحق نظاماً يليق بطموحه', 'Deserves Software Worthy of Its Ambition'),
       description: t(
-        'سواء كنت تحتاج موقعاً مؤسسياً، تطبيقاً، نظام إدارة، أو أتمتة ذكية، نساعدك على تحويل الفكرة إلى منتج واضح قابل للإطلاق والدعم.',
-        'Whether you need a corporate website, app, management system, or intelligent automation, we help turn the idea into a clear product ready to launch and support.'
+        'سواء كنت تحتاج موقعاً مؤسسياً، تطبيقاً، نظام إدارة، أو أتمتة ذكية — نساعدك على تحويل الفكرة إلى منتج واضح قابل للإطلاق والدعم.',
+        'Whether you need a corporate website, app, management system, or intelligent automation — we help turn the idea into a clear product ready to launch and support.',
       ),
       align: 'left' as const,
       dir,
@@ -107,7 +107,7 @@ export default function HeroScroll() {
     <ScrollGlobe
       sections={sections}
       globeConfig={globeConfig}
-      className="bg-[#000813]"
+      className="bg-[#070B14]"
     />
   );
 }

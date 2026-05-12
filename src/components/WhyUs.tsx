@@ -37,12 +37,12 @@ export default function WhyUs() {
   ];
 
   return (
-    <section className="brand-section whyus-section">
-      <div className="brand-container">
+    <section className="dt-section whyus-section">
+      <div className="dt-container">
         <div className="whyus-grid">
           <div className="whyus-text">
-            <span className="brand-tag">{t('لماذا نحن', 'Why Choose Us')}</span>
-            <h2 className="brand-section-title">{t('لماذا تختار بغداد المستقبل AI؟', 'Why Choose Baghdad Future AI?')}</h2>
+            <span className="dt-badge">{t('لماذا نحن', 'Why Choose Us')}</span>
+            <h2 className="dt-section-title">{t('لماذا تختار بغداد المستقبل AI؟', 'Why Choose Baghdad Future AI?')}</h2>
             <div className="why-items">
               {reasons.map(r => (
                 <div key={r.num} className="why-item reveal" ref={addReveal}>

@@ -15,30 +15,30 @@ interface ScrollGlobeProps {
     actions?: { label: string; variant: "primary" | "secondary"; onClick?: () => void }[];
   }[];
   globeConfig?: {
-    positions: {
-      top: string;
-      left: string;
-      scale: number;
-    }[];
+    positions: { top: string; left: string; scale: number }[];
   };
   className?: string;
 }
 
 const defaultGlobeConfig = {
   positions: [
-    { top: "48%", left: "72%", scale: 1.35 },
-    { top: "26%", left: "78%", scale: 0.9 },
-    { top: "60%", left: "74%", scale: 1.55 },
-    { top: "48%", left: "68%", scale: 1.85 },
+    { top: "50%", left: "75%", scale: 1.4 },
+    { top: "25%", left: "50%", scale: 0.9 },
+    { top: "15%", left: "90%", scale: 2   },
+    { top: "50%", left: "50%", scale: 1.8 },
   ],
 };
 
 const parsePercent = (str: string): number => parseFloat(str.replace("%", ""));
 
-const toTransform = (position: { top: number; left: number; scale: number }) =>
-  `translate3d(${position.left}vw, ${position.top}vh, 0) translate3d(-50%, -50%, 0) scale3d(${position.scale}, ${position.scale}, 1)`;
+const toTransform = (pos: { top: number; left: number; scale: number }) =>
+  `translate3d(${pos.left}vw, ${pos.top}vh, 0) translate3d(-50%, -50%, 0) scale3d(${pos.scale}, ${pos.scale}, 1)`;
 
-export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, className }: ScrollGlobeProps) {
+export function ScrollGlobe({
+  sections,
+  globeConfig = defaultGlobeConfig,
+  className,
+}: ScrollGlobeProps) {
   const [activeSection, setActiveSection] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [globeTransform, setGlobeTransform] = useState(() => {
@@ -72,11 +72,9 @@ export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, classN
 
     sectionRefs.current.forEach((ref, index) => {
       if (!ref) return;
-
       const rect = ref.getBoundingClientRect();
       const sectionCenter = rect.top + rect.height / 2;
       const distance = Math.abs(sectionCenter - viewportCenter);
-
       if (distance < minDistance) {
         minDistance = distance;
         newActiveSection = index;
@@ -90,38 +88,29 @@ export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, classN
 
   useEffect(() => {
     let ticking = false;
-
     const handleScroll = () => {
       if (ticking) return;
-
       animationFrameId.current = requestAnimationFrame(() => {
         updateScrollPosition();
         ticking = false;
       });
       ticking = true;
     };
-
     window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener("resize", handleScroll, { passive: true });
     updateScrollPosition();
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
-      if (animationFrameId.current) {
-        cancelAnimationFrame(animationFrameId.current);
-      }
+      if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current);
     };
   }, [updateScrollPosition]);
 
   useEffect(() => {
     const initialPos = calculatedPositions[0];
-    if (initialPos) {
-      setGlobeTransform(toTransform(initialPos));
-    }
+    if (initialPos) setGlobeTransform(toTransform(initialPos));
   }, [calculatedPositions]);
 
-  // Hide globe smoothly when hero wrapper leaves viewport
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
@@ -141,118 +130,120 @@ export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, classN
         className,
       )}
     >
+      {/* Background grid */}
       <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,0.22),transparent_34%),radial-gradient(circle_at_80%_42%,rgba(20,184,166,0.14),transparent_30%),linear-gradient(180deg,rgba(0,8,19,0)_0%,rgba(0,8,19,0.78)_100%)]" />
-        <div className="absolute inset-0 opacity-[0.16] [background-image:linear-gradient(rgba(255,255,255,.12)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.12)_1px,transparent_1px)] [background-size:80px_80px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(103,232,249,0.08),transparent_40%),radial-gradient(circle_at_80%_60%,rgba(59,130,246,0.07),transparent_40%)]" />
+        <div className="absolute inset-0 opacity-[0.04] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:60px_60px]" />
       </div>
 
-      <div className="fixed top-0 left-0 z-50 h-0.5 w-full bg-gradient-to-r from-border/20 via-border/40 to-border/20">
+      {/* Scroll progress bar */}
+      <div className="fixed top-0 left-0 z-50 h-0.5 w-full bg-white/5">
         <div
-          className="h-full bg-gradient-to-r from-primary via-cyan-400 to-emerald-400 shadow-sm will-change-transform"
+          className="h-full bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 will-change-transform"
           style={{
             transform: `scaleX(${scrollProgress})`,
             transformOrigin: "left center",
             transition: "transform 0.15s ease-out",
-            filter: "drop-shadow(0 0 4px rgba(34, 211, 238, 0.4))",
+            filter: "drop-shadow(0 0 4px rgba(103,232,249,0.5))",
           }}
         />
       </div>
 
-      <div className="hidden sm:flex fixed right-2 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40">
-        <div className="space-y-3 sm:space-y-4 lg:space-y-6">
-          {sections.map((section, index) => (
-            <div key={section.id} className="group relative">
-              <div
-                className={cn(
-                  "absolute right-5 sm:right-6 lg:right-8 top-1/2 -translate-y-1/2",
-                  "rounded-lg border border-white/10 bg-[#071225]/90 px-3 py-1.5 text-xs font-medium text-white shadow-xl backdrop-blur-md",
-                  activeSection === index ? "animate-fadeOut" : "opacity-0",
-                )}
-              >
-                <div className="flex items-center gap-2 whitespace-nowrap">
-                  <div className="h-1.5 w-1.5 rounded-full bg-cyan-300" />
-                  <span>{section.badge || `Section ${index + 1}`}</span>
-                </div>
+      {/* Side nav dots */}
+      <div className="hidden sm:flex fixed right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 flex-col gap-4 lg:gap-6 items-center">
+        {sections.map((section, index) => (
+          <div key={section.id} className="group relative">
+            <div
+              className={cn(
+                "absolute right-6 lg:right-8 top-1/2 -translate-y-1/2",
+                "rounded-lg border border-cyan-300/15 bg-[#070B14]/90 px-3 py-1.5 text-xs font-medium text-cyan-100 shadow-xl backdrop-blur-md whitespace-nowrap",
+                activeSection === index ? "animate-fadeOut" : "opacity-0",
+              )}
+            >
+              <div className="flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                <span>{section.badge || `Section ${index + 1}`}</span>
               </div>
-
-              <button
-                onClick={() => {
-                  sectionRefs.current[index]?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                  });
-                }}
-                className={cn(
-                  "relative h-3 w-3 rounded-full border-2 transition-all duration-300 hover:scale-125",
-                  "before:absolute before:inset-0 before:rounded-full before:transition-all before:duration-300",
-                  activeSection === index
-                    ? "border-cyan-300 bg-cyan-300 shadow-lg shadow-cyan-300/30 before:animate-ping before:bg-cyan-300/20"
-                    : "border-white/35 bg-transparent hover:border-cyan-300/70 hover:bg-cyan-300/10",
-                )}
-                aria-label={`Go to ${section.badge || `section ${index + 1}`}`}
-              />
             </div>
-          ))}
-        </div>
-
-        <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-cyan-300/25 to-transparent" />
+            <button
+              onClick={() =>
+                sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
+              className={cn(
+                "relative h-2.5 w-2.5 lg:h-3 lg:w-3 rounded-full border-2 transition-all duration-300 hover:scale-125",
+                "before:absolute before:inset-0 before:rounded-full before:transition-all before:duration-300",
+                activeSection === index
+                  ? "border-cyan-300 bg-cyan-300 shadow-lg shadow-cyan-300/30 before:animate-ping before:bg-cyan-300/20"
+                  : "border-white/25 bg-transparent hover:border-cyan-300/60 hover:bg-cyan-300/10",
+              )}
+              aria-label={`Go to ${section.badge || `section ${index + 1}`}`}
+            />
+          </div>
+        ))}
+        <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-cyan-300/20 to-transparent" />
       </div>
 
+      {/* Globe — top:0 left:0 anchors to viewport origin so translate3d works correctly */}
       <div
-        className="fixed z-30 h-[250px] w-[250px] pointer-events-none will-change-transform transition-all duration-[1400ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
+        className="fixed z-10 pointer-events-none will-change-transform"
         style={{
+          top: 0,
+          left: 0,
+          width: 250,
+          height: 250,
           transform: globeTransform,
-          opacity: heroVisible ? (activeSection === sections.length - 1 ? 0.42 : 0.88) : 0,
+          opacity: heroVisible ? (activeSection === sections.length - 1 ? 0.4 : 0.85) : 0,
           transition: "transform 1.4s cubic-bezier(0.23,1,0.32,1), opacity 0.6s ease",
         }}
       >
-        <div className="scale-[0.72] sm:scale-90 lg:scale-100">
+        <div className="scale-75 sm:scale-90 lg:scale-100 origin-top-left">
           <Globe />
         </div>
       </div>
 
+      {/* Sections */}
       {sections.map((section, index) => {
         const dir = section.dir || "ltr";
         const textAlign =
           section.align === "center" ? "text-center" : dir === "rtl" ? "text-right" : "text-left";
         const actionAlign =
-          section.align === "center" ? "justify-center" : "justify-start";
+          section.align === "center" ? "justify-center" : dir === "rtl" ? "justify-end" : "justify-start";
 
         return (
           <section
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
-            className="relative z-20 grid min-h-screen w-full grid-cols-1 items-center overflow-hidden px-4 py-24 sm:px-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(320px,0.78fr)] lg:px-14"
+            className="relative z-20 grid min-h-screen w-full grid-cols-1 items-center overflow-hidden px-6 py-24 sm:px-10 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.7fr)] lg:px-16"
           >
             <div
               className={cn(
-                "relative w-full max-w-5xl rounded-none transition-all duration-700",
+                "relative w-full max-w-3xl transition-all duration-700",
                 textAlign,
                 section.align === "center" && "mx-auto",
               )}
               dir={dir}
             >
               {section.badge && (
-                <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-bold text-cyan-100">
-                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,.8)]" />
+                <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/8 px-4 py-1.5 text-xs font-bold text-cyan-200">
+                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(103,232,249,0.8)]" />
                   {section.badge}
                 </span>
               )}
 
               <h1
                 className={cn(
-                  "mb-6 font-black leading-[1.08]",
+                  "mb-5 font-black leading-[1.06] tracking-tight",
                   index === 0
                     ? "text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                     : "text-3xl sm:text-4xl md:text-5xl lg:text-6xl",
                 )}
               >
-                <span className="block bg-gradient-to-r from-white via-cyan-100 to-white/75 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-white via-slate-100 to-white/70 bg-clip-text text-transparent">
                   {section.title}
                 </span>
                 {section.subtitle && (
-                  <span className="mt-2 block text-[0.55em] font-semibold leading-tight text-slate-300">
+                  <span className="mt-2 block text-[0.52em] font-semibold leading-snug text-slate-400">
                     {section.subtitle}
                   </span>
                 )}
@@ -260,19 +251,19 @@ export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, classN
 
               <div
                 className={cn(
-                  "mb-8 text-base font-light leading-8 text-slate-300 sm:text-lg lg:text-xl",
-                  section.align === "center" ? "mx-auto max-w-3xl" : "max-w-3xl",
+                  "mb-8 text-base font-light leading-8 text-slate-400 sm:text-lg",
+                  section.align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl",
                 )}
               >
                 <p>{section.description}</p>
                 {index === 0 && (
-                  <div className={cn("mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-400", actionAlign)}>
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
+                  <div className={cn("mt-5 flex flex-wrap items-center gap-3 text-sm text-slate-500", actionAlign)}>
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/4 px-3 py-1.5 backdrop-blur">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                       <span>{dir === "rtl" ? "تجربة تفاعلية" : "Interactive Experience"}</span>
                     </div>
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur">
-                      <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/4 px-3 py-1.5 backdrop-blur">
+                      <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
                       <span>{dir === "rtl" ? "مرر للاستكشاف" : "Scroll to Explore"}</span>
                     </div>
                   </div>
@@ -280,16 +271,16 @@ export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, classN
               </div>
 
               {section.features && (
-                <div className="mb-8 grid gap-3 sm:gap-4">
+                <div className="mb-8 grid gap-3">
                   {section.features.map((feature) => (
                     <div
                       key={feature.title}
-                      className="group rounded-xl border border-white/10 bg-white/[0.055] p-4 shadow-2xl shadow-black/10 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/25 hover:bg-white/[0.08] sm:p-5"
+                      className="group rounded-xl border border-white/8 bg-white/4 p-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/20 hover:bg-white/6 sm:p-5"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-cyan-300 transition-colors group-hover:bg-emerald-300" />
-                        <div className="min-w-0 flex-1 space-y-1">
-                          <h3 className="text-base font-bold text-white sm:text-lg">{feature.title}</h3>
+                        <div className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan-400 transition-colors group-hover:bg-emerald-400" />
+                        <div className="min-w-0 flex-1">
+                          <h3 className="mb-1 text-base font-bold text-white sm:text-lg">{feature.title}</h3>
                           <p className="text-sm leading-7 text-slate-400 sm:text-base">{feature.description}</p>
                         </div>
                       </div>
@@ -305,10 +296,10 @@ export function ScrollGlobe({ sections, globeConfig = defaultGlobeConfig, classN
                       key={action.label}
                       onClick={action.onClick}
                       className={cn(
-                        "group relative w-full overflow-hidden rounded-xl px-6 py-3.5 text-sm font-bold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-cyan-300/30 sm:w-auto sm:px-8 sm:text-base",
+                        "group relative w-full overflow-hidden rounded-xl px-7 py-3.5 text-sm font-bold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-cyan-300/30 sm:w-auto sm:px-8 sm:text-base",
                         action.variant === "primary"
                           ? "bg-cyan-300 text-slate-950 shadow-lg shadow-cyan-300/20 hover:bg-white hover:shadow-cyan-300/35"
-                          : "border border-white/15 bg-white/5 text-white backdrop-blur-sm hover:border-cyan-300/35 hover:bg-white/10",
+                          : "border border-white/12 bg-white/4 text-white backdrop-blur-sm hover:border-cyan-300/30 hover:bg-white/8",
                       )}
                     >
                       <span className="relative z-10">{action.label}</span>

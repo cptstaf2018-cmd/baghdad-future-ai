@@ -14,11 +14,12 @@ export default function Portfolio() {
   const doubled = [...projects, ...projects];
 
   return (
-    <section className="brand-section portfolio-section" id="portfolio">
-      <div className="brand-container">
-        <div className="brand-section-head">
-          <span className="brand-tag">{t('أعمالنا', 'Our Work')}</span>
-          <h2 className="brand-section-title">{t('مشاريع حقيقية لعملاء حقيقيين', 'Real Projects for Real Clients')}</h2>
+    <section className="dt-section alt portfolio-section" id="portfolio">
+      <div className="dt-container">
+        <div className="dt-section-head">
+          <span className="dt-badge">{t('أعمالنا', 'Our Work')}</span>
+          <h2 className="dt-section-title">{t('مشاريع حقيقية لعملاء حقيقيين', 'Real Projects for Real Clients')}</h2>
+          <p className="dt-section-sub">{t('نماذج من مشاريعنا المنجزة في العراق والمنطقة', 'Selected projects delivered across Iraq and the region')}</p>
         </div>
       </div>
       <div className="pf-scroll-wrap">

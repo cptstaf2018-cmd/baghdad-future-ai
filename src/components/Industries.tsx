@@ -27,11 +27,12 @@ export default function Industries() {
   ];
 
   return (
-    <section className="brand-section industries-section" id="industries">
-      <div className="brand-container">
-        <div className="brand-section-head">
-          <span className="brand-tag">{t('القطاعات', 'Industries')}</span>
-          <h2 className="brand-section-title">{t('خبرة موثّقة في أبرز القطاعات الحيوية', 'Proven Expertise Across Key Industry Sectors')}</h2>
+    <section className="dt-section alt industries-section" id="industries">
+      <div className="dt-container">
+        <div className="dt-section-head">
+          <span className="dt-badge">{t('القطاعات', 'Industries')}</span>
+          <h2 className="dt-section-title">{t('خبرة موثّقة في أبرز القطاعات الحيوية', 'Proven Expertise Across Key Industry Sectors')}</h2>
+          <p className="dt-section-sub">{t('نخدم الوزارات والمستشفيات والجامعات والشركات بحلول مخصصة لكل قطاع', 'We serve ministries, hospitals, universities, and companies with tailored solutions for every sector')}</p>
         </div>
         <div className="industries-grid">
           {industries.map(ind => (

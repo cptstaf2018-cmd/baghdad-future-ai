@@ -22,7 +22,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`brand-navbar${scrolled ? ' scrolled' : ''}`} id="navbar">
+    <nav className={`dt-navbar${scrolled ? ' scrolled' : ''}`} id="navbar">
       <div className="nav-inner">
         <a href="#" className="nav-logo">
           {t('بغداد المستقبل', 'Baghdad Future')} <span>AI</span>
@@ -37,10 +37,10 @@ export default function Navbar() {
           ))}
         </ul>
         <div className="nav-actions">
-          <a href="#contact" className="btn-contact-nav">
+          <a href="#contact" className="btn-nav-cta">
             {t('تواصل معنا', 'Contact Us')}
           </a>
-          <button className="lang-btn" onClick={toggle} aria-label="Toggle language">
+          <button className="dt-lang-btn" onClick={toggle} aria-label="Toggle language">
             {lang === 'ar' ? 'EN' : 'AR'}
           </button>
           <button

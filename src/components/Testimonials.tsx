@@ -14,11 +14,11 @@ export default function Testimonials() {
   const doubled = [...reviews, ...reviews];
 
   return (
-    <section className="brand-section testimonials-section">
-      <div className="brand-container">
-        <div className="brand-section-head">
-          <span className="brand-tag">{t('آراء العملاء', 'Client Reviews')}</span>
-          <h2 className="brand-section-title">{t('ماذا قال عملاؤنا؟', 'What Did Our Clients Say?')}</h2>
+    <section className="dt-section testimonials-section">
+      <div className="dt-container">
+        <div className="dt-section-head">
+          <span className="dt-badge">{t('آراء العملاء', 'Client Reviews')}</span>
+          <h2 className="dt-section-title">{t('ماذا قال عملاؤنا؟', 'What Did Our Clients Say?')}</h2>
         </div>
       </div>
       <div className="reviews-wrap">

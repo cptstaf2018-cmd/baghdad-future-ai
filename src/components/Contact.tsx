@@ -21,11 +21,11 @@ export default function Contact() {
   };
 
   return (
-    <section className="brand-section contact-section" id="contact">
-      <div className="brand-container">
-        <div className="brand-section-head">
-          <span className="brand-tag">{t('تواصل معنا', 'Contact Us')}</span>
-          <h2 className="brand-section-title">{t('تواصل معنا وابدأ مشروعك اليوم', 'Get in Touch and Start Your Project Today')}</h2>
+    <section className="dt-section contact-section" id="contact">
+      <div className="dt-container">
+        <div className="dt-section-head">
+          <span className="dt-badge">{t('تواصل معنا', 'Contact Us')}</span>
+          <h2 className="dt-section-title">{t('تواصل معنا وابدأ مشروعك اليوم', 'Get in Touch and Start Your Project Today')}</h2>
         </div>
         <div className="contact-grid">
           <div className="contact-info">

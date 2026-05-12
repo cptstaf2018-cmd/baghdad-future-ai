@@ -18,12 +18,12 @@ export default function Products() {
   const addReveal = (el: HTMLElement | null) => { if (el) revealRefs.current.push(el); };
 
   return (
-    <section className="brand-section products-section" id="products">
-      <div className="brand-container">
-        <div className="brand-section-head">
-          <span className="brand-tag">{t('منتجاتنا', 'Our Products')}</span>
-          <h2 className="brand-section-title">{t('منتجاتنا البرمجية الجاهزة للتطبيق', 'Our Ready-to-Deploy Software Products')}</h2>
-          <p className="brand-section-sub">{t('حلول برمجية متكاملة مصممة خصيصاً للبيئة العراقية والمؤسسية', 'Integrated software solutions designed specifically for the Iraqi and institutional environment')}</p>
+    <section className="dt-section products-section" id="products">
+      <div className="dt-container">
+        <div className="dt-section-head">
+          <span className="dt-badge">{t('منتجاتنا', 'Our Products')}</span>
+          <h2 className="dt-section-title">{t('منتجاتنا البرمجية الجاهزة للتطبيق', 'Our Ready-to-Deploy Software Products')}</h2>
+          <p className="dt-section-sub">{t('حلول برمجية متكاملة مصممة خصيصاً للبيئة العراقية والمؤسسية', 'Integrated software solutions designed specifically for the Iraqi and institutional environment')}</p>
         </div>
         <div className="products-grid">
 
@@ -82,3 +82,4 @@ export default function Products() {
     </section>
   );
 }
+

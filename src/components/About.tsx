@@ -20,18 +20,18 @@ export default function About() {
   const values = [
     { icon: '💡', title: t('الابتكار المستمر', 'Continuous Innovation'), desc: t('نواكب أحدث التقنيات العالمية', 'We keep pace with the latest global technologies') },
     { icon: '🛡️', title: t('الأمان والموثوقية', 'Security & Reliability'), desc: t('بنية تحتية آمنة بمعايير دولية', 'Secure infrastructure with international standards') },
-    { icon: '🤝', title: t('شراكة حقيقية', 'True Partnership'), desc: t('ندعمك ما بعد التسليم بدون توقف', 'We support you post-delivery without stop') },
+    { icon: '🤝', title: t('شراكة حقيقية', 'True Partnership'), desc: t('ندعمك ما بعد التسليم بدون توقف', 'We support you post-delivery without interruption') },
     { icon: '📍', title: t('خبرة محلية عميقة', 'Deep Local Expertise'), desc: t('نفهم السوق العراقي والبيئة المؤسسية', 'We understand the Iraqi market and institutional environment') },
   ];
 
   return (
-    <section className="brand-section about-section" id="about">
-      <div className="brand-container">
+    <section className="dt-section about-section" id="about">
+      <div className="dt-container">
         <div className="about-grid">
           <div className="about-text">
-            <span className="brand-tag">{t('من نحن', 'About Us')}</span>
-            <h2 className="brand-section-title">
-              {t('شركة تقنية عراقية رائدة في التحول الرقمي', "Iraq's Leading Technology Company in Digital Transformation")}
+            <span className="dt-badge">{t('من نحن', 'About Us')}</span>
+            <h2 className="dt-section-title">
+              {t('شركة تقنية عراقية رائدة في التحول الرقمي', "Iraq's Leading Tech Company in Digital Transformation")}
             </h2>
             <p className="about-desc">
               {t(
@@ -82,7 +82,7 @@ export default function About() {
               </div>
             </div>
             <div className="about-card-third reveal" ref={addReveal}>
-              <div className="act-icon">📍</div>
+              <span>📍</span>
               <div>{t('أربيل · بغداد', 'Erbil · Baghdad')}</div>
             </div>
           </div>

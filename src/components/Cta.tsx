@@ -17,7 +17,7 @@ export default function Cta() {
     <section className="cta-section">
       <div className="cta-bg" />
       <div className="cta-inner reveal" ref={ref}>
-        <span className="brand-tag light">{t('ابدأ مشروعك', 'Start Your Project')}</span>
+        <span className="dt-badge">{t('ابدأ مشروعك', 'Start Your Project')}</span>
         <h2>{t('مستعد لتحويل مؤسستك رقمياً؟', 'Ready to Digitally Transform Your Institution?')}</h2>
         <p>{t('تواصل معنا اليوم لاستشارة مجانية ودراسة احتياجاتك بدون أي التزام', 'Contact us today for a free consultation and study of your needs with no commitment')}</p>
         <div className="cta-btns">
