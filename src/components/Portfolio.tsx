@@ -7,6 +7,7 @@ const projects = [
   { href: 'https://superlative-cheesecake-4963e9.netlify.app/', img: '/images/pf-salon.jpg', catAr: 'موقع تجاري', catEn: 'Business Website', nameAr: 'صالون كلاس تكريت', nameEn: 'Salon Class Tikrit', descAr: 'موقع صالون تجميل فاخر مع نظام حجوزات', descEn: 'Luxury beauty salon website with booking system' },
   { href: 'https://zesty-licorice-3717d7.netlify.app/', img: '/images/pf-tikmart.jpg', catAr: 'متجر إلكتروني', catEn: 'E-Commerce', nameAr: 'متجر إلكتروني احترافي', nameEn: 'Professional Online Store', descAr: 'منصة تسوق متكاملة مع إدارة منتجات وسلة شراء', descEn: 'Integrated shopping platform with product management and cart' },
   { href: 'https://karmaclub-sandy.vercel.app/', img: '/images/pf-karma.jpg', catAr: 'موقع نادي رياضي', catEn: 'Sports Club Website', nameAr: 'نادي الكرمة الرياضي', nameEn: 'Al-Karma Sport Club', descAr: 'موقع احترافي لنادي كرة قدم عراقي في دوري النجوم — تأسس 1974', descEn: 'Professional website for an Iraqi football club in the Stars League — founded 1974' },
+  { href: 'https://glowing-rugelach-33ae09.netlify.app/', img: '/images/pf-erbil.jpg', catAr: 'موقع نادي رياضي', catEn: 'Sports Club Website', nameAr: 'نادي أربيل الرياضي', nameEn: 'Erbil Sport Club', descAr: 'موقع نادي أربيل الرياضي — من أبرز أندية كرة القدم العراقية، تأسس 1968', descEn: 'Erbil Sport Club — one of Iraq\'s most celebrated football clubs, founded 1968' },
 ];
 
 export default function Portfolio() {
