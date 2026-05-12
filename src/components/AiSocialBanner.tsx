@@ -1,14 +1,14 @@
 import { useLang } from '@/hooks/useLang';
 
 const items = [
-  { en: '🔥 100K+ Followers? Engagement Dropped? We Fix That with AI',   ar: '🔥 حسابك فوق 100K مشترك؟ التفاعل توقف أو ضعف؟ نحلها بالذكاء الاصطناعي' },
-  { en: '📊 Deep Account Analysis — Find Why Engagement Stopped',        ar: '📊 تحليل عميق لحسابك — نكشف سبب توقف التفاعل' },
-  { en: '⚡ Revive Your Reach in 30 Days — Guaranteed Strategy',         ar: '⚡ نعيد انتشارك خلال 30 يوماً — استراتيجية مضمونة' },
-  { en: '🎯 Tailored AI Content for Accounts Above 100K',                ar: '🎯 محتوى ذكي مصمم لحسابات فوق 100 ألف متابع' },
-  { en: '📈 Turn Dead Followers into Active Engagement Again',            ar: '📈 حوّل متابعيك الصامتين إلى تفاعل حقيقي مجدداً' },
-  { en: '🌍 Instagram · TikTok · YouTube · Snapchat · X',                ar: '🌍 انستغرام · تيك توك · يوتيوب · سناب · إكس' },
-  { en: '✨ AI-Powered Posting Schedule Optimized for Your Audience',     ar: '✨ جدول نشر بالذكاء الاصطناعي مُحسَّن لجمهورك تحديداً' },
-  { en: '🚀 Free Consultation for Struggling Accounts — Contact Now',     ar: '🚀 استشارة مجانية لأصحاب الحسابات المتوقفة — تواصل الآن' },
+  { en: '🔥 OFFER: Full Account Revival Package — First Month 50% OFF',         ar: '🔥 عرض خاص: باقة إحياء الحساب الكاملة — الشهر الأول بخصم 50%' },
+  { en: '🎁 FREE Account Audit Worth $200 — Limited Time Only',                 ar: '🎁 تحليل مجاني لحسابك بقيمة 200$ — لفترة محدودة فقط' },
+  { en: '⚡ 100K+ Followers But Zero Engagement? We Revive in 30 Days',         ar: '⚡ فوق 100K متابع لكن تفاعل صفر؟ نعيده خلال 30 يوماً' },
+  { en: '📦 Social Media Bundle: Content + Ads + Analytics — One Price',        ar: '📦 باقة السوشل ميديا: محتوى + إعلانات + تحليلات — بسعر واحد' },
+  { en: '🤝 Trusted by 150+ Clients in Iraq · Gulf · Europe',                   ar: '🤝 ثقة أكثر من 150 عميل في العراق والخليج وأوروبا' },
+  { en: '📈 Guaranteed Results or Your Money Back — No Risk',                   ar: '📈 نتائج مضمونة أو نرد لك المبلغ — بدون مخاطرة' },
+  { en: '🎯 AI Strategy for Instagram · TikTok · YouTube · Snapchat · X',       ar: '🎯 استراتيجية ذكاء اصطناعي لإنستغرام · تيك توك · يوتيوب · سناب · إكس' },
+  { en: '🚀 Book FREE Consultation NOW — WhatsApp Available 24/7',               ar: '🚀 احجز استشارتك المجانية الآن — واتساب متاح 24/7' },
 ];
 
 export default function AiSocialBanner() {
