@@ -1,14 +1,14 @@
 import { useLang } from '@/hooks/useLang';
 
 const items = [
-  { en: '🎁 EXCLUSIVE OFFER — Free Full Account Analysis, Limited Spots!',           ar: '🎁 عرض حصري — تحليل كامل لحسابك مجاناً، أماكن محدودة!' },
-  { en: '🔥 BREAKING: Free AI Content Strategy for the First 10 to Contact Us',      ar: '🔥 بشرى: استراتيجية محتوى مجانية بالذكاء الاصطناعي لأول 10 يتواصلون!' },
-  { en: '🎯 FREE 30-Day Growth Plan — Tailored Only for Your Account',               ar: '🎯 خطة نمو مجانية لمدة 30 يوماً — مصممة لحسابك أنت تحديداً' },
-  { en: '⚡ Exclusive: Free Engagement Revival Consultation — Today Only',            ar: '⚡ حصري: استشارة إحياء التفاعل مجاناً — اليوم فقط' },
-  { en: '🌟 GIFT: Free Competitor Analysis Report — Know Where You Stand',           ar: '🌟 هدية: تقرير تحليل المنافسين مجاناً — اعرف موقعك بالسوق' },
-  { en: '🚀 Free AI Audit: Discover Why Your Followers Stopped Engaging',            ar: '🚀 تشخيص مجاني بالذكاء الاصطناعي — اكتشف سبب توقف تفاعل متابعيك' },
-  { en: '🎉 Special Offer: Free First Content Calendar for New Clients',             ar: '🎉 عرض مميز: أول تقويم محتوى مجاناً للعملاء الجدد' },
-  { en: '💥 URGENT — Free Spot Available Now, Contact Us on WhatsApp!',              ar: '💥 عاجل — مقعد مجاني متاح الآن، تواصل معنا على الواتساب!' },
+  { en: '🔥 Why are accounts your size getting 10x more engagement? Find out FREE',   ar: '🔥 لماذا حسابات بحجمك تحصل على تفاعل أضعاف تفاعلك؟ — اعرف السبب مجاناً' },
+  { en: '⚡ We give you a full account report in 48 hours — no strings attached',     ar: '⚡ نعطيك تقرير كامل عن حسابك خلال 48 ساعة — بدون أي التزام منك' },
+  { en: '🎯 First month: we write the content, build the strategy, FREE',             ar: '🎯 الشهر الأول: نكتب المحتوى، نبني الاستراتيجية — مجاناً معك' },
+  { en: '💡 100K followers and still invisible? We fix your algorithm problem FREE',   ar: '💡 100K متابع وما تظهر؟ — نحل مشكلة الخوارزمية معك مجاناً' },
+  { en: '🚀 Try us 7 days FREE — if results don\'t show, walk away, no questions',    ar: '🚀 جربنا 7 أيام مجاناً — إذا ما شفت نتيجة، وداعاً بلا أي كلام' },
+  { en: '🎁 FREE: Your competitors\' full analysis — see exactly what they\'re doing', ar: '🎁 هدية: تحليل كامل للمنافسين — شوف بالضبط ليش هم يكبرون وأنت واقف' },
+  { en: '⭐ Join 150+ clients who doubled their reach — start FREE today',            ar: '⭐ انضم لـ 150+ عميل ضاعفوا انتشارهم — ابدأ معنا اليوم مجاناً' },
+  { en: '📩 DM us NOW and get your FREE personalized growth roadmap in 24 hours',     ar: '📩 راسلنا الآن واحصل على خارطة طريق نمو مخصصة لحسابك خلال 24 ساعة' },
 ];
 
 export default function AiSocialBanner() {
