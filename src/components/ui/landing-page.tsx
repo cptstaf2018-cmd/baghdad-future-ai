@@ -182,9 +182,9 @@ export function ScrollGlobe({
         <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-blue-300/40 to-transparent" />
       </div>
 
-      {/* Globe — hidden on mobile, shown on sm+ */}
+      {/* Globe */}
       <div
-        className="hidden sm:block fixed z-10 pointer-events-none will-change-transform"
+        className="fixed z-10 pointer-events-none will-change-transform"
         style={{
           top: 0,
           left: 0,
@@ -213,7 +213,7 @@ export function ScrollGlobe({
             key={section.id}
             ref={(el) => (sectionRefs.current[index] = el)}
             dir="ltr"
-            className="relative z-20 flex w-full flex-col items-center justify-center px-6 py-20 text-center sm:items-start sm:text-start sm:px-14 lg:px-20"
+            className="relative z-20 flex w-full flex-col items-start justify-center px-14 py-20 lg:px-20"
             style={{ minHeight: index === 0 ? '88vh' : '72vh' }}
           >
             <div
@@ -289,7 +289,7 @@ export function ScrollGlobe({
               )}
 
               {section.actions && (
-                <div className={cn("flex flex-col flex-wrap gap-3 sm:flex-row sm:gap-4 justify-center sm:justify-start", actionAlign)}>
+                <div className={cn("flex flex-row flex-wrap gap-4", actionAlign)}>
                   {section.actions.map((action) => (
                     <button
                       key={action.label}
@@ -308,14 +308,7 @@ export function ScrollGlobe({
               )}
             </div>
 
-            {/* Mobile globe — small decorative, shown only on mobile */}
-            {index === 0 && (
-              <div className="mt-8 flex justify-center sm:hidden" aria-hidden="true">
-                <div style={{ transform: "scale(0.7)", transformOrigin: "center" }}>
-                  <Globe />
-                </div>
-              </div>
-            )}
+            <div className="hidden lg:block" aria-hidden="true" />
           </section>
         );
       })}
