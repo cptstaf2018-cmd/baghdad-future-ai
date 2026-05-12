@@ -9,6 +9,7 @@ const projects = [
   { href: 'https://karmaclub-sandy.vercel.app/', img: '/images/pf-karma.jpg', catAr: 'موقع نادي رياضي', catEn: 'Sports Club Website', nameAr: 'نادي الكرمة الرياضي', nameEn: 'Al-Karma Sport Club', descAr: 'موقع احترافي لنادي كرة قدم عراقي في دوري النجوم — تأسس 1974', descEn: 'Professional website for an Iraqi football club in the Stars League — founded 1974' },
   { href: 'https://glowing-rugelach-33ae09.netlify.app/', img: '/images/pf-erbil.jpg', catAr: 'موقع نادي رياضي', catEn: 'Sports Club Website', nameAr: 'نادي أربيل الرياضي', nameEn: 'Erbil Sport Club', descAr: 'موقع نادي أربيل الرياضي — من أبرز أندية كرة القدم العراقية، تأسس 1968', descEn: 'Erbil Sport Club — one of Iraq\'s most celebrated football clubs, founded 1968' },
   { href: 'https://gregarious-dodol-f11d3f.netlify.app/', img: '/images/pf-onetouch.jpg', catAr: 'موقع شركة هندسية', catEn: 'Engineering Firm Website', nameAr: 'ون تاتش للهندسة والإنشاء', nameEn: 'OneTouch Engineering', descAr: 'مكتب هندسي عراقي متخصص في التصميم والإنشاء — أكثر من 500 مشروع منذ 2003', descEn: 'Iraqi engineering office in design & construction — 500+ projects since 2003' },
+  { href: 'https://amazing-rabanadas-319c89.netlify.app/', img: '/images/pf-tikmart.jpg', catAr: '🎁 أداة مجانية', catEn: '🎁 Free AI Tool', nameAr: 'مولّد محتوى السوشل ميديا بالذكاء الاصطناعي', nameEn: 'AI Social Media Content Generator', descAr: 'هدية من شركتنا — أداة ذكاء اصطناعي تولّد كابشن وهاشتاق لمنشوراتك بثوانٍ. جربها الآن مجاناً', descEn: 'Our gift to you — AI tool that generates captions & hashtags for your posts in seconds. Try it FREE', isFree: true },
 ];
 
 export default function Portfolio() {
@@ -23,11 +24,30 @@ export default function Portfolio() {
           <h2 className="dt-section-title">{t('مشاريع حقيقية لعملاء حقيقيين', 'Real Projects for Real Clients')}</h2>
           <p className="dt-section-sub">{t('نماذج من مشاريعنا المنجزة في العراق والمنطقة', 'Selected projects delivered across Iraq and the region')}</p>
         </div>
+
+        {/* Free tool highlight */}
+        <a href="https://amazing-rabanadas-319c89.netlify.app/" target="_blank" rel="noreferrer" className="pf-free-banner">
+          <div className="pf-free-banner-inner">
+            <div className="pf-free-left">
+              <span className="pf-free-tag">🎁 {t('هدية مجانية لك', 'Free Gift for You')}</span>
+              <h3>{t('جرّب ذكاءنا الاصطناعي مجاناً — الآن', 'Try Our AI for FREE — Right Now')}</h3>
+              <p>{t('أداة تولّد كابشن وهاشتاق احترافية لمنشوراتك على إنستغرام وتيك توك وفيسبوك — بثوانٍ، بدون أي تسجيل', 'Generates professional captions & hashtags for Instagram, TikTok & Facebook — in seconds, no sign-up needed')}</p>
+              <span className="pf-free-cta">{t('افتح الأداة ← مجاناً', 'Open the Tool ← FREE')}</span>
+            </div>
+            <div className="pf-free-right">
+              <div className="pf-free-feature">📸 {t('صوّر المنتج وانشر', 'Photo to Post')}</div>
+              <div className="pf-free-feature">🤖 {t('كابشن بالذكاء الاصطناعي', 'AI Captions')}</div>
+              <div className="pf-free-feature">📅 {t('جدول النشر الأسبوعي', 'Weekly Schedule')}</div>
+              <div className="pf-free-feature">🔥 {t('هاشتاق العراق والخليج', 'Iraq & Gulf Hashtags')}</div>
+            </div>
+          </div>
+        </a>
+
       </div>
       <div className="pf-scroll-wrap">
         <div className="pf-scroll-track">
           {doubled.map((p, i) => (
-            <a key={i} href={p.href} target="_blank" rel="noreferrer" className="pf-item">
+            <a key={i} href={p.href} target="_blank" rel="noreferrer" className={`pf-item${(p as any).isFree ? ' pf-item-free' : ''}`}>
               <div className="pf-img">
                 <img src={p.img} alt={t(p.nameAr, p.nameEn)} loading="lazy" />
               </div>
@@ -35,7 +55,10 @@ export default function Portfolio() {
                 <span className="pf-cat">{t(p.catAr, p.catEn)}</span>
                 <strong>{t(p.nameAr, p.nameEn)}</strong>
                 <p>{t(p.descAr, p.descEn)}</p>
-                <span className="pf-badge-live">✅ {t('عميل حقيقي', 'Real Client')}</span>
+                {(p as any).isFree
+                  ? <span className="pf-badge-free">🎁 {t('هدية مجانية — جرّبها', 'Free Gift — Try It')}</span>
+                  : <span className="pf-badge-live">✅ {t('عميل حقيقي', 'Real Client')}</span>
+                }
               </div>
             </a>
           ))}
