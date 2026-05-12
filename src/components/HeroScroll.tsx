@@ -107,7 +107,7 @@ export default function HeroScroll() {
     <ScrollGlobe
       sections={sections}
       globeConfig={globeConfig}
-      className="bg-[#070B14]"
+      className="bg-[#F0F4FF]"
     />
   );
 }

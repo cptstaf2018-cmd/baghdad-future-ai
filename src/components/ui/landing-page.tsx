@@ -132,19 +132,18 @@ export function ScrollGlobe({
     >
       {/* Background grid */}
       <div className="pointer-events-none absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(103,232,249,0.08),transparent_40%),radial-gradient(circle_at_80%_60%,rgba(59,130,246,0.07),transparent_40%)]" />
-        <div className="absolute inset-0 opacity-[0.04] [background-image:linear-gradient(rgba(255,255,255,.2)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.2)_1px,transparent_1px)] [background-size:60px_60px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(29,78,216,0.06),transparent_40%),radial-gradient(circle_at_80%_60%,rgba(147,197,253,0.1),transparent_40%)]" />
+        <div className="absolute inset-0 opacity-[0.04] [background-image:linear-gradient(rgba(29,78,216,.3)_1px,transparent_1px),linear-gradient(90deg,rgba(29,78,216,.3)_1px,transparent_1px)] [background-size:60px_60px]" />
       </div>
 
       {/* Scroll progress bar */}
-      <div className="fixed top-0 left-0 z-50 h-0.5 w-full bg-white/5">
+      <div className="fixed top-0 left-0 z-50 h-0.5 w-full bg-blue-100">
         <div
-          className="h-full bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 will-change-transform"
+          className="h-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 will-change-transform"
           style={{
             transform: `scaleX(${scrollProgress})`,
             transformOrigin: "left center",
             transition: "transform 0.15s ease-out",
-            filter: "drop-shadow(0 0 4px rgba(103,232,249,0.5))",
           }}
         />
       </div>
@@ -156,12 +155,12 @@ export function ScrollGlobe({
             <div
               className={cn(
                 "absolute right-6 lg:right-8 top-1/2 -translate-y-1/2",
-                "rounded-lg border border-cyan-300/15 bg-[#070B14]/90 px-3 py-1.5 text-xs font-medium text-cyan-100 shadow-xl backdrop-blur-md whitespace-nowrap",
+                "rounded-lg border border-blue-200 bg-white/95 px-3 py-1.5 text-xs font-medium text-blue-800 shadow-lg backdrop-blur-md whitespace-nowrap",
                 activeSection === index ? "animate-fadeOut" : "opacity-0",
               )}
             >
               <div className="flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                <div className="h-1.5 w-1.5 rounded-full bg-blue-600" />
                 <span>{section.badge || `Section ${index + 1}`}</span>
               </div>
             </div>
@@ -173,14 +172,14 @@ export function ScrollGlobe({
                 "relative h-2.5 w-2.5 lg:h-3 lg:w-3 rounded-full border-2 transition-all duration-300 hover:scale-125",
                 "before:absolute before:inset-0 before:rounded-full before:transition-all before:duration-300",
                 activeSection === index
-                  ? "border-cyan-300 bg-cyan-300 shadow-lg shadow-cyan-300/30 before:animate-ping before:bg-cyan-300/20"
-                  : "border-white/25 bg-transparent hover:border-cyan-300/60 hover:bg-cyan-300/10",
+                  ? "border-blue-600 bg-blue-600 shadow-lg shadow-blue-600/30 before:animate-ping before:bg-blue-600/20"
+                  : "border-blue-300 bg-transparent hover:border-blue-500 hover:bg-blue-100",
               )}
               aria-label={`Go to ${section.badge || `section ${index + 1}`}`}
             />
           </div>
         ))}
-        <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-cyan-300/20 to-transparent" />
+        <div className="absolute left-1/2 top-0 bottom-0 -z-10 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-blue-300/40 to-transparent" />
       </div>
 
       {/* Globe — top:0 left:0 anchors to viewport origin so translate3d works correctly */}
@@ -225,8 +224,8 @@ export function ScrollGlobe({
               dir={dir}
             >
               {section.badge && (
-                <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-cyan-300/8 px-4 py-1.5 text-xs font-bold text-cyan-200">
-                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(103,232,249,0.8)]" />
+                <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-bold text-blue-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
                   {section.badge}
                 </span>
               )}
@@ -239,11 +238,11 @@ export function ScrollGlobe({
                     : "text-3xl sm:text-4xl md:text-5xl lg:text-6xl",
                 )}
               >
-                <span className="block bg-gradient-to-r from-white via-slate-100 to-white/70 bg-clip-text text-transparent">
+                <span className="block text-blue-900">
                   {section.title}
                 </span>
                 {section.subtitle && (
-                  <span className="mt-2 block text-[0.52em] font-semibold leading-snug text-slate-400">
+                  <span className="mt-2 block text-[0.52em] font-semibold leading-snug text-blue-500">
                     {section.subtitle}
                   </span>
                 )}
@@ -251,19 +250,19 @@ export function ScrollGlobe({
 
               <div
                 className={cn(
-                  "mb-8 text-base font-light leading-8 text-slate-400 sm:text-lg",
+                  "mb-8 text-base font-light leading-8 text-blue-600 sm:text-lg",
                   section.align === "center" ? "mx-auto max-w-2xl" : "max-w-2xl",
                 )}
               >
                 <p>{section.description}</p>
                 {index === 0 && (
-                  <div className={cn("mt-5 flex flex-wrap items-center gap-3 text-sm text-slate-500", actionAlign)}>
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/4 px-3 py-1.5 backdrop-blur">
-                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  <div className={cn("mt-5 flex flex-wrap items-center gap-3 text-sm text-blue-400", actionAlign)}>
+                    <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5">
+                      <span className="h-1.5 w-1.5 rounded-full bg-green-500" />
                       <span>{dir === "rtl" ? "تجربة تفاعلية" : "Interactive Experience"}</span>
                     </div>
-                    <div className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/4 px-3 py-1.5 backdrop-blur">
-                      <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                    <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
                       <span>{dir === "rtl" ? "مرر للاستكشاف" : "Scroll to Explore"}</span>
                     </div>
                   </div>
@@ -275,13 +274,13 @@ export function ScrollGlobe({
                   {section.features.map((feature) => (
                     <div
                       key={feature.title}
-                      className="group rounded-xl border border-white/8 bg-white/4 p-4 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300/20 hover:bg-white/6 sm:p-5"
+                      className="group rounded-xl border border-blue-200 bg-white p-4 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-400 hover:shadow-md sm:p-5"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan-400 transition-colors group-hover:bg-emerald-400" />
+                        <div className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-600" />
                         <div className="min-w-0 flex-1">
-                          <h3 className="mb-1 text-base font-bold text-white sm:text-lg">{feature.title}</h3>
-                          <p className="text-sm leading-7 text-slate-400 sm:text-base">{feature.description}</p>
+                          <h3 className="mb-1 text-base font-bold text-blue-900 sm:text-lg">{feature.title}</h3>
+                          <p className="text-sm leading-7 text-blue-600 sm:text-base">{feature.description}</p>
                         </div>
                       </div>
                     </div>
@@ -296,10 +295,10 @@ export function ScrollGlobe({
                       key={action.label}
                       onClick={action.onClick}
                       className={cn(
-                        "group relative w-full overflow-hidden rounded-xl px-7 py-3.5 text-sm font-bold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-cyan-300/30 sm:w-auto sm:px-8 sm:text-base",
+                        "group relative w-full overflow-hidden rounded-xl px-7 py-3.5 text-sm font-bold transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-300 sm:w-auto sm:px-8 sm:text-base",
                         action.variant === "primary"
-                          ? "bg-cyan-300 text-slate-950 shadow-lg shadow-cyan-300/20 hover:bg-white hover:shadow-cyan-300/35"
-                          : "border border-white/12 bg-white/4 text-white backdrop-blur-sm hover:border-cyan-300/30 hover:bg-white/8",
+                          ? "bg-blue-700 text-white shadow-lg shadow-blue-600/30 hover:bg-blue-800"
+                          : "border border-blue-200 bg-white text-blue-700 hover:border-blue-400 hover:bg-blue-50",
                       )}
                     >
                       <span className="relative z-10">{action.label}</span>
