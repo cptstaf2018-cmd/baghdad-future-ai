@@ -301,14 +301,22 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
 .pf-scroll-wrap {
   overflow: hidden; margin-top: 48px;
   direction: ltr;
-  -webkit-mask: linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
-  mask: linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);
+  -webkit-mask: linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  mask: linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
 }
-.pf-scroll-track { display: flex; gap: 18px; width: max-content; animation: pfScroll 50s linear infinite; direction: ltr; }
+.pf-scroll-track {
+  display: flex; gap: 20px;
+  width: max-content;
+  direction: ltr;
+  animation: pfScroll 35s linear infinite;
+}
 .pf-scroll-track:hover { animation-play-state: paused; }
-@keyframes pfScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+@keyframes pfScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 .pf-item {
-  width: 270px; flex-shrink: 0;
+  width: 280px; flex-shrink: 0;
   background: #fff; border: 1px solid #BFDBFE;
   border-radius: 20px; overflow: hidden; transition: all .3s; display: flex; flex-direction: column;
   box-shadow: 0 2px 12px rgba(29,78,216,.06);
