@@ -18,10 +18,10 @@ export default function About() {
   const addReveal = (el: HTMLElement | null) => { if (el) revealRefs.current.push(el); };
 
   const values = [
-    { icon: '💡', title: t('الابتكار المستمر', 'Continuous Innovation'), desc: t('نواكب أحدث التقنيات العالمية', 'We keep pace with the latest global technologies') },
-    { icon: '🛡️', title: t('الأمان والموثوقية', 'Security & Reliability'), desc: t('بنية تحتية آمنة بمعايير دولية', 'Secure infrastructure with international standards') },
-    { icon: '🤝', title: t('شراكة حقيقية', 'True Partnership'), desc: t('ندعمك ما بعد التسليم بدون توقف', 'We support you post-delivery without interruption') },
-    { icon: '📍', title: t('خبرة محلية عميقة', 'Deep Local Expertise'), desc: t('نفهم السوق العراقي والبيئة المؤسسية', 'We understand the Iraqi market and institutional environment') },
+    { icon: '🌍', title: t('حضور إقليمي وعالمي', 'Regional & Global Presence'), desc: t('نخدم عملاء في العراق والسعودية والإمارات والكويت وأوروبا', 'Serving clients in Iraq, Saudi Arabia, UAE, Kuwait and Europe') },
+    { icon: '📱', title: t('سوشل ميديا وتسويق رقمي', 'Social Media & Digital Marketing'), desc: t('محتوى، إعلانات، وحملات تجلب عملاء حقيقيين', 'Content, ads, and campaigns that bring real customers') },
+    { icon: '🤝', title: t('شراكة طويلة الأمد', 'Long-Term Partnership'), desc: t('لا نسلّم المشروع ونمشي — ندعمك باستمرار ونكبر معك', 'We don\'t deliver and disappear — we support you continuously and grow with you') },
+    { icon: '⚡', title: t('تسليم سريع وجودة عالية', 'Fast Delivery, High Quality'), desc: t('نلتزم بالمواعيد ونتجاوز التوقعات في كل مشروع', 'We meet deadlines and exceed expectations on every project') },
   ];
 
   return (
@@ -31,12 +31,12 @@ export default function About() {
           <div className="about-text">
             <span className="dt-badge">{t('من نحن', 'About Us')}</span>
             <h2 className="dt-section-title">
-              {t('شركة تقنية عراقية رائدة في التحول الرقمي', "Iraq's Leading Tech Company in Digital Transformation")}
+              {t('شريكك الرقمي في العراق والخليج والعالم', 'Your Digital Partner in Iraq, Gulf & Beyond')}
             </h2>
             <p className="about-desc">
               {t(
-                'تأسست بغداد المستقبل AI عام 2023 بهدف واحد: بناء منظومة تقنية متكاملة تخدم المؤسسات العراقية الكبرى. نجمع بين الخبرة المحلية العميقة والتقنيات العالمية الحديثة لتقديم حلول رقمية حقيقية قابلة للتوسع والتطوير.',
-                'Baghdad Future AI was founded in 2023 with one goal: building an integrated technology ecosystem for major Iraqi institutions. We combine deep local expertise with modern global technologies to deliver real, scalable digital solutions.'
+                'تأسست بغداد المستقبل AI عام 2023 لتكون الشريك التقني الأول للشركات والمؤسسات في العراق ودول الخليج والعالم. نجمع المواقع والتطبيقات وإدارة السوشل ميديا وأنظمة ERP والذكاء الاصطناعي تحت سقف واحد — لأن عملاءنا يستحقون حلاً متكاملاً لا خدمات مبعثرة.',
+                'Baghdad Future AI was founded in 2023 to be the first tech partner for businesses and institutions in Iraq, the Gulf, and worldwide. We bring together websites, apps, social media management, ERP systems, and AI under one roof — because our clients deserve an integrated solution, not scattered services.'
               )}
             </p>
             <div className="about-values">
@@ -62,13 +62,14 @@ export default function About() {
               </div>
               <div className="acm-stats">
                 <div className="acm-stat"><span className="acm-num">+150</span><span className="acm-lbl">{t('مشروع', 'Projects')}</span></div>
-                <div className="acm-stat"><span className="acm-num">2</span><span className="acm-lbl">{t('فرع', 'Branches')}</span></div>
-                <div className="acm-stat"><span className="acm-num">Iraq</span><span className="acm-lbl">{t('& الخليج', '& Gulf')}</span></div>
+                <div className="acm-stat"><span className="acm-num">5+</span><span className="acm-lbl">{t('دول', 'Countries')}</span></div>
+                <div className="acm-stat"><span className="acm-num">2023</span><span className="acm-lbl">{t('تأسست', 'Founded')}</span></div>
               </div>
               <div className="acm-tags">
+                <span>{t('سوشل ميديا', 'Social Media')}</span>
                 <span>{t('الذكاء الاصطناعي', 'AI')}</span>
-                <span>SaaS</span><span>ERP</span>
-                <span>{t('الرعاية الصحية', 'Healthcare')}</span>
+                <span>ERP</span>
+                <span>{t('تطبيقات', 'Apps')}</span>
               </div>
             </div>
             <div className="about-card-secondary">
@@ -82,8 +83,8 @@ export default function About() {
               </div>
             </div>
             <div className="about-card-third reveal" ref={addReveal}>
-              <span>📍</span>
-              <div>{t('أربيل · بغداد', 'Erbil · Baghdad')}</div>
+              <span>🌍</span>
+              <div>{t('العراق · الخليج · العالم', 'Iraq · Gulf · World')}</div>
             </div>
           </div>
         </div>
