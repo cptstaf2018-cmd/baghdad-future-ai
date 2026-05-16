@@ -27,7 +27,7 @@ export default function Products() {
         </div>
         <div className="products-grid">
 
-          <a href="https://clinicplt.vercel.app/login" target="_blank" rel="noreferrer" className="product-card featured reveal" ref={addReveal}>
+          <a href="https://www.clinic-ai-pro.com/" target="_blank" rel="noreferrer" className="product-card featured reveal" ref={addReveal}>
             <div className="product-badge">{t('متاح الآن', 'Live Now')}</div>
             <div className="product-icon">🏥</div>
             <h3>{t('كلينيك — نظام إدارة العيادات', 'Clinicplt — Clinic Management')}</h3>
