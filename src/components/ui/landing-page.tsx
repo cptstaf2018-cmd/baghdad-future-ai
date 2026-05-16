@@ -44,7 +44,6 @@ export function ScrollGlobe({
   className,
 }: ScrollGlobeProps) {
   const [activeSection, setActiveSection] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobile, setIsMobile] = useState(() => typeof window !== "undefined" && window.innerWidth < 768);
   const [globeTransform, setGlobeTransform] = useState(() => {
     const p = globeConfig.positions[0];
@@ -74,10 +73,6 @@ export function ScrollGlobe({
   const calculatedPositions = activePositions;
 
   const updateScrollPosition = useCallback(() => {
-    const scrollTop = window.pageYOffset;
-    const docHeight = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
-    setScrollProgress(Math.min(Math.max(scrollTop / docHeight, 0), 1));
-
     const viewportCenter = window.innerHeight / 2;
     let newActiveSection = 0;
     let minDistance = Infinity;
