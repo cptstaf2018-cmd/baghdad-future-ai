@@ -1,7 +1,7 @@
 import { useLang } from '@/hooks/useLang';
 
 const projects = [
-  { href: 'https://clinicplt.vercel.app/login', img: '/images/pf-clinic.jpg', catAr: 'نظام طبي', catEn: 'Medical System', nameAr: 'كلينيك — إدارة العيادات', nameEn: 'Clinicplt — Clinic Management', descAr: 'نظام SaaS متكامل للعيادات والمراكز الطبية', descEn: 'Integrated SaaS system for clinics and medical centers' },
+  { href: 'https://www.clinic-ai-pro.com/', img: '/images/pf-clinic.jpg', catAr: 'نظام طبي', catEn: 'Medical System', nameAr: 'كلينيك — إدارة العيادات', nameEn: 'Clinicplt — Clinic Management', descAr: 'نظام SaaS متكامل للعيادات والمراكز الطبية', descEn: 'Integrated SaaS system for clinics and medical centers' },
   { href: 'https://kyn-app.vercel.app/', img: '/images/pf-kyn.jpg', catAr: 'تطبيق ذكي', catEn: 'Smart App', nameAr: 'KYN App', nameEn: 'KYN App', descAr: 'منصة ذكية متكاملة بتجربة مستخدم احترافية', descEn: 'Integrated smart platform with professional UX' },
   { href: 'https://darbonna-taxi.vercel.app/', img: '/images/pf-darbonna.jpg', catAr: 'تطبيق نقل', catEn: 'Transport App', nameAr: 'Darbonna Taxi', nameEn: 'Darbonna Taxi', descAr: 'منصة حجز سيارات أجرة ذكية مع تتبع مباشر', descEn: 'Smart taxi booking platform with live tracking' },
   { href: 'https://superlative-cheesecake-4963e9.netlify.app/', img: '/images/pf-salon.jpg', catAr: 'موقع تجاري', catEn: 'Business Website', nameAr: 'صالون كلاس تكريت', nameEn: 'Salon Class Tikrit', descAr: 'موقع صالون تجميل فاخر مع نظام حجوزات', descEn: 'Luxury beauty salon website with booking system' },
