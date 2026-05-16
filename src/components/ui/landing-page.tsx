@@ -148,17 +148,6 @@ export function ScrollGlobe({
         <div className="absolute inset-0 opacity-[0.04] [background-image:linear-gradient(rgba(29,78,216,.3)_1px,transparent_1px),linear-gradient(90deg,rgba(29,78,216,.3)_1px,transparent_1px)] [background-size:60px_60px]" />
       </div>
 
-      {/* Scroll progress bar */}
-      <div className="fixed top-0 left-0 z-50 h-0.5 w-full bg-blue-100">
-        <div
-          className="h-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 will-change-transform"
-          style={{
-            transform: `scaleX(${scrollProgress})`,
-            transformOrigin: "left center",
-            transition: "transform 0.15s ease-out",
-          }}
-        />
-      </div>
 
       {/* Side nav dots */}
       <div className="hidden sm:flex fixed right-4 lg:right-8 top-1/2 -translate-y-1/2 z-40 flex-col gap-4 lg:gap-6 items-center">
