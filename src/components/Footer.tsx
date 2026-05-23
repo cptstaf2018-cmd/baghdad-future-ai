@@ -83,7 +83,7 @@ export default function Footer() {
               <h4>{t('تواصل معنا', 'Contact Us')}</h4>
               <ul>
                 <li>📍 {t('بغداد · أربيل، العراق', 'Baghdad · Erbil, Iraq')}</li>
-                <li><a href="tel:07806688044">📱 078 066 880 44</a></li>
+                <li><a href="tel:07806688044" dir="ltr">📱 07806688044</a></li>
                 <li><a href="mailto:cptstaf2018@gmail.com">✉️ cptstaf2018@gmail.com</a></li>
                 <li><a href="https://baghdad-future-ai.my/" target="_blank" rel="noreferrer">🌐 baghdad-future-ai.my</a></li>
               </ul>
