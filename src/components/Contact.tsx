@@ -32,7 +32,7 @@ export default function Contact() {
             {[
               { icon: '📍', title: t('الفرع الأول — أربيل', 'Branch 1 — Erbil'), sub: t('شارع 100، أربيل، العراق', 'Street 100, Erbil, Iraq') },
               { icon: '📍', title: t('الفرع الثاني — بغداد', 'Branch 2 — Baghdad'), sub: t('المنصور، قرب تمثال أبو جعفر المنصور', 'Mansour, near Abu Jaafar Al-Mansour Statue') },
-              { icon: '📱', title: t('الهاتف', 'Phone'), sub: <><a href="tel:07706688044">07706688044</a> · <a href="tel:07806688044">07806688044</a></> },
+              { icon: '📱', title: t('الهاتف', 'Phone'), sub: <a href="tel:07806688044">07806688044</a> },
               { icon: '✉️', title: t('البريد الإلكتروني', 'Email'), sub: <a href="mailto:cptstaf2018@gmail.com">cptstaf2018@gmail.com</a> },
             ].map((item, i) => (
               <div key={i} className="cinfo-item">
