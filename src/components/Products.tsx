@@ -41,17 +41,19 @@ export default function Products() {
             <span className="product-link">{t('زيارة المنصة ←', 'Visit Platform →')}</span>
           </a>
 
-          <div className="product-card reveal" ref={addReveal}>
-            <div className="product-icon">👁️</div>
-            <h3>{t('نظام الحضور المركزي', 'Central Attendance System')}</h3>
-            <p>{t('تتبع حضور الموظفين عبر بصمة الإصبع والوجه مع تكامل كامل مع أنظمة الرواتب والإدارة.', 'Employee attendance tracking via fingerprint and facial recognition with full integration with payroll and management systems.')}</p>
+          <a href="https://alhql-aldhky.vercel.app/dashboard" target="_blank" rel="noreferrer" className="product-card featured reveal" ref={addReveal}>
+            <div className="product-badge">{t('متاح الآن', 'Live Now')}</div>
+            <div className="product-icon">🐄</div>
+            <h3>{t('الحقل الذكي — إدارة المواشي', 'Smart Farm — Livestock Management')}</h3>
+            <p>{t('نظام ذكاء اصطناعي متكامل لإدارة الدواجن والأغنام والأبقار: صحة الحيوان، التغذية، الإنتاج واللقاحات.', 'Integrated AI system for managing poultry, sheep & cattle: animal health, feeding, production & vaccinations.')}</p>
             <ul className="product-features">
-              <li>{t('تعرف على الوجه والبصمة', 'Face & fingerprint recognition')}</li>
-              <li>{t('إدارة مركزية لعدة فروع', 'Central management for multiple branches')}</li>
-              <li>{t('تكامل مع نظام الرواتب', 'Payroll system integration')}</li>
+              <li>{t('متابعة صحة الحيوانات', 'Animal health monitoring')}</li>
+              <li>{t('جدول تغذية ولقاحات ذكي', 'Smart feeding & vaccination schedule')}</li>
+              <li>{t('إحصائيات الإنتاج اليومي', 'Daily production statistics')}</li>
+              <li>{t('يدعم الدواجن والأغنام والأبقار', 'Supports poultry, sheep & cattle')}</li>
             </ul>
-            <span className="product-soon">{t('قريباً', 'Coming Soon')}</span>
-          </div>
+            <span className="product-link">{t('زيارة المنصة ←', 'Visit Platform →')}</span>
+          </a>
 
           <div className="product-card reveal" ref={addReveal}>
             <div className="product-icon">⚙️</div>
