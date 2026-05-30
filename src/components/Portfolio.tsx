@@ -1,6 +1,7 @@
 import { useLang } from '@/hooks/useLang';
 
 const projects = [
+  { href: 'https://carecar.online/about', img: '/images/pf-carecar.png', catAr: 'نظام SaaS للسيارات', catEn: 'Car Management SaaS', nameAr: 'كير كار — إدارة مراكز السيارات', nameEn: 'CareCar — Car Service Management', descAr: 'منصة SaaS متكاملة لإدارة مراكز صيانة وغسيل السيارات — المواعيد، العملاء، الفواتير والتقارير', descEn: 'Integrated SaaS platform for car service & wash centers — appointments, clients, billing & reports' },
   { href: 'https://alhql-aldhky.vercel.app/dashboard', img: '/images/pf-farm.png', catAr: 'نظام زراعي ذكي', catEn: 'Smart Farm System', nameAr: 'الحقل الذكي — إدارة المواشي', nameEn: 'Smart Farm — Livestock Management', descAr: 'نظام ذكاء اصطناعي متكامل لإدارة الدواجن والأغنام والأبقار — صحة الحيوان، التغذية، الإنتاج واللقاحات', descEn: 'AI-powered system for managing poultry, sheep & cattle — health monitoring, feeding, production & vaccinations' },
   { href: 'https://www.clinic-ai-pro.com/', img: '/images/pf-clinic.jpg', catAr: 'نظام طبي', catEn: 'Medical System', nameAr: 'كلينيك — إدارة العيادات', nameEn: 'Clinicplt — Clinic Management', descAr: 'نظام SaaS متكامل للعيادات والمراكز الطبية', descEn: 'Integrated SaaS system for clinics and medical centers' },
   { href: 'https://kyn-app.vercel.app/', img: '/images/pf-kyn.jpg', catAr: 'تطبيق ذكي', catEn: 'Smart App', nameAr: 'KYN App', nameEn: 'KYN App', descAr: 'منصة ذكية متكاملة بتجربة مستخدم احترافية', descEn: 'Integrated smart platform with professional UX' },
