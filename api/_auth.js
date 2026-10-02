@@ -28,7 +28,7 @@ export async function readJson(req) {
 
 export function createSession(email) {
   const expires = Date.now() + WEEK_SECONDS * 1000;
-  const payload = `${email}.${expires}`;
+  const payload = Buffer.from(JSON.stringify({ email, expires })).toString('base64url');
   return `${payload}.${sign(payload)}`;
 }
 
@@ -41,10 +41,19 @@ export function getCookie(req, name) {
 
 export function isAuthed(req) {
   const token = getCookie(req, COOKIE_NAME);
-  const [email, expires, signature] = token.split('.');
-  if (!email || !expires || !signature) return false;
-  if (Number(expires) < Date.now()) return false;
-  return timingSafeEqual(signature, sign(`${email}.${expires}`));
+  const separator = token.lastIndexOf('.');
+  if (separator === -1) return false;
+
+  const payload = token.slice(0, separator);
+  const signature = token.slice(separator + 1);
+  if (!payload || !signature || !timingSafeEqual(signature, sign(payload))) return false;
+
+  try {
+    const session = JSON.parse(Buffer.from(payload, 'base64url').toString('utf8'));
+    return Number(session.expires) >= Date.now();
+  } catch {
+    return false;
+  }
 }
 
 export function setSessionCookie(res, email) {
