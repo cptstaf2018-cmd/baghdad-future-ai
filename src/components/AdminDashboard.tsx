@@ -98,7 +98,9 @@ export default function AdminDashboard() {
     setSaving(false);
 
     if (!response.ok) {
-      setStatus('لم يتم الحفظ. تأكد من متغيرات Blob ومتغيرات تسجيل الدخول في Vercel.');
+      const data = await response.json().catch(() => null);
+      const message = data?.message ? ` السبب: ${data.message}` : '';
+      setStatus(`لم يتم الحفظ.${message}`);
       return;
     }
 
