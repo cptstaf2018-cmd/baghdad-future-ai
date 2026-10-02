@@ -13,8 +13,13 @@ import Cta from '@/components/Cta';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WaFab from '@/components/WaFab';
+import AdminDashboard from '@/components/AdminDashboard';
 
 export default function App() {
+  if (window.location.pathname.startsWith('/admin')) {
+    return <AdminDashboard />;
+  }
+
   return (
     <LangProvider>
       <Navbar />
