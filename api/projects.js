@@ -34,9 +34,13 @@ function validateProjects(projects) {
 
 export default async function handler(req, res) {
   if (req.method === 'GET') {
-    const projects = await readProjects();
-    res.setHeader('Cache-Control', 's-maxage=30, stale-while-revalidate=120');
-    res.status(200).json({ projects });
+    try {
+      const projects = await readProjects();
+      res.setHeader('Cache-Control', 's-maxage=30, stale-while-revalidate=120');
+      res.status(200).json({ projects });
+    } catch (error) {
+      res.status(500).json({ error: 'read_failed', message: error.message });
+    }
     return;
   }
 
@@ -49,8 +53,12 @@ export default async function handler(req, res) {
       return;
     }
 
-    await writeProjects(projects);
-    res.status(200).json({ projects });
+    try {
+      await writeProjects(projects);
+      res.status(200).json({ projects });
+    } catch (error) {
+      res.status(500).json({ error: 'write_failed', message: error.message });
+    }
     return;
   }
 

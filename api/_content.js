@@ -20,9 +20,12 @@ export const defaultProjects = [
 
 export async function readProjects() {
   try {
-    const blob = await get(PROJECTS_BLOB_PATH, { access: 'private' });
-    if (!blob) return defaultProjects;
-    return await blob.json();
+    const result = await get(PROJECTS_BLOB_PATH, { access: 'private', useCache: false });
+    if (!result?.stream) return defaultProjects;
+
+    const response = new Response(result.stream);
+    const text = await response.text();
+    return JSON.parse(text);
   } catch (error) {
     if (error?.message?.includes('does not exist') || error?.message?.includes('not exist')) {
       return defaultProjects;
