@@ -8,6 +8,7 @@ import Products from '@/components/Products';
 import Industries from '@/components/Industries';
 import WhyUs from '@/components/WhyUs';
 import Portfolio from '@/components/Portfolio';
+import Academy from '@/components/Academy';
 import Testimonials from '@/components/Testimonials';
 import Cta from '@/components/Cta';
 import Contact from '@/components/Contact';
@@ -31,6 +32,7 @@ export default function App() {
       <Industries />
       <WhyUs />
       <Portfolio />
+      <Academy />
       <Testimonials />
       <Cta />
       <Contact />

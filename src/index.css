@@ -877,3 +877,24 @@ input, textarea, select { font-family: inherit; font-size: inherit; }
     flex-direction: column;
   }
 }
+
+/* ── Academy ── */
+.academy-card { display: grid; grid-template-columns: 1.05fr 1fr; gap: 0; background: #fff; border: 1px solid #BFDBFE; border-radius: 24px; overflow: hidden; box-shadow: 0 12px 40px rgba(29,78,216,.1); }
+.academy-shot { display: block; background: #E0E9FF; overflow: hidden; }
+.academy-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .5s; }
+.academy-shot:hover img { transform: scale(1.03); }
+.academy-body { padding: 36px 36px 32px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.academy-free { font-size: 12px; font-weight: 800; color: #92400E; background: #FEF3C7; border: 1px solid #FBBF24; padding: 4px 12px; border-radius: 30px; }
+.academy-body h3 { font-size: clamp(20px, 2vw, 28px); font-weight: 900; color: #1E3A8A; line-height: 1.35; }
+.academy-body p { font-size: 15px; color: #475569; line-height: 1.8; }
+.academy-lectures { list-style: none; counter-reset: lec; display: grid; gap: 8px; width: 100%; padding: 0; margin: 4px 0 6px; }
+.academy-lectures li { counter-increment: lec; display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; color: #1E3A8A; }
+.academy-lectures li::before { content: counter(lec); flex: none; width: 26px; height: 26px; border-radius: 50%; background: #DBEAFE; color: #1D4ED8; font-size: 12px; font-weight: 800; display: grid; place-items: center; }
+.academy-cta { display: inline-flex; background: #1D4ED8; color: #fff; padding: 13px 28px; border-radius: 10px; font-size: 15px; font-weight: 800; transition: transform .22s, box-shadow .22s, background .22s; }
+.academy-cta:hover { background: #1E40AF; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29,78,216,.3); }
+.academy-cta:focus-visible, .academy-shot:focus-visible { outline: 3px solid #FBBF24; outline-offset: 3px; }
+@media (max-width: 860px) {
+  .academy-card { grid-template-columns: 1fr; }
+  .academy-shot { max-height: 280px; }
+  .academy-body { padding: 24px 20px; }
+}

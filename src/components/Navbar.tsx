@@ -18,6 +18,7 @@ export default function Navbar() {
     { href: '#products',   label: t('المنتجات', 'Products') },
     { href: '#industries', label: t('القطاعات', 'Industries') },
     { href: '#portfolio',  label: t('أعمالنا', 'Portfolio') },
+    { href: '#academy',    label: t('الأكاديمية', 'Academy') },
     { href: '#contact',    label: t('تواصل معنا', 'Contact') },
   ];
 
