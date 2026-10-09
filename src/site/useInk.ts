@@ -15,7 +15,7 @@ function samplePhrase(lines: string[], w: number, h: number, rtl: boolean): [num
   const o = off.getContext('2d');
   if (!o) return [];
   const narrow = w < 700;
-  let size = Math.min(w / (narrow ? 5.4 : 7.4), h / 4.1);
+  let size = Math.min(w / (narrow ? 4.6 : 7.4), h / 4.1);
   o.font = `900 ${size}px ${FONT}`;
   const widest = Math.max(...lines.map(l => o.measureText(l).width));
   if (widest > w * .9) { size *= (w * .9) / widest; o.font = `900 ${size}px ${FONT}`; }
@@ -67,7 +67,7 @@ export function useInk(canvasRef: RefObject<HTMLCanvasElement>, phrases: string[
           p.vx += (p.tx - p.x) * .028; p.vy += (p.ty - p.y) * .028;
           p.vx *= .84; p.vy *= .84; p.x += p.vx; p.y += p.vy;
         }
-        ctx.globalAlpha = p.free ? .1 : 1;
+        ctx.globalAlpha = p.free ? .04 : 1;
         ctx.fillStyle = p.blue ? LAPIS : INK;
         ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fill();
       }
@@ -81,7 +81,7 @@ export function useInk(canvasRef: RefObject<HTMLCanvasElement>, phrases: string[
       order.forEach((k, j) => {
         const p = s.parts[k];
         if (j < t.length) { p.tx = t[j][0]; p.ty = t[j][1]; p.free = false; }
-        else { p.free = true; p.tx = Math.random() * s.w; p.ty = s.h * (.75 + Math.random() * .25); }
+        else { p.free = true; p.tx = Math.random() * s.w; p.ty = Math.random() * s.h * .6; }
         if (burst) { p.vx += (Math.random() - .5) * 18; p.vy += (Math.random() - .5) * 18; }
       });
       onIndex(i);
