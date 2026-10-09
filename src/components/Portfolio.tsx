@@ -30,23 +30,6 @@ export default function Portfolio() {
           <p className="dt-section-sub">{t('نماذج من مشاريعنا المنجزة في العراق والمنطقة', 'Selected projects delivered across Iraq and the region')}</p>
         </div>
 
-        {/* Free tool highlight */}
-        <a href="https://amazing-rabanadas-319c89.netlify.app/" target="_blank" rel="noreferrer" className="pf-free-banner">
-          <div className="pf-free-banner-inner">
-            <div className="pf-free-left">
-              <span className="pf-free-tag">🎁 {t('هدية مجانية لك', 'Free Gift for You')}</span>
-              <h3>{t('جرّب ذكاءنا الاصطناعي مجاناً — الآن', 'Try Our AI for FREE — Right Now')}</h3>
-              <p>{t('أداة تولّد كابشن وهاشتاق احترافية لمنشوراتك على إنستغرام وتيك توك وفيسبوك — بثوانٍ، بدون أي تسجيل', 'Generates professional captions & hashtags for Instagram, TikTok & Facebook — in seconds, no sign-up needed')}</p>
-              <span className="pf-free-cta">{t('افتح الأداة ← مجاناً', 'Open the Tool ← FREE')}</span>
-            </div>
-            <div className="pf-free-right">
-              <div className="pf-free-feature">📸 {t('صوّر المنتج وانشر', 'Photo to Post')}</div>
-              <div className="pf-free-feature">🤖 {t('كابشن بالذكاء الاصطناعي', 'AI Captions')}</div>
-              <div className="pf-free-feature">📅 {t('جدول النشر الأسبوعي', 'Weekly Schedule')}</div>
-              <div className="pf-free-feature">🔥 {t('هاشتاق العراق والخليج', 'Iraq & Gulf Hashtags')}</div>
-            </div>
-          </div>
-        </a>
 
       </div>
       <div className="pf-scroll-wrap">
