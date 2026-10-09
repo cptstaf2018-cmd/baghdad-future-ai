@@ -34,7 +34,7 @@ export default function About() {
             )}</p>
             <div className="hf-facts">
               <div><strong>2023</strong>{t('سنة التأسيس', 'Founded')}</div>
-              <div><strong>{t('٥ منصات', '5 platforms')}</strong>{t('تعمل الآن', 'live today')}</div>
+              <div><strong>{t('5 منصات', '5 platforms')}</strong>{t('تعمل الآن', 'live today')}</div>
               <div><strong>{t('العراق والخليج', 'Iraq & Gulf')}</strong>{t('حيث نعمل', 'where we work')}</div>
             </div>
           </div>

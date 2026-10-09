@@ -40,7 +40,8 @@ export default function Work() {
     return () => { window.removeEventListener('mousemove', onMove); cancelAnimationFrame(raf); };
   }, []);
 
-  const visible = projects.filter(p => !p.hidden);
+  // The free social-media tool was retired from the site; hide it even if the stored list still has it.
+  const visible = projects.filter(p => !p.hidden && !p.isFree);
 
   return (
     <section className="hf-sec" id="work">

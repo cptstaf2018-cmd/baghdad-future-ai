@@ -58,7 +58,7 @@ export function Academy() {
           )}</p>
           <a className="hf-btn hf-btn-ink" href={ACADEMY_URL} target="_blank" rel="noreferrer">{t('سجّل في الدفعة الأولى', 'Join the first cohort')}</a>
           <div className="hf-ac-note">
-            <span><strong>{t('٥٠', '50')}</strong>{t('مقعداً في الدفعة الأولى', 'seats in the first cohort')}</span>
+            <span><strong>50</strong>{t('مقعداً في الدفعة الأولى', 'seats in the first cohort')}</span>
             <span><strong>{t('مجانية', 'Free')}</strong>{t('بدون أي رسوم', 'no fees at all')}</span>
           </div>
         </div>
