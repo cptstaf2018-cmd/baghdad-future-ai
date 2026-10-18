@@ -5,6 +5,20 @@ import { useLang } from '@/hooks/useLang';
 const PEEK_OFFSET = 230;
 const FOLLOW_EASE = .14;
 
+// The dashboard list wins, but projects added to defaultProjects in code (matched by image)
+// still appear, placed after the project that precedes them in the defaults.
+function withNewDefaults(stored: Project[]): Project[] {
+  const result = [...stored];
+  defaultProjects.forEach((d, i) => {
+    if (result.some(p => p.img === d.img)) return;
+    const prev = defaultProjects[i - 1];
+    const at = prev ? result.findIndex(p => p.img === prev.img) : -1;
+    if (prev && at === -1) result.push(d);
+    else result.splice(at + 1, 0, d);
+  });
+  return result;
+}
+
 // Product/work index: big names; on desktop a screenshot floats after the cursor.
 export default function Work() {
   const { t, lang } = useLang();
@@ -17,7 +31,7 @@ export default function Work() {
     fetch('/api/projects')
       .then(r => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then((data: { projects?: Project[] }) => {
-        if (Array.isArray(data.projects) && data.projects.length > 0) setProjects(data.projects);
+        if (Array.isArray(data.projects) && data.projects.length > 0) setProjects(withNewDefaults(data.projects));
       })
       .catch(() => setProjects(defaultProjects));
   }, []);
