@@ -113,7 +113,6 @@ export function Footer() {
           <div>
             <h3>{t('بغداد المستقبل AI', 'Baghdad Future AI')}</h3>
             <p>{t('منصات وأنظمة ذكاء اصطناعي صُنعت في بغداد لأعمال العراق والخليج.', 'Platforms and AI systems made in Baghdad for businesses in Iraq and the Gulf.')}</p>
-            <Socials />
           </div>
           <div>
             <h3>{t('الموقع', 'Site')}</h3>
